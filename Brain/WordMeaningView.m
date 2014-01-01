@@ -8,7 +8,6 @@
 
 #import "WordMeaningView.h"
 #import "NSAttributedString+Html2Attributed.h"
-#import "UIFont+AppFont.h"
 #import "WordManager.h"
 
 @interface WordMeaningView ()
@@ -87,7 +86,6 @@ const float screenWidth=320;
 {
     UITextView* textView=[[UITextView alloc] init];
     textView.attributedText=[NSAttributedString getAttributeStringFromHtmlString:str];
-    [textView setFont:[UIFont systemFontOfSize:[UIFont appFontSize]]];
     CGSize size = [self.meaningView sizeThatFits:CGSizeMake(self.meaningView.frame.size.width, FLT_MAX)];
     self.meaningView.frame=CGRectMake(self.meaningView.frame.origin.x, self.meaningView.frame.origin.y, self.meaningView.frame.size.width,size.height);
 }
@@ -208,6 +206,8 @@ const float screenWidth=320;
         [self.delegate wordTapCallBack:self.selectString];
     }
 }
+
+
 //-(void) wordTap:(UITapGestureRecognizer *)tap
 //{
 //    CGPoint pos=[tap locationInView:self.meaningView];

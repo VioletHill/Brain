@@ -17,6 +17,8 @@
 
 @property (nonatomic,strong) NSMutableArray* meaningViewArray;
 
+@property (nonatomic) BOOL isNeedPop;
+
 @end
 
 @implementation WordMeaningController
@@ -49,20 +51,36 @@
     [self resetWordWithWord:self.word];
 }
 
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    if (self.isNeedPop)
+    {
+        [self.navigationController popViewControllerAnimated:NO];
+    }
+    if (isInit)
+    {
+        self.scrollView.contentOffset=CGPointMake(0, -64);
+    }
+    else
+    {
+        self.scrollView.contentOffset=CGPointMake(0, 0);
+    }
+
+}
+
 -(WordMeaningRootScrollView*) scrollView
 {
     if (_scrollView==nil)
     {
         self.view.backgroundColor=[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190/255.0 alpha:1.0];
 
-        //NSLog(@"%f %f",self.view.frame.origin.y, self.view.frame.size.height);
         if (isInit)
         {
             _scrollView=(WordMeaningRootScrollView*)[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)];
         }
         else
         {
-            self.navigationItem.backBarButtonItem.title=@"Back";
             _scrollView=(WordMeaningRootScrollView*)[[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, 320, self.view.frame.size.height-64)];
         }
 
@@ -119,7 +137,6 @@
     }
     
     self.scrollView.contentOffset=CGPointMake(0, 0);
-    NSLog(@"%f",self.view.frame.size.height);
     if (height<self.view.frame.size.height)
     {
         height=self.view.frame.size.height;
@@ -134,10 +151,17 @@
     {
         wordEntity=[[WordManager sharedWordManager] findWordByCompleteWord:word];
         if (wordEntity==nil) wordEntity=[[WordManager sharedWordManager] findWordByCompleteWord:word.lowercaseString];
+        
+        if (wordEntity!=nil && [wordEntity.word isEqualToString:self.word.word])
+        {
+            WordMeaningController* nextController=[[WordMeaningController alloc] init];
+            nextController.word=wordEntity;
+            nextController.isNeedPop=YES;
+            [self.navigationController pushViewController:nextController animated:YES];
+            
+        }
         if (wordEntity!=nil && ![wordEntity.word isEqualToString:self.word.word])
         {
-            //self.word=wordEntity;
-            //[self resetWordWithWord:self.word];
             WordMeaningController* nextController=[[WordMeaningController alloc] init];
             nextController.word=wordEntity;
             [self.navigationController pushViewController:nextController animated:YES];

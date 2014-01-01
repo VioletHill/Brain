@@ -112,6 +112,11 @@
     wordMeaningController.word=[[WordManager sharedWordManager] findWordByCompleteWord:[self.data objectAtIndex:selectIndex]];
 }
 
+-(void) searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [self.tableView setContentOffset:CGPointZero animated:YES];
+}
+
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     [self.data removeAllObjects];

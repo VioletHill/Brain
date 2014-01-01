@@ -8,10 +8,13 @@
 
 #import "WordManager.h"
 
+#import "NSString+sortString.h"
+
 
 @interface WordManager()
 
 @property (nonatomic,strong) NSArray* allWord;
+@property (nonatomic,strong) NSArray* prefixWord;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @end
 
@@ -52,10 +55,30 @@
     NSFetchRequest *request=[[NSFetchRequest alloc] init];
     NSEntityDescription *entity=[NSEntityDescription entityForName:@"Word" inManagedObjectContext: _managedObjectContext];
     [request setEntity:entity];
+    
     self.allWord=[[_managedObjectContext executeFetchRequest:request error:nil] sortedArrayUsingComparator:^NSComparisonResult(Word* a,Word* b){
-        return [a.word.lowercaseString compare:b.word.lowercaseString];
+        NSComparisonResult result=[[a.word getSortString] compare:[b.word getSortString]];
+        if (result==NSOrderedSame)
+        {
+            return [a.word compare:b.word];
+        }
+        else return result;
     }];
     
+    [self getPrefixWord];
+}
+
+-(void) getPrefixWord
+{
+    NSMutableArray* arr=[[NSMutableArray alloc] init];
+    for (int i=0; i<self.allWord.count; i++)
+    {
+        if ([[[self.allWord objectAtIndex:i] word] characterAtIndex:0]=='-')
+        {
+            [arr addObject:[self.allWord objectAtIndex:i]];
+        }
+    }
+    self.prefixWord=arr;
 }
 
 
@@ -178,15 +201,21 @@
 {
     if (searchText==nil || [searchText isEqualToString:@""]) return nil;
     searchText=searchText.lowercaseString;
+    
+    NSArray* searchArray;
+    
+    if ([searchText characterAtIndex:0]=='-') searchArray=self.prefixWord;
+    else searchArray=self.allWord;
+    
     NSMutableArray* data=[[NSMutableArray alloc] init];
     int l=0;
-    int r=(int)self.allWord.count;
+    int r=(int)searchArray.count;
     
     while (l<r)
     {
         int mid=(l+r)>>1;
-        NSLog(@"%@",((Word*)[self.allWord objectAtIndex:mid]).word );
-        NSComparisonResult result=[((Word*)[self.allWord objectAtIndex:mid]).word.lowercaseString compare:searchText];
+        NSString* a=[((Word*)[searchArray objectAtIndex:mid]).word getSortString];
+        NSComparisonResult result=[a compare:[searchText getSortString]];
         if (result==NSOrderedSame)
         {
             l=mid;
@@ -199,16 +228,17 @@
         else r=mid;
     }
     
+    //单词有重复的 比如 china 和 China
     while (l>=1)
     {
-        NSComparisonResult result=[((Word*)[self.allWord objectAtIndex:l-1]).word.lowercaseString compare:searchText];
+        NSComparisonResult result=[[((Word*)[searchArray objectAtIndex:l-1]).word getSortString] compare:[searchText getSortString]];
         if (result==NSOrderedSame) l--;
         else break ;
     }
     
-    for (int i=l; i<MIN(l+25, self.allWord.count); i++)
+    for (int i=l; i<MIN(l+25, searchArray.count); i++)
     {
-        [data addObject:((Word*)[self.allWord objectAtIndex:i]).word];
+        [data addObject:((Word*)[searchArray objectAtIndex:i]).word];
     }
     return data;
 }

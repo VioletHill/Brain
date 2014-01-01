@@ -12,8 +12,8 @@
 		2423A7A9186028A20032089A /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423A7A8186028A20032089A /* Word.m */; };
 		2437EE8E186470D100F9389F /* WordMeaningRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */; };
 		2438830B18617A1F0082B056 /* WordMeaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2438830A18617A1F0082B056 /* WordMeaningView.m */; };
+		2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2452801C1873C3E300220AD5 /* NSString+sortString.m */; };
 		248273DF185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */; };
-		248273E3185D937E00CACE60 /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 248273E2185D937E00CACE60 /* UIFont+AppFont.m */; };
 		2487C1F1183CAEC500B0B365 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2487C1F0183CAEC500B0B365 /* AboutViewController.m */; };
 		2487C209183D061400B0B365 /* AboutLiuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2487C208183D061400B0B365 /* AboutLiuViewController.m */; };
 		249CE22A182A118D0027831A /* WordMeaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249CE229182A118D0027831A /* WordMeaningController.m */; };
@@ -80,10 +80,10 @@
 		2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningRootScrollView.m; sourceTree = "<group>"; };
 		2438830918617A1F0082B056 /* WordMeaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningView.h; sourceTree = "<group>"; };
 		2438830A18617A1F0082B056 /* WordMeaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningView.m; sourceTree = "<group>"; };
+		2452801B1873C3E300220AD5 /* NSString+sortString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sortString.h"; sourceTree = "<group>"; };
+		2452801C1873C3E300220AD5 /* NSString+sortString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sortString.m"; sourceTree = "<group>"; };
 		248273DD185AFF9800CACE60 /* NSAttributedString+Html2Attributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Html2Attributed.h"; sourceTree = "<group>"; };
 		248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Html2Attributed.m"; sourceTree = "<group>"; };
-		248273E1185D937E00CACE60 /* UIFont+AppFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AppFont.h"; sourceTree = "<group>"; };
-		248273E2185D937E00CACE60 /* UIFont+AppFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFont.m"; sourceTree = "<group>"; };
 		2487C1EF183CAEC500B0B365 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		2487C1F0183CAEC500B0B365 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		2487C207183D061400B0B365 /* AboutLiuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutLiuViewController.h; sourceTree = "<group>"; };
@@ -219,8 +219,8 @@
 			children = (
 				248273DD185AFF9800CACE60 /* NSAttributedString+Html2Attributed.h */,
 				248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */,
-				248273E1185D937E00CACE60 /* UIFont+AppFont.h */,
-				248273E2185D937E00CACE60 /* UIFont+AppFont.m */,
+				2452801B1873C3E300220AD5 /* NSString+sortString.h */,
+				2452801C1873C3E300220AD5 /* NSString+sortString.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -530,8 +530,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */,
 				2487C209183D061400B0B365 /* AboutLiuViewController.m in Sources */,
-				248273E3185D937E00CACE60 /* UIFont+AppFont.m in Sources */,
 				2423A7A9186028A20032089A /* Word.m in Sources */,
 				248273DF185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m in Sources */,
 				2437EE8E186470D100F9389F /* WordMeaningRootScrollView.m in Sources */,
@@ -693,6 +693,8 @@
 		24A8FB551826827A00957AFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -713,6 +715,8 @@
 		24A8FB561826827A00957AFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

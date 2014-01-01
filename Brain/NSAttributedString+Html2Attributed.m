@@ -7,7 +7,6 @@
 //
 
 #import "NSAttributedString+Html2Attributed.h"
-#import "UIFont+AppFont.h"
 
 @implementation NSAttributedString (Html2Attributed)
 
