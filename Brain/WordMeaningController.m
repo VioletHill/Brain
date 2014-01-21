@@ -137,11 +137,12 @@
     }
     
     self.scrollView.contentOffset=CGPointMake(0, 0);
-    if (height<self.view.frame.size.height)
+    if (height<self.view.frame.size.height-63)
     {
-        height=self.view.frame.size.height;
+        height=self.view.frame.size.height-63;
     }
     [self.scrollView setContentSize:CGSizeMake(0, height)];
+    self.scrollView.scrollEnabled=YES;
 }
 
 - (void)wordTapCallBack:(NSString *)word

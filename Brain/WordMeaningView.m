@@ -99,7 +99,7 @@ const float screenWidth=320;
     @try
     {
         UIFont* font=[[self.meaningView.attributedText attributesAtIndex:index effectiveRange:nil] objectForKey:@"NSFont"];
-        NSLog(@"%@",font);
+    
         if ([font.description rangeOfString:@"font-weight: bold"].location==NSNotFound)
         {
             selectRange=NSMakeRange(0, 0);
@@ -156,7 +156,6 @@ const float screenWidth=320;
     @catch (NSException *exception) {
         selectRange=NSMakeRange(l, 0);
     }
-    NSLog(@"%@",result);
     return result;
 }
 

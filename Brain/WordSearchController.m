@@ -60,6 +60,7 @@
     if (_searchBar!=searchBar)
     {
         _searchBar=searchBar;
+        _searchBar.autocorrectionType=UITextAutocorrectionTypeNo;
         _searchBar.delegate=self;
     }
 }

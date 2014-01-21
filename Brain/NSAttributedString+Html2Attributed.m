@@ -13,8 +13,9 @@
 +(NSAttributedString*)getAttributeStringFromHtmlString:(NSString*)str
 {
     NSMutableString* html=[str mutableCopy];
-
+    
     NSMutableAttributedString* att = [[[NSAttributedString alloc] initWithData:[html dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]} documentAttributes:nil error:nil] mutableCopy];
+    
     return att;
 }
 

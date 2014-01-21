@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		24087E1418656B07000A11DA /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24087E1318656B06000A11DA /* Property List.plist */; };
-		24087E1E18657E10000A11DA /* Brain.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24087E1D18657E10000A11DA /* Brain.sqlite */; };
 		2423A7A9186028A20032089A /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423A7A8186028A20032089A /* Word.m */; };
 		2437EE8E186470D100F9389F /* WordMeaningRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */; };
 		2438830B18617A1F0082B056 /* WordMeaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2438830A18617A1F0082B056 /* WordMeaningView.m */; };
 		2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2452801C1873C3E300220AD5 /* NSString+sortString.m */; };
+		245280211873FCD000220AD5 /* Brain.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 245280201873FCD000220AD5 /* Brain.sqlite */; };
 		248273DF185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */; };
 		2487C1F1183CAEC500B0B365 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2487C1F0183CAEC500B0B365 /* AboutViewController.m */; };
 		2487C209183D061400B0B365 /* AboutLiuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2487C208183D061400B0B365 /* AboutLiuViewController.m */; };
@@ -73,7 +73,6 @@
 
 /* Begin PBXFileReference section */
 		24087E1318656B06000A11DA /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
-		24087E1D18657E10000A11DA /* Brain.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brain.sqlite; sourceTree = "<group>"; };
 		2423A7A7186028A20032089A /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
 		2423A7A8186028A20032089A /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		2437EE8C186470D100F9389F /* WordMeaningRootScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningRootScrollView.h; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		2438830A18617A1F0082B056 /* WordMeaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningView.m; sourceTree = "<group>"; };
 		2452801B1873C3E300220AD5 /* NSString+sortString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sortString.h"; sourceTree = "<group>"; };
 		2452801C1873C3E300220AD5 /* NSString+sortString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sortString.m"; sourceTree = "<group>"; };
+		245280201873FCD000220AD5 /* Brain.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brain.sqlite; sourceTree = "<group>"; };
 		248273DD185AFF9800CACE60 /* NSAttributedString+Html2Attributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Html2Attributed.h"; sourceTree = "<group>"; };
 		248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Html2Attributed.m"; sourceTree = "<group>"; };
 		2487C1EF183CAEC500B0B365 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -417,7 +417,7 @@
 		24C50475182883CF0048B6C0 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				24087E1D18657E10000A11DA /* Brain.sqlite */,
+				245280201873FCD000220AD5 /* Brain.sqlite */,
 				24C5041F182883400048B6C0 /* MagicalRecord */,
 				24C500D4182881090048B6C0 /* Word.xcdatamodeld */,
 				2423A7A7186028A20032089A /* Word.h */,
@@ -507,7 +507,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24087E1E18657E10000A11DA /* Brain.sqlite in Resources */,
+				245280211873FCD000220AD5 /* Brain.sqlite in Resources */,
 				24087E1418656B07000A11DA /* Property List.plist in Resources */,
 				24A8FB3E1826827A00957AFA /* Images.xcassets in Resources */,
 				24A8FB301826827A00957AFA /* InfoPlist.strings in Resources */,
