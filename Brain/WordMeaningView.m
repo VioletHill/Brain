@@ -34,7 +34,7 @@ const float screenWidth=320;
     if (_cutOff==nil)
     {
         _cutOff=[[UIButton alloc] initWithFrame:CGRectMake(0, 44, width, 6)];
-        [_cutOff setBackgroundColor:[UIColor blackColor]];
+        [_cutOff setBackgroundColor:[UIColor colorWithRed:214.0/255.0 green:207.0/255.0 blue:195.0/255.0 alpha:1]];
         [_cutOff setEnabled:NO];
     }
     return _cutOff;
@@ -46,6 +46,7 @@ const float screenWidth=320;
     if (_wordTitle==nil)
     {
         _wordTitle=[[UILabel alloc] initWithFrame:CGRectMake(5, 0, width-5, 44)];
+        _wordTitle.textColor=[UIColor colorWithRed:93.0/255.0 green:63.0/255.0 blue:47.0/255.0 alpha:1];
         [self addSubview:self.wordTitle];
         [self addSubview:self.cutOff];
     }
@@ -57,6 +58,7 @@ const float screenWidth=320;
     if (_meaningView==nil)
     {
         _meaningView=[[UITextView alloc] initWithFrame:CGRectMake(0, 50, width, 300)];
+        _meaningView.backgroundColor=[UIColor colorWithRed:251.0/255.0 green:240.0/255.0 blue:217.0/255.0 alpha:1.0];
         _meaningView.editable=NO;
         _meaningView.scrollEnabled=NO;
         _meaningView.userInteractionEnabled=NO;
@@ -69,7 +71,7 @@ const float screenWidth=320;
 {
     if (self=[super init])
     {
-        self.backgroundColor=[UIColor whiteColor];
+        self.backgroundColor=[UIColor colorWithRed:251.0/255.0 green:240.0/255.0 blue:217.0/255.0 alpha:1.0];
         self.wordTitle.text=word;
         self.meaningView.attributedText=[NSAttributedString getAttributeStringFromHtmlString:meaning];
         self.oldAttributed=self.meaningView.attributedText;
@@ -181,6 +183,7 @@ const float screenWidth=320;
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    self.superview.userInteractionEnabled=NO;
     CGPoint pos=[[touches anyObject] locationInView:self.meaningView];
     [self wordTap:pos];
 }
@@ -194,6 +197,7 @@ const float screenWidth=320;
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    self.superview.userInteractionEnabled=YES;
     if (lastRange.length!=0)
     {
         self.meaningView.attributedText=self.oldAttributed;
@@ -206,17 +210,9 @@ const float screenWidth=320;
     }
 }
 
-
-//-(void) wordTap:(UITapGestureRecognizer *)tap
-//{
-//    CGPoint pos=[tap locationInView:self.meaningView];
-//    pos.y += self.meaningView.contentOffset.y;
-//    UITextPosition      *tapPos = [self.meaningView closestPositionToPoint:pos];
-//    NSInteger tapIndex=[self.meaningView offsetFromPosition:self.meaningView.beginningOfDocument toPosition:tapPos]-1;
-//    if ([self.delegate respondsToSelector:@selector(wordTapCallBack:)])
-//    {
-//        [self.delegate wordTapCallBack:[self getStringAtIndex:tapIndex] ];
-//    }
-//}
+-(void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self touchesEnded:touches withEvent:event];
+}
 
 @end

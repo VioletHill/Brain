@@ -24,6 +24,7 @@
 @implementation WordMeaningController
 {
     BOOL isInit;
+    BOOL isNeedResetPosition;
 }
 
 -(instancetype) init
@@ -47,6 +48,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:251.0/4 green:240.0/255.0 blue:217.0/255.0 alpha:1];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithRed:93.0/255.0 green:63.0/255.0 blue:39.0/255.0 alpha:1] forKey:NSForegroundColorAttributeName];
 
     [self resetWordWithWord:self.word];
 }
@@ -58,22 +61,24 @@
     {
         [self.navigationController popViewControllerAnimated:NO];
     }
-    if (isInit)
+    if (!isNeedResetPosition)
     {
-        self.scrollView.contentOffset=CGPointMake(0, -64);
+        if (isInit)
+        {
+            self.scrollView.contentOffset=CGPointMake(0, -64);
+        }
+        else
+        {
+            self.scrollView.contentOffset=CGPointMake(0, 0);
+        }
     }
-    else
-    {
-        self.scrollView.contentOffset=CGPointMake(0, 0);
-    }
-
 }
 
 -(WordMeaningRootScrollView*) scrollView
 {
     if (_scrollView==nil)
     {
-        self.view.backgroundColor=[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190/255.0 alpha:1.0];
+        self.view.backgroundColor=[UIColor colorWithRed:172.0/255.0 green:154.0/255.0 blue:137.0/255.0 alpha:1.0];
 
         if (isInit)
         {
@@ -155,6 +160,7 @@
         
         if (wordEntity!=nil && [wordEntity.word isEqualToString:self.word.word])
         {
+            isNeedResetPosition=NO;
             WordMeaningController* nextController=[[WordMeaningController alloc] init];
             nextController.word=wordEntity;
             nextController.isNeedPop=YES;
@@ -163,6 +169,7 @@
         }
         if (wordEntity!=nil && ![wordEntity.word isEqualToString:self.word.word])
         {
+            isNeedResetPosition=YES;
             WordMeaningController* nextController=[[WordMeaningController alloc] init];
             nextController.word=wordEntity;
             [self.navigationController pushViewController:nextController animated:YES];

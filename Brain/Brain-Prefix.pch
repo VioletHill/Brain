@@ -20,6 +20,6 @@
     #define MR_SHORTHAND
     #import "CoreData+MagicalRecord.h"
 
-    #define DEVICE_IS_IOS6 [[[UIDevice currentDevice]  systemVersion] floatValue]<7.0
+    #import <NewRelicAgent/NewRelic.h>
 
 #endif

@@ -16,18 +16,20 @@
 /*
  生成数据库
 */
-- (BOOL)isDatabaseEmpty;
-
-- (void)setupDatabase;
-
--(void)logData;
-
--(void)getAllWordFromPlist;
+//- (BOOL)isDatabaseEmpty;
+//
+//- (void)setupDatabase;
+//
+//-(void)logData;
+//
+//-(void)getAllWordFromPlist;
 
 
 ////////////////////////
 
--(void) getAllWord;
+//-(void) getAllWord;
+
+-(void)preparedWord;
 
 - (Word*)findWordByCompleteWord:(NSString*)word;
 

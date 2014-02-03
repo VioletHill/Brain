@@ -13,13 +13,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [NewRelicAgent startWithApplicationToken:@"AA077f78882b16c27ce60fbd51c5e0e196f849a816"];
     // Override point for customization after application launch.
 //  [MagicalRecord setupCoreDataStack];
 //    if ([[WordManager sharedWordManager] isDatabaseEmpty])
 //    {
 //        [[WordManager sharedWordManager] setupDatabase];
 //    }
-    [[WordManager sharedWordManager] getAllWord];
+//    [[WordManager sharedWordManager] getAllWord];
+    [[WordManager sharedWordManager] preparedWord];
     return YES;
 }
 							

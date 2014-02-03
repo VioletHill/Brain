@@ -11,11 +11,9 @@
 		2423A7A9186028A20032089A /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423A7A8186028A20032089A /* Word.m */; };
 		2437EE8E186470D100F9389F /* WordMeaningRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */; };
 		2438830B18617A1F0082B056 /* WordMeaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2438830A18617A1F0082B056 /* WordMeaningView.m */; };
+		24421ED718994FE0006270A8 /* AbbreviationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24421ED618994FE0006270A8 /* AbbreviationViewController.m */; };
 		2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2452801C1873C3E300220AD5 /* NSString+sortString.m */; };
-		245280211873FCD000220AD5 /* Brain.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 245280201873FCD000220AD5 /* Brain.sqlite */; };
 		248273DF185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */; };
-		2487C1F1183CAEC500B0B365 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2487C1F0183CAEC500B0B365 /* AboutViewController.m */; };
-		2487C209183D061400B0B365 /* AboutLiuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2487C208183D061400B0B365 /* AboutLiuViewController.m */; };
 		249CE22A182A118D0027831A /* WordMeaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249CE229182A118D0027831A /* WordMeaningController.m */; };
 		24A8FB261826827A00957AFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB251826827A00957AFA /* Foundation.framework */; };
 		24A8FB281826827A00957AFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB271826827A00957AFA /* CoreGraphics.framework */; };
@@ -31,6 +29,35 @@
 		24A8FB471826827A00957AFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB291826827A00957AFA /* UIKit.framework */; };
 		24A8FB4F1826827A00957AFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FB4D1826827A00957AFA /* InfoPlist.strings */; };
 		24A8FB511826827A00957AFA /* BrainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FB501826827A00957AFA /* BrainTests.m */; };
+		24B1F41D1897B55600F3274A /* BrainA.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F41C1897B55600F3274A /* BrainA.sqlite */; };
+		24B1F41F1897BBCC00F3274A /* BrainB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F41E1897BBCC00F3274A /* BrainB.sqlite */; };
+		24B1F4211897BBD600F3274A /* BrainC.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4201897BBD600F3274A /* BrainC.sqlite */; };
+		24B1F42C1897BBEB00F3274A /* BrainY.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4221897BBEB00F3274A /* BrainY.sqlite */; };
+		24B1F42D1897BBEB00F3274A /* BrainX.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4231897BBEB00F3274A /* BrainX.sqlite */; };
+		24B1F42E1897BBEB00F3274A /* BrainO.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4241897BBEB00F3274A /* BrainO.sqlite */; };
+		24B1F42F1897BBEB00F3274A /* BrainD.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4251897BBEB00F3274A /* BrainD.sqlite */; };
+		24B1F4301897BBEB00F3274A /* BrainS.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4261897BBEB00F3274A /* BrainS.sqlite */; };
+		24B1F4311897BBEB00F3274A /* BrainK.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4271897BBEB00F3274A /* BrainK.sqlite */; };
+		24B1F4321897BBEB00F3274A /* BrainN.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4281897BBEB00F3274A /* BrainN.sqlite */; };
+		24B1F4331897BBEB00F3274A /* BrainJ.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4291897BBEB00F3274A /* BrainJ.sqlite */; };
+		24B1F4341897BBEB00F3274A /* BrainE.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F42A1897BBEB00F3274A /* BrainE.sqlite */; };
+		24B1F4351897BBEB00F3274A /* BrainR.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F42B1897BBEB00F3274A /* BrainR.sqlite */; };
+		24B1F4371897BC1500F3274A /* BrainF.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4361897BC1500F3274A /* BrainF.sqlite */; };
+		24B1F43B1897BC2400F3274A /* BrainH.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4381897BC2400F3274A /* BrainH.sqlite */; };
+		24B1F43C1897BC2400F3274A /* BrainI.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4391897BC2400F3274A /* BrainI.sqlite */; };
+		24B1F43D1897BC2400F3274A /* BrainG.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F43A1897BC2400F3274A /* BrainG.sqlite */; };
+		24B1F4401897BC5000F3274A /* BrainL.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F43E1897BC5000F3274A /* BrainL.sqlite */; };
+		24B1F4411897BC5000F3274A /* BrainM.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F43F1897BC5000F3274A /* BrainM.sqlite */; };
+		24B1F4441897BC6B00F3274A /* BrainP.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4421897BC6B00F3274A /* BrainP.sqlite */; };
+		24B1F4451897BC6B00F3274A /* BrainQ.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4431897BC6B00F3274A /* BrainQ.sqlite */; };
+		24B1F44A1897BC8300F3274A /* BrainT.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4461897BC8300F3274A /* BrainT.sqlite */; };
+		24B1F44B1897BC8300F3274A /* BrainU.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4471897BC8300F3274A /* BrainU.sqlite */; };
+		24B1F44C1897BC8300F3274A /* BrainV.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4481897BC8300F3274A /* BrainV.sqlite */; };
+		24B1F44D1897BC8300F3274A /* BrainW.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4491897BC8300F3274A /* BrainW.sqlite */; };
+		24B1F44F1897BC9600F3274A /* BrainZ.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F44E1897BC9600F3274A /* BrainZ.sqlite */; };
+		24B1F4531897CFD900F3274A /* BrainPrefix.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4521897CFD900F3274A /* BrainPrefix.sqlite */; };
+		24B1F4591898AD2700F3274A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1F4581898AD2700F3274A /* AboutViewController.m */; };
+		24B1F45D1898BC3800F3274A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B1F45C1898BC3700F3274A /* MessageUI.framework */; };
 		24C500D6182881090048B6C0 /* Word.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24C500D4182881090048B6C0 /* Word.xcdatamodeld */; };
 		24C5045B182883400048B6C0 /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C50423182883400048B6C0 /* MagicalImportFunctions.m */; };
 		24C5045C182883400048B6C0 /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C50425182883400048B6C0 /* NSAttributeDescription+MagicalDataImport.m */; };
@@ -59,6 +86,11 @@
 		24C50473182883400048B6C0 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C50456182883400048B6C0 /* MagicalRecord+ShorthandSupport.m */; };
 		24C50474182883400048B6C0 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C50458182883400048B6C0 /* MagicalRecord.m */; };
 		24C5047B182884090048B6C0 /* WordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C5047A182884090048B6C0 /* WordManager.m */; };
+		24D026EB189E99F50070039C /* Abbreviation.html in Resources */ = {isa = PBXBuildFile; fileRef = 24D026EA189E99F50070039C /* Abbreviation.html */; };
+		24D026ED189EA0810070039C /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026EC189EA0810070039C /* NewRelicAgent.framework */; };
+		24D026EF189EA0B80070039C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026EE189EA0B80070039C /* CoreTelephony.framework */; };
+		24D026F1189EA1BC0070039C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026F0189EA1BC0070039C /* SystemConfiguration.framework */; };
+		24D026F3189EA1C80070039C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026F2189EA1C80070039C /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,15 +111,12 @@
 		2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningRootScrollView.m; sourceTree = "<group>"; };
 		2438830918617A1F0082B056 /* WordMeaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningView.h; sourceTree = "<group>"; };
 		2438830A18617A1F0082B056 /* WordMeaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningView.m; sourceTree = "<group>"; };
+		24421ED518994FE0006270A8 /* AbbreviationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbbreviationViewController.h; sourceTree = "<group>"; };
+		24421ED618994FE0006270A8 /* AbbreviationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbbreviationViewController.m; sourceTree = "<group>"; };
 		2452801B1873C3E300220AD5 /* NSString+sortString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sortString.h"; sourceTree = "<group>"; };
 		2452801C1873C3E300220AD5 /* NSString+sortString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sortString.m"; sourceTree = "<group>"; };
-		245280201873FCD000220AD5 /* Brain.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brain.sqlite; sourceTree = "<group>"; };
 		248273DD185AFF9800CACE60 /* NSAttributedString+Html2Attributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Html2Attributed.h"; sourceTree = "<group>"; };
 		248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Html2Attributed.m"; sourceTree = "<group>"; };
-		2487C1EF183CAEC500B0B365 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
-		2487C1F0183CAEC500B0B365 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		2487C207183D061400B0B365 /* AboutLiuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutLiuViewController.h; sourceTree = "<group>"; };
-		2487C208183D061400B0B365 /* AboutLiuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutLiuViewController.m; sourceTree = "<group>"; };
 		249CE228182A118D0027831A /* WordMeaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningController.h; sourceTree = "<group>"; };
 		249CE229182A118D0027831A /* WordMeaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningController.m; sourceTree = "<group>"; };
 		24A8FB221826827A00957AFA /* Brain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brain.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +138,36 @@
 		24A8FB4C1826827A00957AFA /* BrainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrainTests-Info.plist"; sourceTree = "<group>"; };
 		24A8FB4E1826827A00957AFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24A8FB501826827A00957AFA /* BrainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrainTests.m; sourceTree = "<group>"; };
+		24B1F41C1897B55600F3274A /* BrainA.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainA.sqlite; sourceTree = "<group>"; };
+		24B1F41E1897BBCC00F3274A /* BrainB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainB.sqlite; sourceTree = "<group>"; };
+		24B1F4201897BBD600F3274A /* BrainC.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainC.sqlite; sourceTree = "<group>"; };
+		24B1F4221897BBEB00F3274A /* BrainY.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainY.sqlite; sourceTree = "<group>"; };
+		24B1F4231897BBEB00F3274A /* BrainX.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainX.sqlite; sourceTree = "<group>"; };
+		24B1F4241897BBEB00F3274A /* BrainO.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainO.sqlite; sourceTree = "<group>"; };
+		24B1F4251897BBEB00F3274A /* BrainD.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainD.sqlite; sourceTree = "<group>"; };
+		24B1F4261897BBEB00F3274A /* BrainS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainS.sqlite; sourceTree = "<group>"; };
+		24B1F4271897BBEB00F3274A /* BrainK.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainK.sqlite; sourceTree = "<group>"; };
+		24B1F4281897BBEB00F3274A /* BrainN.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainN.sqlite; sourceTree = "<group>"; };
+		24B1F4291897BBEB00F3274A /* BrainJ.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainJ.sqlite; sourceTree = "<group>"; };
+		24B1F42A1897BBEB00F3274A /* BrainE.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainE.sqlite; sourceTree = "<group>"; };
+		24B1F42B1897BBEB00F3274A /* BrainR.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainR.sqlite; sourceTree = "<group>"; };
+		24B1F4361897BC1500F3274A /* BrainF.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainF.sqlite; sourceTree = "<group>"; };
+		24B1F4381897BC2400F3274A /* BrainH.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainH.sqlite; sourceTree = "<group>"; };
+		24B1F4391897BC2400F3274A /* BrainI.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainI.sqlite; sourceTree = "<group>"; };
+		24B1F43A1897BC2400F3274A /* BrainG.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainG.sqlite; sourceTree = "<group>"; };
+		24B1F43E1897BC5000F3274A /* BrainL.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainL.sqlite; sourceTree = "<group>"; };
+		24B1F43F1897BC5000F3274A /* BrainM.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainM.sqlite; sourceTree = "<group>"; };
+		24B1F4421897BC6B00F3274A /* BrainP.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainP.sqlite; sourceTree = "<group>"; };
+		24B1F4431897BC6B00F3274A /* BrainQ.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainQ.sqlite; sourceTree = "<group>"; };
+		24B1F4461897BC8300F3274A /* BrainT.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainT.sqlite; sourceTree = "<group>"; };
+		24B1F4471897BC8300F3274A /* BrainU.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainU.sqlite; sourceTree = "<group>"; };
+		24B1F4481897BC8300F3274A /* BrainV.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainV.sqlite; sourceTree = "<group>"; };
+		24B1F4491897BC8300F3274A /* BrainW.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainW.sqlite; sourceTree = "<group>"; };
+		24B1F44E1897BC9600F3274A /* BrainZ.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainZ.sqlite; sourceTree = "<group>"; };
+		24B1F4521897CFD900F3274A /* BrainPrefix.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainPrefix.sqlite; sourceTree = "<group>"; };
+		24B1F4571898AD2700F3274A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		24B1F4581898AD2700F3274A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		24B1F45C1898BC3700F3274A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		24C500D5182881090048B6C0 /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
 		24C50422182883400048B6C0 /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		24C50423182883400048B6C0 /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
@@ -166,6 +225,11 @@
 		24C5045A182883400048B6C0 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		24C50479182884090048B6C0 /* WordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordManager.h; sourceTree = "<group>"; };
 		24C5047A182884090048B6C0 /* WordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordManager.m; sourceTree = "<group>"; };
+		24D026EA189E99F50070039C /* Abbreviation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Abbreviation.html; sourceTree = "<group>"; };
+		24D026EC189EA0810070039C /* NewRelicAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewRelicAgent.framework; sourceTree = "<group>"; };
+		24D026EE189EA0B80070039C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		24D026F0189EA1BC0070039C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		24D026F2189EA1C80070039C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +237,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D026F3189EA1C80070039C /* libz.dylib in Frameworks */,
+				24D026F1189EA1BC0070039C /* SystemConfiguration.framework in Frameworks */,
+				24D026EF189EA0B80070039C /* CoreTelephony.framework in Frameworks */,
+				24B1F45D1898BC3800F3274A /* MessageUI.framework in Frameworks */,
 				24A8FB281826827A00957AFA /* CoreGraphics.framework in Frameworks */,
+				24D026ED189EA0810070039C /* NewRelicAgent.framework in Frameworks */,
 				24A8FB2A1826827A00957AFA /* UIKit.framework in Frameworks */,
 				24A8FB261826827A00957AFA /* Foundation.framework in Frameworks */,
 			);
@@ -228,10 +297,11 @@
 		2487C1EE183CAEB100B0B365 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				2487C1EF183CAEC500B0B365 /* AboutViewController.h */,
-				2487C1F0183CAEC500B0B365 /* AboutViewController.m */,
-				2487C207183D061400B0B365 /* AboutLiuViewController.h */,
-				2487C208183D061400B0B365 /* AboutLiuViewController.m */,
+				24D026EA189E99F50070039C /* Abbreviation.html */,
+				24B1F4571898AD2700F3274A /* AboutViewController.h */,
+				24B1F4581898AD2700F3274A /* AboutViewController.m */,
+				24421ED518994FE0006270A8 /* AbbreviationViewController.h */,
+				24421ED618994FE0006270A8 /* AbbreviationViewController.m */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -258,6 +328,11 @@
 		24A8FB241826827A00957AFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24D026F2189EA1C80070039C /* libz.dylib */,
+				24D026F0189EA1BC0070039C /* SystemConfiguration.framework */,
+				24D026EE189EA0B80070039C /* CoreTelephony.framework */,
+				24D026EC189EA0810070039C /* NewRelicAgent.framework */,
+				24B1F45C1898BC3700F3274A /* MessageUI.framework */,
 				24A8FB251826827A00957AFA /* Foundation.framework */,
 				24A8FB271826827A00957AFA /* CoreGraphics.framework */,
 				24A8FB291826827A00957AFA /* UIKit.framework */,
@@ -311,6 +386,40 @@
 				24A8FB4D1826827A00957AFA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24B1F41B1897B54C00F3274A /* sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				24B1F4521897CFD900F3274A /* BrainPrefix.sqlite */,
+				24B1F41C1897B55600F3274A /* BrainA.sqlite */,
+				24B1F41E1897BBCC00F3274A /* BrainB.sqlite */,
+				24B1F4201897BBD600F3274A /* BrainC.sqlite */,
+				24B1F4251897BBEB00F3274A /* BrainD.sqlite */,
+				24B1F42A1897BBEB00F3274A /* BrainE.sqlite */,
+				24B1F4361897BC1500F3274A /* BrainF.sqlite */,
+				24B1F43A1897BC2400F3274A /* BrainG.sqlite */,
+				24B1F4381897BC2400F3274A /* BrainH.sqlite */,
+				24B1F4391897BC2400F3274A /* BrainI.sqlite */,
+				24B1F4291897BBEB00F3274A /* BrainJ.sqlite */,
+				24B1F4271897BBEB00F3274A /* BrainK.sqlite */,
+				24B1F43E1897BC5000F3274A /* BrainL.sqlite */,
+				24B1F43F1897BC5000F3274A /* BrainM.sqlite */,
+				24B1F4281897BBEB00F3274A /* BrainN.sqlite */,
+				24B1F4241897BBEB00F3274A /* BrainO.sqlite */,
+				24B1F4421897BC6B00F3274A /* BrainP.sqlite */,
+				24B1F4431897BC6B00F3274A /* BrainQ.sqlite */,
+				24B1F42B1897BBEB00F3274A /* BrainR.sqlite */,
+				24B1F4261897BBEB00F3274A /* BrainS.sqlite */,
+				24B1F4461897BC8300F3274A /* BrainT.sqlite */,
+				24B1F4471897BC8300F3274A /* BrainU.sqlite */,
+				24B1F4481897BC8300F3274A /* BrainV.sqlite */,
+				24B1F4491897BC8300F3274A /* BrainW.sqlite */,
+				24B1F4231897BBEB00F3274A /* BrainX.sqlite */,
+				24B1F4221897BBEB00F3274A /* BrainY.sqlite */,
+				24B1F44E1897BC9600F3274A /* BrainZ.sqlite */,
+			);
+			name = sqlite;
 			sourceTree = "<group>";
 		};
 		24C5041F182883400048B6C0 /* MagicalRecord */ = {
@@ -417,7 +526,7 @@
 		24C50475182883CF0048B6C0 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				245280201873FCD000220AD5 /* Brain.sqlite */,
+				24B1F41B1897B54C00F3274A /* sqlite */,
 				24C5041F182883400048B6C0 /* MagicalRecord */,
 				24C500D4182881090048B6C0 /* Word.xcdatamodeld */,
 				2423A7A7186028A20032089A /* Word.h */,
@@ -477,6 +586,11 @@
 				TargetAttributes = {
 					24A8FB211826827A00957AFA = {
 						DevelopmentTeam = GS9T9X284M;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+						};
 					};
 					24A8FB421826827A00957AFA = {
 						TestTargetID = 24A8FB211826827A00957AFA;
@@ -507,11 +621,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				245280211873FCD000220AD5 /* Brain.sqlite in Resources */,
+				24B1F4341897BBEB00F3274A /* BrainE.sqlite in Resources */,
+				24B1F4311897BBEB00F3274A /* BrainK.sqlite in Resources */,
 				24087E1418656B07000A11DA /* Property List.plist in Resources */,
+				24B1F43C1897BC2400F3274A /* BrainI.sqlite in Resources */,
+				24B1F4331897BBEB00F3274A /* BrainJ.sqlite in Resources */,
+				24B1F44B1897BC8300F3274A /* BrainU.sqlite in Resources */,
+				24B1F41D1897B55600F3274A /* BrainA.sqlite in Resources */,
+				24B1F4321897BBEB00F3274A /* BrainN.sqlite in Resources */,
+				24B1F4371897BC1500F3274A /* BrainF.sqlite in Resources */,
+				24B1F4401897BC5000F3274A /* BrainL.sqlite in Resources */,
+				24D026EB189E99F50070039C /* Abbreviation.html in Resources */,
+				24B1F44A1897BC8300F3274A /* BrainT.sqlite in Resources */,
+				24B1F41F1897BBCC00F3274A /* BrainB.sqlite in Resources */,
+				24B1F42E1897BBEB00F3274A /* BrainO.sqlite in Resources */,
+				24B1F44D1897BC8300F3274A /* BrainW.sqlite in Resources */,
+				24B1F4211897BBD600F3274A /* BrainC.sqlite in Resources */,
+				24B1F43D1897BC2400F3274A /* BrainG.sqlite in Resources */,
+				24B1F4411897BC5000F3274A /* BrainM.sqlite in Resources */,
 				24A8FB3E1826827A00957AFA /* Images.xcassets in Resources */,
 				24A8FB301826827A00957AFA /* InfoPlist.strings in Resources */,
+				24B1F44C1897BC8300F3274A /* BrainV.sqlite in Resources */,
+				24B1F42C1897BBEB00F3274A /* BrainY.sqlite in Resources */,
+				24B1F4451897BC6B00F3274A /* BrainQ.sqlite in Resources */,
+				24B1F4441897BC6B00F3274A /* BrainP.sqlite in Resources */,
+				24B1F42F1897BBEB00F3274A /* BrainD.sqlite in Resources */,
 				24A8FB391826827A00957AFA /* Main.storyboard in Resources */,
+				24B1F42D1897BBEB00F3274A /* BrainX.sqlite in Resources */,
+				24B1F43B1897BC2400F3274A /* BrainH.sqlite in Resources */,
+				24B1F44F1897BC9600F3274A /* BrainZ.sqlite in Resources */,
+				24B1F4301897BBEB00F3274A /* BrainS.sqlite in Resources */,
+				24B1F4531897CFD900F3274A /* BrainPrefix.sqlite in Resources */,
+				24B1F4351897BBEB00F3274A /* BrainR.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +672,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */,
-				2487C209183D061400B0B365 /* AboutLiuViewController.m in Sources */,
 				2423A7A9186028A20032089A /* Word.m in Sources */,
 				248273DF185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m in Sources */,
 				2437EE8E186470D100F9389F /* WordMeaningRootScrollView.m in Sources */,
@@ -554,6 +694,8 @@
 				24C50473182883400048B6C0 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				24C50464182883400048B6C0 /* NSManagedObject+MagicalFinders.m in Sources */,
 				24C5045F182883400048B6C0 /* NSObject+MagicalDataImport.m in Sources */,
+				24421ED718994FE0006270A8 /* AbbreviationViewController.m in Sources */,
+				24B1F4591898AD2700F3274A /* AboutViewController.m in Sources */,
 				24C50461182883400048B6C0 /* NSString+MagicalDataImport.m in Sources */,
 				2438830B18617A1F0082B056 /* WordMeaningView.m in Sources */,
 				24A8FB361826827A00957AFA /* AppDelegate.m in Sources */,
@@ -562,7 +704,6 @@
 				24C50471182883400048B6C0 /* MagicalRecord+Options.m in Sources */,
 				24C50472182883400048B6C0 /* MagicalRecord+Setup.m in Sources */,
 				24C5046F182883400048B6C0 /* MagicalRecord+ErrorHandling.m in Sources */,
-				2487C1F1183CAEC500B0B365 /* AboutViewController.m in Sources */,
 				24C5046E182883400048B6C0 /* MagicalRecord+Actions.m in Sources */,
 				24A8FB321826827A00957AFA /* main.m in Sources */,
 				24C50468182883400048B6C0 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
@@ -697,10 +838,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/VioletHill/Documents/项目/Brain",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Brain/Brain-Prefix.pch";
 				INFOPLIST_FILE = "Brain/Brain-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/VioletHill/Documents/项目/Brain/Brain/MagicRecord/Project\\ Files/Tests/Support/Vendor/Specta/test/vendor/expecta",
@@ -719,10 +864,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/VioletHill/Documents/项目/Brain",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Brain/Brain-Prefix.pch";
 				INFOPLIST_FILE = "Brain/Brain-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/VioletHill/Documents/项目/Brain/Brain/MagicRecord/Project\\ Files/Tests/Support/Vendor/Specta/test/vendor/expecta",

@@ -2,13 +2,14 @@
 //  AboutViewController.m
 //  Brain
 //
-//  Created by 邱峰 on 13-11-20.
-//  Copyright (c) 2013年 邱峰. All rights reserved.
+//  Created by 邱峰 on 14-1-29.
+//  Copyright (c) 2014年 邱峰. All rights reserved.
 //
 
 #import "AboutViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface AboutViewController ()
+@interface AboutViewController ()<MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -44,66 +45,52 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return [super numberOfSectionsInTableView:tableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [super tableView:tableView numberOfRowsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    UITableViewCell* cell=[super tableView:tableView cellForRowAtIndexPath:indexPath];
     // Configure the cell...
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    if (indexPath.section==1)
+    {
+        if (indexPath.row==0)
+        {
+            [self evaluate];
+        }
+        else if (indexPath.row==1)
+        {
+            [self gotoSuggestion];
+        }
+    }
 }
-*/
+     
+-(void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //[super tableView:tableView didUnhighlightRowAtIndexPath:indexPath];
+    UITableViewCell* cell=[tableView cellForRowAtIndexPath:indexPath];
+    cell.backgroundColor=[UIColor grayColor];
+}
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    UITableViewCell* cell=[tableView cellForRowAtIndexPath:indexPath];
+    cell.backgroundColor=[UIColor whiteColor];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation
@@ -116,5 +103,87 @@
 }
 
  */
+
+
+#pragma mark - suggestion and rate
+
+-(void) gotoSuggestion
+{
+    [self sendEmail];
+}
+
+
+
+-(void) sendEmail
+{
+    MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+    mail.mailComposeDelegate = (id) self;
+    
+    if ([MFMailComposeViewController canSendMail])
+    {
+        //设置收件人
+        [mail setToRecipients:@[@"peigencihui@gmail.com"]];
+
+        //设置抄送人
+        //[mail setCcRecipients:ccAddress];
+        //设置邮件内容
+        [mail setMessageBody:@"请在分割线下面写下您的建议，或者遇到的问题，帮助我们让\"培根词汇\"更加完美，更加符合您的习惯\n-------------------------------------------\n" isHTML:NO];
+        
+        //设置邮件主题
+        [mail setSubject:@"培根词汇建议"];
+        
+        
+        [self presentViewController:mail animated:YES completion:nil];
+    }
+    else
+    {
+        [self sendEmailFail:@"您的设备不支持邮件发送，检查是否设置了邮件账户。如果一切正常，建议您更新设备"];
+    }
+}
+
+
+-(void) sendEmailFail:(NSString*)errorMessage
+{
+    if (errorMessage==nil)
+    {
+        errorMessage=@"对不起，邮件发送失败，检查网络或者您的设备是否正常";
+    }
+    UIAlertView* view=[[UIAlertView alloc] initWithTitle:@"发送失败" message:errorMessage delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [view show];
+}
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"谢谢您的参与" message:@"再次感谢您为我们提出的意见，我们会尽早处理您的反馈" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"取消发送mail");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"保存邮件");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"发送邮件");
+            [alert show];
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"邮件发送失败: %@...", [error localizedDescription]);
+            [self sendEmailFail:nil];
+            break;
+        default:
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)evaluate
+{
+    
+    NSString *str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", @"659880998"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+
+
+}
 
 @end

@@ -28,16 +28,15 @@
   
     self.tableView.delegate=self;
     self.tableView.dataSource=self;
+    
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
-    if ([[[UIDevice currentDevice]  systemVersion] floatValue]<7.0)
-    {
-        self.searchBar.frame=CGRectMake(0, 0, _searchBar.frame.size.width, _searchBar.frame.size.height);
-        self.tableView.frame=CGRectMake(0, 44, self.tableView.frame.size.width, [[UIScreen mainScreen] bounds].size.height-44-self.navigationController.navigationBar.frame.size.height);
-    }
+    self.navigationController.navigationBar.barTintColor=[UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor blackColor] forKey:NSForegroundColorAttributeName];
 }
 
 - (void)didReceiveMemoryWarning
