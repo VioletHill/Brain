@@ -180,7 +180,7 @@
 -(void)evaluate
 {
     
-    NSString *str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", @"659880998"];
+    NSString *str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", @"813629612"];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 
 

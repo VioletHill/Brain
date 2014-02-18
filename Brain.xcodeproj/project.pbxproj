@@ -585,7 +585,7 @@
 				ORGANIZATIONNAME = "邱峰";
 				TargetAttributes = {
 					24A8FB211826827A00957AFA = {
-						DevelopmentTeam = GS9T9X284M;
+						DevelopmentTeam = L7389V69LB;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
