@@ -11,6 +11,12 @@
 		2423A7A9186028A20032089A /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423A7A8186028A20032089A /* Word.m */; };
 		2437EE8E186470D100F9389F /* WordMeaningRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */; };
 		2438830B18617A1F0082B056 /* WordMeaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2438830A18617A1F0082B056 /* WordMeaningView.m */; };
+		243F341C18B9D80D001E9E90 /* Hint.plist in Resources */ = {isa = PBXBuildFile; fileRef = 243F341B18B9D80D001E9E90 /* Hint.plist */; };
+		243F342118B9DC6F001E9E90 /* HintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243F342018B9DC6F001E9E90 /* HintViewController.m */; };
+		243F342618B9F22F001E9E90 /* baloney.html in Resources */ = {isa = PBXBuildFile; fileRef = 243F342218B9F22F001E9E90 /* baloney.html */; };
+		243F342718B9F22F001E9E90 /* imutation.html in Resources */ = {isa = PBXBuildFile; fileRef = 243F342318B9F22F001E9E90 /* imutation.html */; };
+		243F342818B9F22F001E9E90 /* wolf.html in Resources */ = {isa = PBXBuildFile; fileRef = 243F342418B9F22F001E9E90 /* wolf.html */; };
+		243F342918B9F22F001E9E90 /* zero.html in Resources */ = {isa = PBXBuildFile; fileRef = 243F342518B9F22F001E9E90 /* zero.html */; };
 		24421ED718994FE0006270A8 /* AbbreviationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24421ED618994FE0006270A8 /* AbbreviationViewController.m */; };
 		2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2452801C1873C3E300220AD5 /* NSString+sortString.m */; };
 		248273DF185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */; };
@@ -27,7 +33,6 @@
 		24A8FB451826827A00957AFA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB441826827A00957AFA /* XCTest.framework */; };
 		24A8FB461826827A00957AFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB251826827A00957AFA /* Foundation.framework */; };
 		24A8FB471826827A00957AFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB291826827A00957AFA /* UIKit.framework */; };
-		24A8FB4F1826827A00957AFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FB4D1826827A00957AFA /* InfoPlist.strings */; };
 		24A8FB511826827A00957AFA /* BrainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FB501826827A00957AFA /* BrainTests.m */; };
 		24B1F41D1897B55600F3274A /* BrainA.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F41C1897B55600F3274A /* BrainA.sqlite */; };
 		24B1F41F1897BBCC00F3274A /* BrainB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F41E1897BBCC00F3274A /* BrainB.sqlite */; };
@@ -111,6 +116,18 @@
 		2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningRootScrollView.m; sourceTree = "<group>"; };
 		2438830918617A1F0082B056 /* WordMeaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningView.h; sourceTree = "<group>"; };
 		2438830A18617A1F0082B056 /* WordMeaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningView.m; sourceTree = "<group>"; };
+		243F341418B9D467001E9E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		243F341718B9D545001E9E90 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		243F341818B9D545001E9E90 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		243F341918B9D558001E9E90 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		243F341A18B9D558001E9E90 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		243F341B18B9D80D001E9E90 /* Hint.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hint.plist; sourceTree = "<group>"; };
+		243F341F18B9DC6F001E9E90 /* HintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintViewController.h; sourceTree = "<group>"; };
+		243F342018B9DC6F001E9E90 /* HintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintViewController.m; sourceTree = "<group>"; };
+		243F342218B9F22F001E9E90 /* baloney.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = baloney.html; sourceTree = "<group>"; };
+		243F342318B9F22F001E9E90 /* imutation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = imutation.html; sourceTree = "<group>"; };
+		243F342418B9F22F001E9E90 /* wolf.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wolf.html; sourceTree = "<group>"; };
+		243F342518B9F22F001E9E90 /* zero.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = zero.html; sourceTree = "<group>"; };
 		24421ED518994FE0006270A8 /* AbbreviationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbbreviationViewController.h; sourceTree = "<group>"; };
 		24421ED618994FE0006270A8 /* AbbreviationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbbreviationViewController.m; sourceTree = "<group>"; };
 		2452801B1873C3E300220AD5 /* NSString+sortString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sortString.h"; sourceTree = "<group>"; };
@@ -119,12 +136,11 @@
 		248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Html2Attributed.m"; sourceTree = "<group>"; };
 		249CE228182A118D0027831A /* WordMeaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningController.h; sourceTree = "<group>"; };
 		249CE229182A118D0027831A /* WordMeaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningController.m; sourceTree = "<group>"; };
-		24A8FB221826827A00957AFA /* Brain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A8FB221826827A00957AFA /* 培根词汇.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "培根词汇.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8FB251826827A00957AFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24A8FB271826827A00957AFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		24A8FB291826827A00957AFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24A8FB2D1826827A00957AFA /* Brain-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Brain-Info.plist"; sourceTree = "<group>"; };
-		24A8FB2F1826827A00957AFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24A8FB311826827A00957AFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24A8FB331826827A00957AFA /* Brain-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brain-Prefix.pch"; sourceTree = "<group>"; };
 		24A8FB341826827A00957AFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,7 +152,6 @@
 		24A8FB431826827A00957AFA /* BrainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8FB441826827A00957AFA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		24A8FB4C1826827A00957AFA /* BrainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrainTests-Info.plist"; sourceTree = "<group>"; };
-		24A8FB4E1826827A00957AFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24A8FB501826827A00957AFA /* BrainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrainTests.m; sourceTree = "<group>"; };
 		24B1F41C1897B55600F3274A /* BrainA.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainA.sqlite; sourceTree = "<group>"; };
 		24B1F41E1897BBCC00F3274A /* BrainB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainB.sqlite; sourceTree = "<group>"; };
@@ -270,6 +285,8 @@
 				249CE229182A118D0027831A /* WordMeaningController.m */,
 				2437EE8C186470D100F9389F /* WordMeaningRootScrollView.h */,
 				2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */,
+				243F341F18B9DC6F001E9E90 /* HintViewController.h */,
+				243F342018B9DC6F001E9E90 /* HintViewController.m */,
 			);
 			name = WordMeaning;
 			sourceTree = "<group>";
@@ -297,6 +314,10 @@
 		2487C1EE183CAEB100B0B365 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				243F342218B9F22F001E9E90 /* baloney.html */,
+				243F342318B9F22F001E9E90 /* imutation.html */,
+				243F342418B9F22F001E9E90 /* wolf.html */,
+				243F342518B9F22F001E9E90 /* zero.html */,
 				24D026EA189E99F50070039C /* Abbreviation.html */,
 				24B1F4571898AD2700F3274A /* AboutViewController.h */,
 				24B1F4581898AD2700F3274A /* AboutViewController.m */,
@@ -319,7 +340,7 @@
 		24A8FB231826827A00957AFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24A8FB221826827A00957AFA /* Brain.app */,
+				24A8FB221826827A00957AFA /* 培根词汇.app */,
 				24A8FB431826827A00957AFA /* BrainTests.xctest */,
 			);
 			name = Products;
@@ -383,7 +404,6 @@
 			isa = PBXGroup;
 			children = (
 				24A8FB4C1826827A00957AFA /* BrainTests-Info.plist */,
-				24A8FB4D1826827A00957AFA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -533,6 +553,7 @@
 				2423A7A8186028A20032089A /* Word.m */,
 				24C50479182884090048B6C0 /* WordManager.h */,
 				24C5047A182884090048B6C0 /* WordManager.m */,
+				243F341B18B9D80D001E9E90 /* Hint.plist */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -554,7 +575,7 @@
 			);
 			name = Brain;
 			productName = Brain;
-			productReference = 24A8FB221826827A00957AFA /* Brain.app */;
+			productReference = 24A8FB221826827A00957AFA /* 培根词汇.app */;
 			productType = "com.apple.product-type.application";
 		};
 		24A8FB421826827A00957AFA /* BrainTests */ = {
@@ -585,7 +606,7 @@
 				ORGANIZATIONNAME = "邱峰";
 				TargetAttributes = {
 					24A8FB211826827A00957AFA = {
-						DevelopmentTeam = L7389V69LB;
+						DevelopmentTeam = GS9T9X284M;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -604,6 +625,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant-TW",
+				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = 24A8FB191826827A00957AFA;
 			productRefGroup = 24A8FB231826827A00957AFA /* Products */;
@@ -621,11 +645,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243F342718B9F22F001E9E90 /* imutation.html in Resources */,
 				24B1F4341897BBEB00F3274A /* BrainE.sqlite in Resources */,
 				24B1F4311897BBEB00F3274A /* BrainK.sqlite in Resources */,
 				24087E1418656B07000A11DA /* Property List.plist in Resources */,
 				24B1F43C1897BC2400F3274A /* BrainI.sqlite in Resources */,
 				24B1F4331897BBEB00F3274A /* BrainJ.sqlite in Resources */,
+				243F342918B9F22F001E9E90 /* zero.html in Resources */,
+				243F342618B9F22F001E9E90 /* baloney.html in Resources */,
 				24B1F44B1897BC8300F3274A /* BrainU.sqlite in Resources */,
 				24B1F41D1897B55600F3274A /* BrainA.sqlite in Resources */,
 				24B1F4321897BBEB00F3274A /* BrainN.sqlite in Resources */,
@@ -650,9 +677,11 @@
 				24B1F42D1897BBEB00F3274A /* BrainX.sqlite in Resources */,
 				24B1F43B1897BC2400F3274A /* BrainH.sqlite in Resources */,
 				24B1F44F1897BC9600F3274A /* BrainZ.sqlite in Resources */,
+				243F341C18B9D80D001E9E90 /* Hint.plist in Resources */,
 				24B1F4301897BBEB00F3274A /* BrainS.sqlite in Resources */,
 				24B1F4531897CFD900F3274A /* BrainPrefix.sqlite in Resources */,
 				24B1F4351897BBEB00F3274A /* BrainR.sqlite in Resources */,
+				243F342818B9F22F001E9E90 /* wolf.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,7 +689,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A8FB4F1826827A00957AFA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +724,7 @@
 				24C5045F182883400048B6C0 /* NSObject+MagicalDataImport.m in Sources */,
 				24421ED718994FE0006270A8 /* AbbreviationViewController.m in Sources */,
 				24B1F4591898AD2700F3274A /* AboutViewController.m in Sources */,
+				243F342118B9DC6F001E9E90 /* HintViewController.m in Sources */,
 				24C50461182883400048B6C0 /* NSString+MagicalDataImport.m in Sources */,
 				2438830B18617A1F0082B056 /* WordMeaningView.m in Sources */,
 				24A8FB361826827A00957AFA /* AppDelegate.m in Sources */,
@@ -735,7 +764,9 @@
 		24A8FB2E1826827A00957AFA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				24A8FB2F1826827A00957AFA /* en */,
+				243F341418B9D467001E9E90 /* Base */,
+				243F341818B9D545001E9E90 /* zh-Hant */,
+				243F341A18B9D558001E9E90 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -744,16 +775,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				24A8FB381826827A00957AFA /* Base */,
+				243F341718B9D545001E9E90 /* zh-Hant */,
+				243F341918B9D558001E9E90 /* zh-Hans */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		24A8FB4D1826827A00957AFA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24A8FB4E1826827A00957AFA /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -850,7 +875,7 @@
 					"$(inherited)",
 					"/Users/VioletHill/Documents/项目/Brain/Brain/MagicRecord/Project\\ Files/Tests/Support/Vendor/Specta/test/vendor/expecta",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "培根词汇";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -876,7 +901,7 @@
 					"$(inherited)",
 					"/Users/VioletHill/Documents/项目/Brain/Brain/MagicRecord/Project\\ Files/Tests/Support/Vendor/Specta/test/vendor/expecta",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "培根词汇";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

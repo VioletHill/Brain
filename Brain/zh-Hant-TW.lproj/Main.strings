@@ -1,0 +1,51 @@
+
+/* Class = "IBUILabel"; text = "About Douglas Harper"; ObjectID = "0HC-fX-tMC"; */
+"0HC-fX-tMC.text" = "About Douglas Harper";
+
+/* Class = "IBUINavigationItem"; title = "Introduction and abbreviations"; ObjectID = "0YR-cD-3ah"; */
+"0YR-cD-3ah.title" = "Introduction and abbreviations";
+
+/* Class = "IBUINavigationItem"; title = "Etymonline"; ObjectID = "Dqo-2J-7Gs"; */
+"Dqo-2J-7Gs.title" = "Etymonline";
+
+/* Class = "IBUILabel"; text = "Like it, rate this App 5 stars"; ObjectID = "IUL-FL-i9B"; */
+"IUL-FL-i9B.text" = "Like it, rate this App 5 stars";
+
+/* Class = "IBUINavigationItem"; title = "About"; ObjectID = "KBx-NK-kmp"; */
+"KBx-NK-kmp.title" = "About";
+
+/* Class = "IBUILabel"; text = "Copyright (c) 2014 Douglas Harper"; ObjectID = "Kqj-as-NXG"; */
+"Kqj-as-NXG.text" = "Copyright (c) 2014 Douglas Harper";
+
+/* Class = "IBUILabel"; text = "Version 1.1"; ObjectID = "RDj-Ei-1I6"; */
+"RDj-Ei-1I6.text" = "Version 1.1";
+
+/* Class = "IBUILabel"; text = "Introduction and abbreviations"; ObjectID = "Rze-Pl-0S1"; */
+"Rze-Pl-0S1.text" = "Introduction and abbreviations";
+
+/* Class = "IBUIBarButtonItem"; title = "About"; ObjectID = "ULu-lI-wJh"; */
+"ULu-lI-wJh.title" = "About";
+
+/* Class = "IBUILabel"; text = "About Chongwei Liu"; ObjectID = "YaN-W9-kVI"; */
+"YaN-W9-kVI.text" = "About Chongwei Liu";
+
+/* Class = "IBUINavigationItem"; title = "Douglas Harper"; ObjectID = "d4p-YD-0XW"; */
+"d4p-YD-0XW.title" = "Douglas Harper";
+
+/* Class = "IBUITextView"; text = "“Any sufficiently advanced technology is indistinguishable from magic.” – Arthur C. Clarke. \n\nThe Internet is magic. You can always find a tool that allows you to fulfill almost any wish - often immediately. (Not that kind of wishes, you know what I mean.) I met up with the eytmoline website in 2008 when I was expanding my vocabulary by learning etymology. At that time, I was using a palm treo 650, an old fashioned smart phone, to access the web and look up the origin of words. But the smart phone was not so smart and the system halted quite frequently. It was painful experience. I was considering develop a mobile version of the website to make the searching and reading experience better, back then. Almost 6 years past, after Douglas Harper, the owner of the site kindly granted me the exclusive right to use the content on etymonline.com in China, I finally put it into action.\n\nI used to believe there was a team of enthusiast working behind etymonline, checking the sources of English words. And I was astonished when I found out that the whole dictionary is just the work of one person. The etymoline dictionary is a gift for people who loves English words all around the world. It's a pleasure for me to bring in a broader audience in China.\n"; ObjectID = "gB1-po-oAW"; */
+"gB1-po-oAW.text" = "“Any sufficiently advanced technology is indistinguishable from magic.” – Arthur C. Clarke. \n\nThe Internet is magic. You can always find a tool that allows you to fulfill almost any wish - often immediately. (Not that kind of wishes, you know what I mean.) I met up with the eytmoline website in 2008 when I was expanding my vocabulary by learning etymology. At that time, I was using a palm treo 650, an old fashioned smart phone, to access the web and look up the origin of words. But the smart phone was not so smart and the system halted quite frequently. It was painful experience. I was considering develop a mobile version of the website to make the searching and reading experience better, back then. Almost 6 years past, after Douglas Harper, the owner of the site kindly granted me the exclusive right to use the content on etymonline.com in China, I finally put it into action.\n\nI used to believe there was a team of enthusiast working behind etymonline, checking the sources of English words. And I was astonished when I found out that the whole dictionary is just the work of one person. The etymoline dictionary is a gift for people who loves English words all around the world. It's a pleasure for me to bring in a broader audience in China.\n";
+
+/* Class = "IBUILabel"; text = "培根词汇"; ObjectID = "iea-zm-t86"; */
+"iea-zm-t86.text" = "培根词汇";
+
+/* Class = "IBUILabel"; text = "Send us feedback"; ObjectID = "lH1-Bv-DxS"; */
+"lH1-Bv-DxS.text" = "Send us feedback";
+
+/* Class = "IBUINavigationItem"; title = "Chongwei Liu"; ObjectID = "p9Q-p3-d1u"; */
+"p9Q-p3-d1u.title" = "Chongwei Liu";
+
+/* Class = "IBUITextView"; text = "Hello, and welcome to Etymonline. This dictionary of the history of English words was created in 2001. It strives to bring the best scholarship in language history to the Internet in a form that can be understood and used by non-specialists. It has been expanded and refined continuously since then, and the work continues today.\n\nThe entries have been compiled from the most reliable print dictionaries and histories in several languages, as well as the mass of material now available in digital libraries. It is meant to be professional enough to satisfy academic standards, but accessible enough to be used by anyone.\n\nI am a newspaper journalist and history writer living and working in the United States. My published print work includes fiction, non-fiction, and poetry. Journalists often must write about complex topics in plain language. Historians must explain the past to the present. Those skills were very helpful in making this dictionary.\n\nYou can use this to discover the history of any common English word. By following the links within each entry, you can discover how words are related to one another and to words in other languages. Some of the results might surprise you. The entries are connected like the branches of a tree.\n\nI made etymonline partly because I wanted a reliable place online to find answers to questions about the histories of words. Since I began etymonline, I have heard from many teachers of English abroad, and students of English from non-English cultures, who tell me they find this presentation of the vocabulary of English especially helpful in their learning.\n\nAs the world grows smaller and people far apart must learn to speak to one another, it gives me great pleasure to offer this material to mobile device users in China and its region. I hope it is a gift of learning and joy for you to use, as it has been for me to make.\n\nI made etymonline so people with questions could find good answers about the histories of words. Since I began etymonline, I have heard from many teachers of English abroad, and students of English from non-English cultures, who tell me they find this presentation of the vocabulary of English especially helpful in their learning. I hope you have as much fun using it as I do making it.  "; ObjectID = "pYo-Zn-dKL"; */
+"pYo-Zn-dKL.text" = "Hello, and welcome to Etymonline. This dictionary of the history of English words was created in 2001. It strives to bring the best scholarship in language history to the Internet in a form that can be understood and used by non-specialists. It has been expanded and refined continuously since then, and the work continues today.\n\nThe entries have been compiled from the most reliable print dictionaries and histories in several languages, as well as the mass of material now available in digital libraries. It is meant to be professional enough to satisfy academic standards, but accessible enough to be used by anyone.\n\nI am a newspaper journalist and history writer living and working in the United States. My published print work includes fiction, non-fiction, and poetry. Journalists often must write about complex topics in plain language. Historians must explain the past to the present. Those skills were very helpful in making this dictionary.\n\nYou can use this to discover the history of any common English word. By following the links within each entry, you can discover how words are related to one another and to words in other languages. Some of the results might surprise you. The entries are connected like the branches of a tree.\n\nI made etymonline partly because I wanted a reliable place online to find answers to questions about the histories of words. Since I began etymonline, I have heard from many teachers of English abroad, and students of English from non-English cultures, who tell me they find this presentation of the vocabulary of English especially helpful in their learning.\n\nAs the world grows smaller and people far apart must learn to speak to one another, it gives me great pleasure to offer this material to mobile device users in China and its region. I hope it is a gift of learning and joy for you to use, as it has been for me to make.\n\nI made etymonline so people with questions could find good answers about the histories of words. Since I began etymonline, I have heard from many teachers of English abroad, and students of English from non-English cultures, who tell me they find this presentation of the vocabulary of English especially helpful in their learning. I hope you have as much fun using it as I do making it.  ";
+
+/* Class = "IBUISearchBar"; placeholder = "Search"; ObjectID = "x8g-Gy-Bnp"; */
+"x8g-Gy-Bnp.placeholder" = "Search";

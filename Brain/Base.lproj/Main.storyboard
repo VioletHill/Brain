@@ -91,7 +91,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-Ei-1I6">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-Ei-1I6">
                                     <rect key="frame" x="126" y="40" width="68" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -140,8 +140,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Like it, rate this App 5 starts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IUL-FL-i9B">
-                                                    <rect key="frame" x="15" y="11" width="215" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Like it, rate this App 5 stars" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IUL-FL-i9B">
+                                                    <rect key="frame" x="15" y="11" width="210" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -351,12 +351,12 @@ I made etymonline so people with questions could find good answers about the his
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">“Any sufficiently advanced technology is indistinguishable from magic.” – Arthur C. Clarke. 
+                                <string key="text">“Any sufficiently advanced technology is indistinguishable from magic.” – Arthur C. Clarke. 
 
 The Internet is magic. You can always find a tool that allows you to fulfill almost any wish - often immediately. (Not that kind of wishes, you know what I mean.) I met up with the eytmoline website in 2008 when I was expanding my vocabulary by learning etymology. At that time, I was using a palm treo 650, an old fashioned smart phone, to access the web and look up the origin of words. But the smart phone was not so smart and the system halted quite frequently. It was painful experience. I was considering develop a mobile version of the website to make the searching and reading experience better, back then. Almost 6 years past, after Douglas Harper, the owner of the site kindly granted me the exclusive right to use the content on etymonline.com in China, I finally put it into action.
 
 I used to believe there was a team of enthusiast working behind etymonline, checking the sources of English words. And I was astonished when I found out that the whole dictionary is just the work of one person. The etymoline dictionary is a gift for people who loves English words all around the world. It's a pleasure for me to bring in a broader audience in China.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

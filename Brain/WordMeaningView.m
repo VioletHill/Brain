@@ -203,8 +203,9 @@ const float screenWidth=320;
         self.meaningView.attributedText=self.oldAttributed;
         lastRange.length=0;
     }
-
-    if ([self.delegate respondsToSelector:@selector(wordTapCallBack:)])
+    
+  //  NSLog(@"%@",self.selectString);
+    if (self.selectString!=nil && ![self.selectString isEqualToString:@""] && [self.delegate respondsToSelector:@selector(wordTapCallBack:)])
     {
         [self.delegate wordTapCallBack:self.selectString];
     }

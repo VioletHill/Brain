@@ -11,6 +11,8 @@
 #import "WordMeaningView.h"
 #import "WordMeaningRootScrollView.h"
 
+#import "HintViewController.h"
+
 @interface WordMeaningController ()<WordMeaingViewTapProtocol>
 
 @property (strong, nonatomic) WordMeaningRootScrollView *scrollView;
@@ -18,6 +20,8 @@
 @property (nonatomic,strong) NSMutableArray* meaningViewArray;
 
 @property (nonatomic) BOOL isNeedPop;
+
+@property (nonatomic,strong) NSDictionary* hint;
 
 @end
 
@@ -57,6 +61,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:251.0/4 green:240.0/255.0 blue:217.0/255.0 alpha:1];
     if (self.isNeedPop)
     {
         [self.navigationController popViewControllerAnimated:NO];
@@ -72,6 +77,16 @@
             self.scrollView.contentOffset=CGPointMake(0, 0);
         }
     }
+}
+
+-(NSDictionary*)hint
+{
+    if (_hint==nil)
+    {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Hint" ofType:@"plist"];
+        _hint= [NSDictionary dictionaryWithContentsOfFile:filePath];
+    }
+    return _hint;
 }
 
 -(WordMeaningRootScrollView*) scrollView
@@ -150,11 +165,35 @@
     self.scrollView.scrollEnabled=YES;
 }
 
+-(BOOL) isNeedHintWithWord:(NSString*)touchWord
+{
+    NSDictionary* item=[self.hint objectForKey:self.word.word];
+    if (item)
+    {
+        NSString* filePath=nil;
+        if ((filePath=[item objectForKey:touchWord])!=nil)
+        {
+            HintViewController* hintController=[[HintViewController alloc] initWithHtmlFile:filePath];
+            [self.navigationController pushViewController:hintController animated:YES];
+            return YES;
+        }
+        else return NO;
+    }
+    return NO;
+}
+
 - (void)wordTapCallBack:(NSString *)word
 {
     Word* wordEntity=nil;
+    NSLog(@"%@",word);
     @try
     {
+        if ([self isNeedHintWithWord:word])
+        {
+            isNeedResetPosition=YES;
+            return ;
+        }
+        
         wordEntity=[[WordManager sharedWordManager] findWordByCompleteWord:word];
         if (wordEntity==nil) wordEntity=[[WordManager sharedWordManager] findWordByCompleteWord:word.lowercaseString];
         

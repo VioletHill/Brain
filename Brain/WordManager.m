@@ -1159,9 +1159,12 @@
 
 -(void)preparedWord
 {
-    [self wordP];
     [self wordS];
+    [self wordC];
+    [self wordA];
+    [self wordM];
     [self wordT];
+    [self wordP];
 }
 
 -(NSString*)getWordTextWithoutProperty:(NSString*)wordText
