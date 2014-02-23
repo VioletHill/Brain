@@ -351,7 +351,7 @@ I made etymonline so people with questions could find good answers about the his
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">The Internet is magical. You could always find a tool that meets your needs - any need - often immediately. The etymonline website is definitely one of them.
+                                <string key="text">The Internet is magical. You could always find a tool that meets your needs - any need - often immediately. The etymonline website is definitely one of them.
 
 I first came across the etymonline website in 2008 when I was trying to expand my vocabulary through etymology. I was using Palm Treo 650, an old fashioned smartphone, to access the website and look up the origins of words. However the smartphone was not so smart at that time and the system halted frequently. It was a painful experience. I always wanted to develop a mobile version of the website to make the searching and reading experience better. 
 
@@ -359,7 +359,7 @@ Almost 6 years since then, I finally made it real after Douglas Harper, the owne
 
 I thought there was a team of enthusiasts working behind etymonline, compiling the sources of English words. And you can imagine how astonished I was when I found out the whole oneline dictionary is actually the work of one single person. 
 
-The etymoline dictionary is indeed a gift for people who love English words all around the world. It is my pleasure to bring it to a broader audience in Greater China.</mutableString>
+The etymoline dictionary is indeed a gift for people who love English words all around the world. It is my pleasure to bring it to a broader audience in Greater China.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

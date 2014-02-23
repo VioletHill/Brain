@@ -13,13 +13,6 @@
 
 + (WordManager*)sharedWordManager;
 
-/*
- 生成数据库
-*/
-- (BOOL)isDatabaseEmpty;
-
-- (void)setupDatabase;
-
 
 -(void)preparedWord;
 

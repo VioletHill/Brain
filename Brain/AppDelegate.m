@@ -15,16 +15,7 @@
 {
     
     [NewRelicAgent startWithApplicationToken:@"AA6231ce5c5e791ff62630a17c1645f77a5cbf4516"];
-    // Override point for customization after application launch.
-//   [MagicalRecord setupCoreDataStack];
-//   // [MagicalRecord setDefaultModelNamed:@"Word.momd"];
-//    
-//    //[MagicalRecord setupCoreDataStackWithStoreNamed:@"Word.sqlite"];
-//
-//    if ([[WordManager sharedWordManager] isDatabaseEmpty])
-//    {
-//        [[WordManager sharedWordManager] setupDatabase];
-//    }
+
     [[WordManager sharedWordManager] preparedWord];
     return YES;
 }
