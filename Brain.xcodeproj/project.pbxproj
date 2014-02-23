@@ -138,7 +138,7 @@
 		248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Html2Attributed.m"; sourceTree = "<group>"; };
 		249CE228182A118D0027831A /* WordMeaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningController.h; sourceTree = "<group>"; };
 		249CE229182A118D0027831A /* WordMeaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningController.m; sourceTree = "<group>"; };
-		24A8FB221826827A00957AFA /* 培根词汇.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "培根词汇.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A8FB221826827A00957AFA /* Brain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8FB251826827A00957AFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24A8FB271826827A00957AFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		24A8FB291826827A00957AFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -340,7 +340,7 @@
 		24A8FB231826827A00957AFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24A8FB221826827A00957AFA /* 培根词汇.app */,
+				24A8FB221826827A00957AFA /* Brain.app */,
 				24A8FB431826827A00957AFA /* BrainTests.xctest */,
 			);
 			name = Products;
@@ -575,7 +575,7 @@
 			);
 			name = Brain;
 			productName = Brain;
-			productReference = 24A8FB221826827A00957AFA /* 培根词汇.app */;
+			productReference = 24A8FB221826827A00957AFA /* Brain.app */;
 			productType = "com.apple.product-type.application";
 		};
 		24A8FB421826827A00957AFA /* BrainTests */ = {
@@ -875,7 +875,7 @@
 					"$(inherited)",
 					"/Users/VioletHill/Documents/项目/Brain/Brain/MagicRecord/Project\\ Files/Tests/Support/Vendor/Specta/test/vendor/expecta",
 				);
-				PRODUCT_NAME = "培根词汇";
+				PRODUCT_NAME = Brain;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -901,7 +901,7 @@
 					"$(inherited)",
 					"/Users/VioletHill/Documents/项目/Brain/Brain/MagicRecord/Project\\ Files/Tests/Support/Vendor/Specta/test/vendor/expecta",
 				);
-				PRODUCT_NAME = "培根词汇";
+				PRODUCT_NAME = Brain;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
