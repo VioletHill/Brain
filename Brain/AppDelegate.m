@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    //[NewRelicAgent startWithApplicationToken:@"AA077f78882b16c27ce60fbd51c5e0e196f849a816"];
+    [NewRelicAgent startWithApplicationToken:@"AA6231ce5c5e791ff62630a17c1645f77a5cbf4516"];
     // Override point for customization after application launch.
 //   [MagicalRecord setupCoreDataStack];
 //   // [MagicalRecord setDefaultModelNamed:@"Word.momd"];
