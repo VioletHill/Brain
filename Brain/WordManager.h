@@ -16,18 +16,10 @@
 /*
  生成数据库
 */
-//- (BOOL)isDatabaseEmpty;
-//
-//- (void)setupDatabase;
-//
-//-(void)logData;
-//
-//-(void)getAllWordFromPlist;
+- (BOOL)isDatabaseEmpty;
 
+- (void)setupDatabase;
 
-////////////////////////
-
-//-(void) getAllWord;
 
 -(void)preparedWord;
 

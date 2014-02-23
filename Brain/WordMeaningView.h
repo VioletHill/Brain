@@ -20,6 +20,8 @@
 
 -(instancetype) initWithWord:(NSString*)word andMeaning:(NSString*)meaning;
 
+@property (nonatomic,weak) NSString* word;
+
 @property (nonatomic,weak) id<WordMeaingViewTapProtocol> delegate;
 
 @end

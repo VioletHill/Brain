@@ -14,9 +14,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
-    #import <CoreText/CoreText.h>
-   // #import "DTCoreText.h"
-
     #define MR_SHORTHAND
     #import "CoreData+MagicalRecord.h"
 

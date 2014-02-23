@@ -150,6 +150,7 @@
     {
         WordMeaningView* meaingView=[[WordMeaningView alloc] initWithWord:obj andMeaning:[word.meaning objectForKey:obj]];
         meaingView.delegate=self;
+        meaingView.word=self.word.word;
         meaingView.frame=CGRectMake(meaingView.frame.origin.x, height, meaingView.frame.size.width, meaingView.frame.size.height);
         [self.meaningViewArray addObject:meaingView];
         [self.scrollView addSubview:meaingView];

@@ -17,6 +17,7 @@
 @property (nonatomic,strong) UITextView* meaningView;
 @property (nonatomic,strong) NSString* selectString;
 @property (nonatomic,strong) NSAttributedString* oldAttributed;
+@property (nonatomic,strong) NSDictionary* hint;
 
 @end
 
@@ -161,6 +162,32 @@ const float screenWidth=320;
     return result;
 }
 
+-(NSDictionary*)hint
+{
+    if (_hint==nil)
+    {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Hint" ofType:@"plist"];
+        _hint= [NSDictionary dictionaryWithContentsOfFile:filePath];
+    }
+    return _hint;
+}
+
+-(BOOL) isHintWord:(NSString*)touchWord
+{
+    NSDictionary* item=[self.hint objectForKey:self.word];
+    if (item)
+    {
+        NSString* filePath=nil;
+        if ((filePath=[item objectForKey:touchWord])!=nil)
+        {
+            return YES;
+        }
+        else return NO;
+    }
+    return NO;
+
+}
+
 -(void) wordTap:(CGPoint)pos
 {
     if (lastRange.location!=selectRange.location && lastRange.length!=selectRange.length )
@@ -172,7 +199,7 @@ const float screenWidth=320;
     UITextPosition      *tapPos = [self.meaningView closestPositionToPoint:pos];
     NSInteger tapIndex=[self.meaningView offsetFromPosition:self.meaningView.beginningOfDocument toPosition:tapPos]-1;
     self.selectString=[self getStringAtIndex:tapIndex];
-    if ([[WordManager sharedWordManager] findWordByCompleteWord:self.selectString] && selectRange.length!=0)
+    if ( ( [[WordManager sharedWordManager] findWordByCompleteWord:self.selectString] ||  [self isHintWord:self.selectString]) && selectRange.length!=0)        //点击阴影效果
     {
         lastRange=NSMakeRange(selectRange.location, selectRange.length);
         NSMutableAttributedString* att=[self.oldAttributed mutableCopy];

@@ -164,15 +164,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Send us feedback" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lH1-Bv-DxS">
-                                                    <rect key="frame" x="15" y="11" width="139" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Send feedback to the developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lH1-Bv-DxS">
+                                                    <rect key="frame" x="15" y="11" width="246" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lr0-KQ-5eF">
-                                                    <rect key="frame" x="241" y="11" width="44" height="21"/>
+                                                    <rect key="frame" x="267" y="11" width="18" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -351,12 +351,15 @@ I made etymonline so people with questions could find good answers about the his
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">“Any sufficiently advanced technology is indistinguishable from magic.” – Arthur C. Clarke. 
+                                <mutableString key="text">The Internet is magical. You could always find a tool that meets your needs - any need - often immediately. The etymonline website is definitely one of them.
 
-The Internet is magic. You can always find a tool that allows you to fulfill almost any wish - often immediately. (Not that kind of wishes, you know what I mean.) I met up with the eytmoline website in 2008 when I was expanding my vocabulary by learning etymology. At that time, I was using a palm treo 650, an old fashioned smart phone, to access the web and look up the origin of words. But the smart phone was not so smart and the system halted quite frequently. It was painful experience. I was considering develop a mobile version of the website to make the searching and reading experience better, back then. Almost 6 years past, after Douglas Harper, the owner of the site kindly granted me the exclusive right to use the content on etymonline.com in China, I finally put it into action.
+I first came across the etymonline website in 2008 when I was trying to expand my vocabulary through etymology. I was using Palm Treo 650, an old fashioned smartphone, to access the website and look up the origins of words. However the smartphone was not so smart at that time and the system halted frequently. It was a painful experience. I always wanted to develop a mobile version of the website to make the searching and reading experience better. 
 
-I used to believe there was a team of enthusiast working behind etymonline, checking the sources of English words. And I was astonished when I found out that the whole dictionary is just the work of one person. The etymoline dictionary is a gift for people who loves English words all around the world. It's a pleasure for me to bring in a broader audience in China.
-</string>
+Almost 6 years since then, I finally made it real after Douglas Harper, the owner of the website kindly granted me the exclusive rights to use the content from etymonline.com in Greater China.
+
+I thought there was a team of enthusiasts working behind etymonline, compiling the sources of English words. And you can imagine how astonished I was when I found out the whole oneline dictionary is actually the work of one single person. 
+
+The etymoline dictionary is indeed a gift for people who love English words all around the world. It is my pleasure to bring it to a broader audience in Greater China.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

@@ -19,6 +19,8 @@
 		243F342918B9F22F001E9E90 /* zero.html in Resources */ = {isa = PBXBuildFile; fileRef = 243F342518B9F22F001E9E90 /* zero.html */; };
 		24421ED718994FE0006270A8 /* AbbreviationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24421ED618994FE0006270A8 /* AbbreviationViewController.m */; };
 		2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2452801C1873C3E300220AD5 /* NSString+sortString.m */; };
+		247CF79218BA2905001A0092 /* BrainF.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 247CF79018BA2905001A0092 /* BrainF.sqlite */; };
+		247CF79318BA2905001A0092 /* BrainB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 247CF79118BA2905001A0092 /* BrainB.sqlite */; };
 		248273DF185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */; };
 		249CE22A182A118D0027831A /* WordMeaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249CE229182A118D0027831A /* WordMeaningController.m */; };
 		24A8FB261826827A00957AFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB251826827A00957AFA /* Foundation.framework */; };
@@ -35,7 +37,6 @@
 		24A8FB471826827A00957AFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB291826827A00957AFA /* UIKit.framework */; };
 		24A8FB511826827A00957AFA /* BrainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FB501826827A00957AFA /* BrainTests.m */; };
 		24B1F41D1897B55600F3274A /* BrainA.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F41C1897B55600F3274A /* BrainA.sqlite */; };
-		24B1F41F1897BBCC00F3274A /* BrainB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F41E1897BBCC00F3274A /* BrainB.sqlite */; };
 		24B1F4211897BBD600F3274A /* BrainC.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4201897BBD600F3274A /* BrainC.sqlite */; };
 		24B1F42C1897BBEB00F3274A /* BrainY.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4221897BBEB00F3274A /* BrainY.sqlite */; };
 		24B1F42D1897BBEB00F3274A /* BrainX.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4231897BBEB00F3274A /* BrainX.sqlite */; };
@@ -47,7 +48,6 @@
 		24B1F4331897BBEB00F3274A /* BrainJ.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4291897BBEB00F3274A /* BrainJ.sqlite */; };
 		24B1F4341897BBEB00F3274A /* BrainE.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F42A1897BBEB00F3274A /* BrainE.sqlite */; };
 		24B1F4351897BBEB00F3274A /* BrainR.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F42B1897BBEB00F3274A /* BrainR.sqlite */; };
-		24B1F4371897BC1500F3274A /* BrainF.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4361897BC1500F3274A /* BrainF.sqlite */; };
 		24B1F43B1897BC2400F3274A /* BrainH.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4381897BC2400F3274A /* BrainH.sqlite */; };
 		24B1F43C1897BC2400F3274A /* BrainI.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F4391897BC2400F3274A /* BrainI.sqlite */; };
 		24B1F43D1897BC2400F3274A /* BrainG.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24B1F43A1897BC2400F3274A /* BrainG.sqlite */; };
@@ -117,9 +117,7 @@
 		2438830918617A1F0082B056 /* WordMeaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningView.h; sourceTree = "<group>"; };
 		2438830A18617A1F0082B056 /* WordMeaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningView.m; sourceTree = "<group>"; };
 		243F341418B9D467001E9E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		243F341718B9D545001E9E90 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		243F341818B9D545001E9E90 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		243F341918B9D558001E9E90 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		243F341A18B9D558001E9E90 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		243F341B18B9D80D001E9E90 /* Hint.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hint.plist; sourceTree = "<group>"; };
 		243F341F18B9DC6F001E9E90 /* HintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintViewController.h; sourceTree = "<group>"; };
@@ -132,6 +130,10 @@
 		24421ED618994FE0006270A8 /* AbbreviationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbbreviationViewController.m; sourceTree = "<group>"; };
 		2452801B1873C3E300220AD5 /* NSString+sortString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sortString.h"; sourceTree = "<group>"; };
 		2452801C1873C3E300220AD5 /* NSString+sortString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sortString.m"; sourceTree = "<group>"; };
+		247CF79018BA2905001A0092 /* BrainF.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainF.sqlite; sourceTree = "<group>"; };
+		247CF79118BA2905001A0092 /* BrainB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainB.sqlite; sourceTree = "<group>"; };
+		247CF79418BA2E2B001A0092 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		247CF79518BA2E2B001A0092 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		248273DD185AFF9800CACE60 /* NSAttributedString+Html2Attributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Html2Attributed.h"; sourceTree = "<group>"; };
 		248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Html2Attributed.m"; sourceTree = "<group>"; };
 		249CE228182A118D0027831A /* WordMeaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningController.h; sourceTree = "<group>"; };
@@ -154,7 +156,6 @@
 		24A8FB4C1826827A00957AFA /* BrainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrainTests-Info.plist"; sourceTree = "<group>"; };
 		24A8FB501826827A00957AFA /* BrainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrainTests.m; sourceTree = "<group>"; };
 		24B1F41C1897B55600F3274A /* BrainA.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainA.sqlite; sourceTree = "<group>"; };
-		24B1F41E1897BBCC00F3274A /* BrainB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainB.sqlite; sourceTree = "<group>"; };
 		24B1F4201897BBD600F3274A /* BrainC.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainC.sqlite; sourceTree = "<group>"; };
 		24B1F4221897BBEB00F3274A /* BrainY.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainY.sqlite; sourceTree = "<group>"; };
 		24B1F4231897BBEB00F3274A /* BrainX.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainX.sqlite; sourceTree = "<group>"; };
@@ -166,7 +167,6 @@
 		24B1F4291897BBEB00F3274A /* BrainJ.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainJ.sqlite; sourceTree = "<group>"; };
 		24B1F42A1897BBEB00F3274A /* BrainE.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainE.sqlite; sourceTree = "<group>"; };
 		24B1F42B1897BBEB00F3274A /* BrainR.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainR.sqlite; sourceTree = "<group>"; };
-		24B1F4361897BC1500F3274A /* BrainF.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainF.sqlite; sourceTree = "<group>"; };
 		24B1F4381897BC2400F3274A /* BrainH.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainH.sqlite; sourceTree = "<group>"; };
 		24B1F4391897BC2400F3274A /* BrainI.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainI.sqlite; sourceTree = "<group>"; };
 		24B1F43A1897BC2400F3274A /* BrainG.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainG.sqlite; sourceTree = "<group>"; };
@@ -413,11 +413,11 @@
 			children = (
 				24B1F4521897CFD900F3274A /* BrainPrefix.sqlite */,
 				24B1F41C1897B55600F3274A /* BrainA.sqlite */,
-				24B1F41E1897BBCC00F3274A /* BrainB.sqlite */,
+				247CF79018BA2905001A0092 /* BrainF.sqlite */,
+				247CF79118BA2905001A0092 /* BrainB.sqlite */,
 				24B1F4201897BBD600F3274A /* BrainC.sqlite */,
 				24B1F4251897BBEB00F3274A /* BrainD.sqlite */,
 				24B1F42A1897BBEB00F3274A /* BrainE.sqlite */,
-				24B1F4361897BC1500F3274A /* BrainF.sqlite */,
 				24B1F43A1897BC2400F3274A /* BrainG.sqlite */,
 				24B1F4381897BC2400F3274A /* BrainH.sqlite */,
 				24B1F4391897BC2400F3274A /* BrainI.sqlite */,
@@ -648,19 +648,19 @@
 				243F342718B9F22F001E9E90 /* imutation.html in Resources */,
 				24B1F4341897BBEB00F3274A /* BrainE.sqlite in Resources */,
 				24B1F4311897BBEB00F3274A /* BrainK.sqlite in Resources */,
+				247CF79318BA2905001A0092 /* BrainB.sqlite in Resources */,
 				24087E1418656B07000A11DA /* Property List.plist in Resources */,
 				24B1F43C1897BC2400F3274A /* BrainI.sqlite in Resources */,
 				24B1F4331897BBEB00F3274A /* BrainJ.sqlite in Resources */,
 				243F342918B9F22F001E9E90 /* zero.html in Resources */,
+				247CF79218BA2905001A0092 /* BrainF.sqlite in Resources */,
 				243F342618B9F22F001E9E90 /* baloney.html in Resources */,
 				24B1F44B1897BC8300F3274A /* BrainU.sqlite in Resources */,
 				24B1F41D1897B55600F3274A /* BrainA.sqlite in Resources */,
 				24B1F4321897BBEB00F3274A /* BrainN.sqlite in Resources */,
-				24B1F4371897BC1500F3274A /* BrainF.sqlite in Resources */,
 				24B1F4401897BC5000F3274A /* BrainL.sqlite in Resources */,
 				24D026EB189E99F50070039C /* Abbreviation.html in Resources */,
 				24B1F44A1897BC8300F3274A /* BrainT.sqlite in Resources */,
-				24B1F41F1897BBCC00F3274A /* BrainB.sqlite in Resources */,
 				24B1F42E1897BBEB00F3274A /* BrainO.sqlite in Resources */,
 				24B1F44D1897BC8300F3274A /* BrainW.sqlite in Resources */,
 				24B1F4211897BBD600F3274A /* BrainC.sqlite in Resources */,
@@ -775,8 +775,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				24A8FB381826827A00957AFA /* Base */,
-				243F341718B9D545001E9E90 /* zh-Hant */,
-				243F341918B9D558001E9E90 /* zh-Hans */,
+				247CF79418BA2E2B001A0092 /* zh-Hant */,
+				247CF79518BA2E2B001A0092 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

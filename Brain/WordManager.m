@@ -1098,63 +1098,15 @@
 #pragma mark - algorithm
 
 
-//-(void) getAllWord
-//{
-//    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Word" withExtension:@"momd"];
-//    
-//    NSManagedObjectModel* managedOjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-//    NSPersistentStoreCoordinator* persistentStoreCoordinator= [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedOjectModel];
-//    
-//    NSURL* sqlite=[[NSBundle mainBundle] URLForResource:@"Brain" withExtension:@"sqlite"];
-//    [persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqlite options:nil error:nil];
-//    _managedObjectContext=[[NSManagedObjectContext alloc] init];
-//    [_managedObjectContext setPersistentStoreCoordinator:persistentStoreCoordinator];
-//
-//    NSFetchRequest *request=[[NSFetchRequest alloc] init];
-//    NSEntityDescription *entity=[NSEntityDescription entityForName:@"Word" inManagedObjectContext: _managedObjectContext];
-//    [request setEntity:entity];
-//    
-//    self.allWord=[[_managedObjectContext executeFetchRequest:request error:nil] sortedArrayUsingComparator:^NSComparisonResult(Word* a,Word* b){
-//        NSComparisonResult result=[[a.word getSortString] compare:[b.word getSortString]];
-//        if (result==NSOrderedSame)
-//        {
-//            return [a.word compare:b.word];
-//        }
-//        else return result;
-//    }];
-//    [self getPrefixWord];
-//}
-//
-//-(void) getPrefixWord
-//{
-//    NSMutableArray* arr=[[NSMutableArray alloc] init];
-//    for (int i=0; i<self.allWord.count; i++)
-//    {
-//        if ([[[self.allWord objectAtIndex:i] word] characterAtIndex:0]=='-')
-//        {
-//            [arr addObject:[self.allWord objectAtIndex:i]];
-//        }
-//    }
-//    self.prefixWord=[arr copy];
-//}
-//
-//
-//- (BOOL) isDatabaseEmpty
-//{
-//    if ([Word findFirst]==nil)
-//    {
-//        return YES;
-//    }
-//    return NO;
-//}
-//
-//
-//-(void)getAllWordFromPlist
-//{
-//    self.allWord=[[self getData] sortedArrayWithOptions:NSSortStable usingComparator:^NSComparisonResult(Word* a,Word* b){
-//        return [a.word.lowercaseString compare:b.word.lowercaseString];
-//    }];
-//}
+- (BOOL) isDatabaseEmpty
+{
+    if ([Word findFirst]==nil)
+    {
+        return YES;
+    }
+    return NO;
+}
+
 
 
 -(void)preparedWord
@@ -1163,8 +1115,7 @@
     [self wordC];
     [self wordA];
     [self wordM];
-    [self wordT];
-    [self wordP];
+    
 }
 
 -(NSString*)getWordTextWithoutProperty:(NSString*)wordText
@@ -1212,56 +1163,58 @@
 //        NSLog(@"%@",word.word);
 //    }
 //}
-//
-//- (NSArray*)getData
-//{
-//    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"WordPlist" ofType:@"plist"];
-//    NSData* data = [NSData dataWithContentsOfFile:plistPath];
-//    NSError *error;
-//    NSPropertyListFormat format;
-//    return  [NSPropertyListSerialization propertyListWithData:data options:0 format:&format error:&error];
-//}
-//
-//- (void)setupDatabase
-//{
-//
-//    NSArray* array =[self getData];
-//    
-//    NSMutableArray* tmpWord=[[NSMutableArray alloc] init];
-//    
-//    for (int i=0; i<array.count; i++)
-//    {
-//        NSString* wordKey=[[array objectAtIndex:i] objectForKey:@"word"];
-//        NSString* meaning=[[array objectAtIndex:i] objectForKey:@"meaning"];
-//        NSString* wordText=[self getWordTextWithoutProperty:wordKey];
-//        
-//        BOOL isNeedContine=YES;
-//        char ch=[wordKey characterAtIndex:0];
-////        if (ch=='-') ch=[wordKey characterAtIndex:1];
-////        
-////        if (ch=='z' || ch=='Z') isNeedContine=NO;
-//        if (ch=='-') isNeedContine=NO;
-//        if (isNeedContine) continue;
-//        
-//        Word* newWord = nil;
-//        int index=[self getWord:wordText indexAtTmpArray:tmpWord];
-//        if (tmpWord.count>index) newWord=[tmpWord objectAtIndex:index];
-//        if (newWord==nil || [newWord.word compare:wordText]!=NSOrderedSame )
-//        {
-//            newWord=[Word createEntity];
-//            newWord.word=wordText;
-//            newWord.meaning=[[NSDictionary alloc] init];
-//            [tmpWord insertObject:newWord atIndex:index];
-//        }
-//        
-//        NSMutableDictionary* dictionary=[newWord.meaning mutableCopy];
-//        [dictionary setObject:meaning forKey:wordKey];
-//        newWord.meaning=[dictionary copy];
-//    }
-//    
-//    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
-//}
-//
+
+- (NSArray*)getData
+{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"WordPlist" ofType:@"plist"];
+    NSData* data = [NSData dataWithContentsOfFile:plistPath];
+    NSError *error;
+    NSPropertyListFormat format;
+    return  [NSPropertyListSerialization propertyListWithData:data options:0 format:&format error:&error];
+}
+
+- (void)setupDatabase
+{
+
+    NSArray* array =[self getData];
+    
+    NSMutableArray* tmpWord=[[NSMutableArray alloc] init];
+    
+    for (int i=0; i<array.count; i++)
+    {
+        NSString* wordKey=[[array objectAtIndex:i] objectForKey:@"word"];
+        NSString* meaning=[[array objectAtIndex:i] objectForKey:@"meaning"];
+        NSString* wordText=[self getWordTextWithoutProperty:wordKey];
+        
+        BOOL isNeedContine=YES;
+        char ch=[wordKey characterAtIndex:0];
+        if (ch=='-') ch=[wordKey characterAtIndex:1];
+
+        if (ch=='z' || ch=='Z') isNeedContine=NO;
+        if (ch=='-') isNeedContine=NO;
+        if (isNeedContine) continue;
+        
+        Word* newWord = nil;
+        int index=[self getWord:wordText indexAtTmpArray:tmpWord];
+        if (tmpWord.count>index) newWord=[tmpWord objectAtIndex:index];
+        if (newWord==nil || [newWord.word compare:wordText]!=NSOrderedSame )
+        {
+            newWord=[Word createEntity];
+            newWord.word=wordText;
+            newWord.meaning=[[NSDictionary alloc] init];
+            [tmpWord insertObject:newWord atIndex:index];
+        }
+        
+        NSMutableDictionary* dictionary=[newWord.meaning mutableCopy];
+        [dictionary setObject:meaning forKey:wordKey];
+        newWord.meaning=[dictionary copy];
+        [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
+
+    }
+    
+    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
+}
+
 
 -(NSArray*) getSearchArrayByWord:(NSString*)word
 {
