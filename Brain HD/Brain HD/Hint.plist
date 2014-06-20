@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>acronym</key>
+	<dict>
+		<key>non-existent before 20c.</key>
+		<string>baloney</string>
+	</dict>
+	<key>bathe</key>
+	<dict>
+		<key>i-mutation</key>
+		<string>imutation</string>
+	</dict>
+	<key>fell</key>
+	<dict>
+		<key>i-mutation</key>
+		<string>imutation</string>
+	</dict>
+	<key>filth</key>
+	<dict>
+		<key>i-mutation</key>
+		<string>imutation</string>
+	</dict>
+	<key>foot</key>
+	<dict>
+		<key>i-mutation</key>
+		<string>imutation</string>
+	</dict>
+	<key>fuck</key>
+	<dict>
+		<key>here</key>
+		<string>baloney</string>
+		<key>ingenious trifling</key>
+		<string>baloney</string>
+	</dict>
+	<key>golf</key>
+	<dict>
+		<key>Despite what you read in an e-mail, &quot;golf&quot; is not an acronym</key>
+		<string>baloney</string>
+	</dict>
+	<key>goose</key>
+	<dict>
+		<key>i-mutation</key>
+		<string>imutation</string>
+	</dict>
+	<key>louse</key>
+	<dict>
+		<key>i-mutation</key>
+		<string>imutation</string>
+	</dict>
+	<key>man</key>
+	<dict>
+		<key>i-mutation</key>
+		<string>imutation</string>
+	</dict>
+	<key>mouse</key>
+	<dict>
+		<key>i-mutation</key>
+		<string>imutation</string>
+	</dict>
+	<key>posh</key>
+	<dict>
+		<key>see here</key>
+		<string>baloney</string>
+	</dict>
+	<key>shit</key>
+	<dict>
+		<key>&quot;Shit&quot; is not an acronym</key>
+		<string>baloney</string>
+	</dict>
+	<key>tip</key>
+	<dict>
+		<key>see here</key>
+		<string>baloney</string>
+	</dict>
+	<key>tooth</key>
+	<dict>
+		<key>i-mutation</key>
+		<string>imutation</string>
+	</dict>
+	<key>wop</key>
+	<dict>
+		<key>not an acronym</key>
+		<string>baloney</string>
+	</dict>
+	<key>zero</key>
+	<dict>
+		<key>here</key>
+		<string>zero</string>
+	</dict>
+	<key>werewolf</key>
+	<dict>
+		<key>here</key>
+		<string>wolf</string>
+	</dict>
+	<key>wolf</key>
+	<dict>
+		<key>here</key>
+		<string>wolf</string>
+	</dict>
+</dict>
+</plist>

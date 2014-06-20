@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Word" representedClassName="Word" isAbstract="YES" syncable="YES">
+        <attribute name="meaning" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="releatedWord" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="WordA" representedClassName="WordA" parentEntity="Word" syncable="YES"/>
+    <entity name="WordB" representedClassName="WordB" parentEntity="Word" syncable="YES"/>
+    <entity name="WordC" representedClassName="WordC" parentEntity="Word" syncable="YES"/>
+    <entity name="WordD" representedClassName="WordD" parentEntity="Word" syncable="YES"/>
+    <entity name="WordE" representedClassName="WordE" parentEntity="Word" syncable="YES"/>
+    <entity name="WordF" representedClassName="WordF" parentEntity="Word" syncable="YES"/>
+    <entity name="WordG" representedClassName="WordG" parentEntity="Word" syncable="YES"/>
+    <entity name="WordH" representedClassName="WordH" parentEntity="Word" syncable="YES"/>
+    <entity name="WordI" representedClassName="WordI" parentEntity="Word" syncable="YES"/>
+    <entity name="WordJ" representedClassName="WordJ" parentEntity="Word" syncable="YES"/>
+    <entity name="WordK" representedClassName="WordK" parentEntity="Word" syncable="YES"/>
+    <entity name="WordL" representedClassName="WordL" parentEntity="Word" syncable="YES"/>
+    <entity name="WordM" representedClassName="WordM" parentEntity="Word" syncable="YES"/>
+    <entity name="WordN" representedClassName="WordN" parentEntity="Word" syncable="YES"/>
+    <entity name="WordO" representedClassName="WordO" parentEntity="Word" syncable="YES"/>
+    <entity name="WordP" representedClassName="WordP" parentEntity="Word" syncable="YES"/>
+    <entity name="WordPrefix" representedClassName="WordPrefix" parentEntity="Word" syncable="YES"/>
+    <entity name="WordQ" representedClassName="WordQ" parentEntity="Word" syncable="YES"/>
+    <entity name="WordR" representedClassName="WordR" parentEntity="Word" syncable="YES"/>
+    <entity name="WordS" representedClassName="WordS" parentEntity="Word" syncable="YES"/>
+    <entity name="WordT" representedClassName="WordT" parentEntity="Word" syncable="YES"/>
+    <entity name="WordU" representedClassName="WordU" parentEntity="Word" syncable="YES"/>
+    <entity name="WordV" representedClassName="WordV" parentEntity="Word" syncable="YES"/>
+    <entity name="WordW" representedClassName="WordW" parentEntity="Word" syncable="YES"/>
+    <entity name="WordX" representedClassName="WordX" parentEntity="Word" syncable="YES"/>
+    <entity name="WordY" representedClassName="WordY" parentEntity="Word" syncable="YES"/>
+    <entity name="WordZ" representedClassName="WordZ" parentEntity="Word" syncable="YES"/>
+    <elements>
+        <element name="WordA" positionX="-18" positionY="27" width="128" height="43"/>
+        <element name="WordB" positionX="36" positionY="108" width="128" height="43"/>
+        <element name="WordC" positionX="9" positionY="90" width="128" height="43"/>
+        <element name="WordD" positionX="18" positionY="99" width="128" height="43"/>
+        <element name="WordE" positionX="27" positionY="108" width="128" height="43"/>
+        <element name="WordF" positionX="36" positionY="117" width="128" height="43"/>
+        <element name="WordG" positionX="45" positionY="135" width="128" height="43"/>
+        <element name="WordH" positionX="63" positionY="153" width="128" height="43"/>
+        <element name="WordI" positionX="81" positionY="171" width="128" height="43"/>
+        <element name="WordJ" positionX="36" positionY="126" width="128" height="43"/>
+        <element name="WordK" positionX="45" positionY="135" width="128" height="43"/>
+        <element name="WordL" positionX="54" positionY="144" width="128" height="43"/>
+        <element name="WordM" positionX="63" positionY="153" width="128" height="43"/>
+        <element name="WordN" positionX="72" positionY="162" width="128" height="43"/>
+        <element name="WordO" positionX="81" positionY="171" width="128" height="43"/>
+        <element name="WordP" positionX="90" positionY="180" width="128" height="43"/>
+        <element name="WordPrefix" positionX="54" positionY="144" width="128" height="43"/>
+        <element name="WordQ" positionX="63" positionY="153" width="128" height="43"/>
+        <element name="WordR" positionX="36" positionY="126" width="128" height="43"/>
+        <element name="WordS" positionX="45" positionY="135" width="128" height="43"/>
+        <element name="WordT" positionX="54" positionY="144" width="128" height="43"/>
+        <element name="WordU" positionX="63" positionY="153" width="128" height="43"/>
+        <element name="WordV" positionX="72" positionY="162" width="128" height="43"/>
+        <element name="WordW" positionX="81" positionY="171" width="128" height="43"/>
+        <element name="WordX" positionX="90" positionY="180" width="128" height="43"/>
+        <element name="WordY" positionX="36" positionY="126" width="128" height="43"/>
+        <element name="WordZ" positionX="45" positionY="135" width="128" height="45"/>
+        <element name="Word" positionX="36" positionY="126" width="128" height="88"/>
+    </elements>
+</model>
