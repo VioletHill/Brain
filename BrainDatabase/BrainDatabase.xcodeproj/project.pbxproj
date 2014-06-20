@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2406BC1519547DC3006A42B9 /* RelationWord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2406BC1419547DC3006A42B9 /* RelationWord.plist */; };
 		240F480418BA1D2800CAB141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F480318BA1D2800CAB141 /* Foundation.framework */; };
 		240F480618BA1D2800CAB141 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F480518BA1D2800CAB141 /* CoreGraphics.framework */; };
 		240F480818BA1D2800CAB141 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F480718BA1D2800CAB141 /* UIKit.framework */; };
@@ -92,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2406BC1419547DC3006A42B9 /* RelationWord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RelationWord.plist; sourceTree = "<group>"; };
 		240F480018BA1D2800CAB141 /* BrainDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		240F480318BA1D2800CAB141 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		240F480518BA1D2800CAB141 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -285,6 +287,7 @@
 		240F480918BA1D2800CAB141 /* BrainDatabase */ = {
 			isa = PBXGroup;
 			children = (
+				2406BC1419547DC3006A42B9 /* RelationWord.plist */,
 				240F489718BA1F1100CAB141 /* WordPlist.plist */,
 				240F483B18BA1D5100CAB141 /* MagicalRecord */,
 				240F481218BA1D2800CAB141 /* AppDelegate.h */,
@@ -576,6 +579,7 @@
 				240F481A18BA1D2800CAB141 /* Main_iPad.storyboard in Resources */,
 				240F481F18BA1D2800CAB141 /* Images.xcassets in Resources */,
 				240F481718BA1D2800CAB141 /* Main_iPhone.storyboard in Resources */,
+				2406BC1519547DC3006A42B9 /* RelationWord.plist in Resources */,
 				240F480E18BA1D2800CAB141 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

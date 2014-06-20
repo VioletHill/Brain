@@ -201,23 +201,60 @@
         }
         
     }
-   // [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
-    [[NSManagedObjectContext defaultContext] save];
+    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
     NSLog(@"%d",[WordS findAll].count);
     NSLog(@"%d",[WordPrefix findAll].count);
 }
 
+-(void) setupRela
+{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"RelationWord" ofType:@"plist"];
+    NSData* data = [NSData dataWithContentsOfFile:plistPath];
+    NSError *error;
+    NSPropertyListFormat format;
+    NSDictionary* relaArray=[NSPropertyListSerialization propertyListWithData:data options:0 format:&format error:&error];
+    for (NSString* key in relaArray)
+    {
+        NSArray* relaWords=relaArray[key];
+        for (NSString* relaWord in relaWords)
+        {
+            [self addRelationWordA:key andWordB:relaWord];
+        }
+    }
+}
 
+-(void) addRelationWordA:(NSString*)a andWordB:(NSString*)b
+{
+    Word* wordA=[Word findFirstByAttribute:@"word" withValue:a];
+    Word* wordB=[Word findFirstByAttribute:@"word" withValue:b];
+    NSMutableArray* relaA=[wordA.releatedWord mutableCopy];
+    NSMutableArray* relaB=[wordB.releatedWord mutableCopy];
+    if (relaA==nil) relaA=[[NSMutableArray alloc] init];
+    if (relaB==nil) relaB=[[NSMutableArray alloc] init];
+    [relaA addObject:wordB.word];
+    [relaB addObject:wordA.word];
+    wordA.releatedWord=[relaA copy];
+    wordB.releatedWord=[relaB copy];
+    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     
-//    [MagicalRecord setupCoreDataStack];
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"Brain.sqlite"];
    // [self setupDatabase];
+   // [self setupRela];
     NSArray* array=[Word findAll];
     NSLog(@"%d",array.count);
+    
+    Word* word=[Word findFirstByAttribute:@"word" withValue:@"chin-up"];
+    NSArray* relaWords=word.releatedWord;
+    for (NSString* relaWord in relaWords)
+    {
+        NSLog(@"%@",relaWord);
+    }
+    
     [MagicalRecord cleanUp];
     return YES;
 }
