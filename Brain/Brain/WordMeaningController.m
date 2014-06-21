@@ -12,6 +12,7 @@
 #import "WordMeaningRootScrollView.h"
 #import "RelatedWordTableView.h"
 #import "HintViewController.h"
+#import "UIColor+AppColor.h"
 
 @interface WordMeaningController () <WordMeaingViewTapProtocol, RelatedWordTableViewProtocol>
 
@@ -50,7 +51,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:251.0 / 4 green:240.0 / 255.0 blue:217.0 / 255.0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithRed:93.0 / 255.0 green:63.0 / 255.0 blue:39.0 / 255.0 alpha:1] forKey:NSForegroundColorAttributeName];
 
     [self resetWordWithWord:self.word];
@@ -58,7 +59,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:251.0 / 4 green:240.0 / 255.0 blue:217.0 / 255.0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
     if (self.isNeedPop) {
         [self.navigationController popViewControllerAnimated:NO];
     }
@@ -241,6 +242,8 @@
 
     RelatedWordTableView* relatedWordTableView = [[RelatedWordTableView alloc] initWithData:array andRect:rect];
     relatedWordTableView.relaDelegate = self;
+    //   UIView* view = [[UIView alloc] initWithFrame:relatedWordTableView.frame];
+    //  return view;
     return relatedWordTableView;
 }
 

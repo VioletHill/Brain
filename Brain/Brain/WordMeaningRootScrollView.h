@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  向下传递touch事件
+ */
 @interface WordMeaningRootScrollView : UIScrollView
 
 @end

@@ -198,7 +198,7 @@
 
 - (void)setupRela
 {
-    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"RelationWord" ofType:@"plist"];
+    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"WordRela" ofType:@"plist"];
     NSData* data = [NSData dataWithContentsOfFile:plistPath];
     NSError* error;
     NSPropertyListFormat format;
@@ -215,6 +215,8 @@
 {
     Word* wordA = [Word findFirstByAttribute:@"word" withValue:a];
     Word* wordB = [Word findFirstByAttribute:@"word" withValue:b];
+    if (wordA == nil || wordB == nil)
+        return;
     NSMutableArray* relaA = [wordA.releatedWord mutableCopy];
     NSMutableArray* relaB = [wordB.releatedWord mutableCopy];
     if (relaA == nil)

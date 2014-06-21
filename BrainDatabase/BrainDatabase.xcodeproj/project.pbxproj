@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2406BC1519547DC3006A42B9 /* RelationWord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2406BC1419547DC3006A42B9 /* RelationWord.plist */; };
 		240F480418BA1D2800CAB141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F480318BA1D2800CAB141 /* Foundation.framework */; };
 		240F480618BA1D2800CAB141 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F480518BA1D2800CAB141 /* CoreGraphics.framework */; };
 		240F480818BA1D2800CAB141 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F480718BA1D2800CAB141 /* UIKit.framework */; };
@@ -79,6 +78,8 @@
 		24834F9C191E71DD00F8109C /* WordV.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834F9B191E71DD00F8109C /* WordV.m */; };
 		24834F9F191E725B00F8109C /* WordEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834F9E191E725B00F8109C /* WordEntity.m */; };
 		2493954C191E6B54002A4A0B /* Word.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2493954A191E6B54002A4A0B /* Word.xcdatamodeld */; };
+		24D6B0D61955B7CC00989D59 /* WordPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24D6B0D51955B7CC00989D59 /* WordPlist.plist */; };
+		24D6B0DC1955D25700989D59 /* WordRela.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24D6B0DB1955D25700989D59 /* WordRela.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +93,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2406BC1419547DC3006A42B9 /* RelationWord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RelationWord.plist; sourceTree = "<group>"; };
 		240F480018BA1D2800CAB141 /* BrainDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		240F480318BA1D2800CAB141 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		240F480518BA1D2800CAB141 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -226,6 +226,8 @@
 		24834F9D191E725B00F8109C /* WordEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordEntity.h; sourceTree = "<group>"; };
 		24834F9E191E725B00F8109C /* WordEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordEntity.m; sourceTree = "<group>"; };
 		2493954B191E6B54002A4A0B /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
+		24D6B0D51955B7CC00989D59 /* WordPlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = WordPlist.plist; sourceTree = "<group>"; };
+		24D6B0DB1955D25700989D59 /* WordRela.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WordRela.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,7 +287,8 @@
 		240F480918BA1D2800CAB141 /* BrainDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				2406BC1419547DC3006A42B9 /* RelationWord.plist */,
+				24D6B0D51955B7CC00989D59 /* WordPlist.plist */,
+				24D6B0DB1955D25700989D59 /* WordRela.plist */,
 				240F483B18BA1D5100CAB141 /* MagicalRecord */,
 				240F481218BA1D2800CAB141 /* AppDelegate.h */,
 				240F481318BA1D2800CAB141 /* AppDelegate.m */,
@@ -575,8 +578,9 @@
 				240F481A18BA1D2800CAB141 /* Main_iPad.storyboard in Resources */,
 				240F481F18BA1D2800CAB141 /* Images.xcassets in Resources */,
 				240F481718BA1D2800CAB141 /* Main_iPhone.storyboard in Resources */,
-				2406BC1519547DC3006A42B9 /* RelationWord.plist in Resources */,
 				240F480E18BA1D2800CAB141 /* InfoPlist.strings in Resources */,
+				24D6B0DC1955D25700989D59 /* WordRela.plist in Resources */,
+				24D6B0D61955B7CC00989D59 /* WordPlist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

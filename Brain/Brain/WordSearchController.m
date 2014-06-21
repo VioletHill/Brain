@@ -109,13 +109,12 @@
     if ([sender isKindOfClass:[UIBarButtonItem class]]) {
         return;
     }
+
     UITableViewCell* cell = sender;
-    int selectIndex = (cell == nil) ? 0 : (int)[self.tableView indexPathForCell:cell].row;
     WordMeaningController* wordMeaningController = segue.destinationViewController;
 
-    NSString* word = self.data.count == 0 ? [UserData sharedUserData].historyWords[selectIndex] : self.data[selectIndex];
-    [[UserData sharedUserData] addHistoryWord:word];
-    
+    NSString* word = cell.textLabel.text;
+
     wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
 }
 

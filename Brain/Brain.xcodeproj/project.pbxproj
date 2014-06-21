@@ -65,9 +65,6 @@
 		24B1F45D1898BC3800F3274A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B1F45C1898BC3700F3274A /* MessageUI.framework */; };
 		24B4031719541E7C0015D194 /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B4031619541E7C0015D194 /* NewRelicAgent.framework */; };
 		24C5047B182884090048B6C0 /* WordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C5047A182884090048B6C0 /* WordManager.m */; };
-		24C72C2719554D600047546D /* Brain.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24C72C2419554D600047546D /* Brain.sqlite */; };
-		24C72C2819554D600047546D /* Brain.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 24C72C2519554D600047546D /* Brain.sqlite-shm */; };
-		24C72C2919554D600047546D /* Brain.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 24C72C2619554D600047546D /* Brain.sqlite-wal */; };
 		24C72C2B19554DEC0047546D /* WordMeaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C72C2A19554DEC0047546D /* WordMeaningController.m */; };
 		24C72C2E195552810047546D /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C72C2D195552810047546D /* UIColor+AppColor.m */; };
 		24C72C32195560910047546D /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C72C31195560910047546D /* UserData.m */; };
@@ -75,6 +72,9 @@
 		24D026EF189EA0B80070039C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026EE189EA0B80070039C /* CoreTelephony.framework */; };
 		24D026F1189EA1BC0070039C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026F0189EA1BC0070039C /* SystemConfiguration.framework */; };
 		24D026F3189EA1C80070039C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026F2189EA1C80070039C /* libz.dylib */; };
+		24D6B0E01955E6D700989D59 /* Brain.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 24D6B0DD1955E6D700989D59 /* Brain.sqlite-wal */; };
+		24D6B0E11955E6D700989D59 /* Brain.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24D6B0DE1955E6D700989D59 /* Brain.sqlite */; };
+		24D6B0E21955E6D700989D59 /* Brain.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 24D6B0DF1955E6D700989D59 /* Brain.sqlite-shm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,9 +193,6 @@
 		24B4031619541E7C0015D194 /* NewRelicAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewRelicAgent.framework; sourceTree = "<group>"; };
 		24C50479182884090048B6C0 /* WordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordManager.h; sourceTree = "<group>"; };
 		24C5047A182884090048B6C0 /* WordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordManager.m; sourceTree = "<group>"; };
-		24C72C2419554D600047546D /* Brain.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brain.sqlite; sourceTree = "<group>"; };
-		24C72C2519554D600047546D /* Brain.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-shm"; sourceTree = "<group>"; };
-		24C72C2619554D600047546D /* Brain.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-wal"; sourceTree = "<group>"; };
 		24C72C2A19554DEC0047546D /* WordMeaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningController.m; sourceTree = "<group>"; };
 		24C72C2C195552810047546D /* UIColor+AppColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColor.h"; sourceTree = "<group>"; };
 		24C72C2D195552810047546D /* UIColor+AppColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
@@ -205,6 +202,9 @@
 		24D026EE189EA0B80070039C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		24D026F0189EA1BC0070039C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		24D026F2189EA1C80070039C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		24D6B0DD1955E6D700989D59 /* Brain.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-wal"; sourceTree = "<group>"; };
+		24D6B0DE1955E6D700989D59 /* Brain.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brain.sqlite; sourceTree = "<group>"; };
+		24D6B0DF1955E6D700989D59 /* Brain.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-shm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,9 +439,9 @@
 		24B1F41B1897B54C00F3274A /* sqlite */ = {
 			isa = PBXGroup;
 			children = (
-				24C72C2419554D600047546D /* Brain.sqlite */,
-				24C72C2519554D600047546D /* Brain.sqlite-shm */,
-				24C72C2619554D600047546D /* Brain.sqlite-wal */,
+				24D6B0DD1955E6D700989D59 /* Brain.sqlite-wal */,
+				24D6B0DE1955E6D700989D59 /* Brain.sqlite */,
+				24D6B0DF1955E6D700989D59 /* Brain.sqlite-shm */,
 			);
 			name = sqlite;
 			sourceTree = "<group>";
@@ -554,18 +554,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D6B0E11955E6D700989D59 /* Brain.sqlite in Resources */,
+				24D6B0E21955E6D700989D59 /* Brain.sqlite-shm in Resources */,
 				243F342718B9F22F001E9E90 /* imutation.html in Resources */,
 				243F342918B9F22F001E9E90 /* zero.html in Resources */,
 				243F342618B9F22F001E9E90 /* baloney.html in Resources */,
 				24D026EB189E99F50070039C /* Abbreviation.html in Resources */,
-				24C72C2819554D600047546D /* Brain.sqlite-shm in Resources */,
-				24C72C2719554D600047546D /* Brain.sqlite in Resources */,
 				24A8FB3E1826827A00957AFA /* Images.xcassets in Resources */,
 				24A8FB301826827A00957AFA /* InfoPlist.strings in Resources */,
 				24A8FB391826827A00957AFA /* Main.storyboard in Resources */,
-				24C72C2919554D600047546D /* Brain.sqlite-wal in Resources */,
 				243F341C18B9D80D001E9E90 /* Hint.plist in Resources */,
 				243F342818B9F22F001E9E90 /* wolf.html in Resources */,
+				24D6B0E01955E6D700989D59 /* Brain.sqlite-wal in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

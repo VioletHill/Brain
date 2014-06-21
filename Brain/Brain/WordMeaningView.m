@@ -57,6 +57,8 @@ const float screenWidth = 320;
         _meaningView.backgroundColor = [UIColor meaningViewBackgroundColor];
         _meaningView.editable = NO;
         _meaningView.scrollEnabled = NO;
+        _meaningView.userInteractionEnabled = YES;
+        _meaningView.contentSize = CGSizeMake(0, 0);
         [self addSubview:_meaningView];
     }
     return _meaningView;
@@ -180,6 +182,7 @@ const float screenWidth = 320;
     UITextPosition* tapPos = [self.meaningView closestPositionToPoint:pos];
     NSInteger tapIndex = [self.meaningView offsetFromPosition:self.meaningView.beginningOfDocument toPosition:tapPos] - 1;
     self.selectString = [self getStringAtIndex:tapIndex];
+
     if (([[WordManager sharedWordManager] findWordByCompleteWord:self.selectString] || [self isHintWord:self.selectString]) && selectRange.length != 0) //点击阴影效果
     {
         lastRange = NSMakeRange(selectRange.location, selectRange.length);
@@ -191,7 +194,6 @@ const float screenWidth = 320;
 
 - (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
 {
-    self.superview.userInteractionEnabled = NO;
     CGPoint pos = [[touches anyObject] locationInView:self.meaningView];
     [self wordTap:pos];
 }
@@ -204,13 +206,11 @@ const float screenWidth = 320;
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event
 {
-    self.superview.userInteractionEnabled = YES;
     if (lastRange.length != 0) {
         self.meaningView.attributedText = self.oldAttributed;
         lastRange.length = 0;
     }
 
-    //  NSLog(@"%@",self.selectString);
     if (self.selectString != nil && ![self.selectString isEqualToString:@""] && [self.delegate respondsToSelector:@selector(wordTapCallBack:)]) {
         [self.delegate wordTapCallBack:self.selectString];
     }

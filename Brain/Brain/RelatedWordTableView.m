@@ -80,8 +80,10 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
+    [self deselectRowAtIndexPath:indexPath animated:NO];
     [self.relaDelegate selectWordAtRelaWordView:self.data[indexPath.row]];
 }
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

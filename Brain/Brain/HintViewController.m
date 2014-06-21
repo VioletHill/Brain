@@ -7,6 +7,7 @@
 //
 
 #import "HintViewController.h"
+#import "UIColor+AppColor.h"
 
 @interface HintViewController ()
 
@@ -41,7 +42,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithRed:251.0 / 255.0 green:240.0 / 255.0 blue:217.0 / 255.0 alpha:1.0];
+    self.view.backgroundColor = [UIColor meaningViewBackgroundColor];
     self.title = @"Hint";
     // Do any additional setup after loading the view.
 }
