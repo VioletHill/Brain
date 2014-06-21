@@ -1,2 +1,2 @@
 platform :ios
-pod ‘MagicRecord’
+pod 'MagicRecord'

@@ -9,11 +9,12 @@
 #import "WordMeaningView.h"
 #import "NSAttributedString+Html2Attributed.h"
 #import "WordManager.h"
+#import "UIColor+AppColor.h"
 
 @interface WordMeaningView ()
 
 @property (nonatomic, strong) UILabel* wordTitle;
-@property (nonatomic, strong) UIButton* cutOff;
+@property (nonatomic, strong) UIView* cutOff;
 @property (nonatomic, strong) UITextView* meaningView;
 @property (nonatomic, strong) NSString* selectString;
 @property (nonatomic, strong) NSAttributedString* oldAttributed;
@@ -29,12 +30,11 @@
 const float width = 300;
 const float screenWidth = 320;
 
-- (UIButton*)cutOff
+- (UIView*)cutOff
 {
     if (_cutOff == nil) {
-        _cutOff = [[UIButton alloc] initWithFrame:CGRectMake(0, 44, width, 6)];
-        [_cutOff setBackgroundColor:[UIColor colorWithRed:214.0 / 255.0 green:207.0 / 255.0 blue:195.0 / 255.0 alpha:1]];
-        [_cutOff setEnabled:NO];
+        _cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44, width, 6)];
+        _cutOff.backgroundColor = [UIColor cutOffColor];
     }
     return _cutOff;
 }
@@ -43,7 +43,7 @@ const float screenWidth = 320;
 {
     if (_wordTitle == nil) {
         _wordTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, width - 5, 44)];
-        _wordTitle.textColor = [UIColor colorWithRed:93.0 / 255.0 green:63.0 / 255.0 blue:47.0 / 255.0 alpha:1];
+        _wordTitle.textColor = [UIColor titleLableColor];
         [self addSubview:self.wordTitle];
         [self addSubview:self.cutOff];
     }
@@ -54,10 +54,9 @@ const float screenWidth = 320;
 {
     if (_meaningView == nil) {
         _meaningView = [[UITextView alloc] initWithFrame:CGRectMake(0, 50, width, 300)];
-        _meaningView.backgroundColor = [UIColor colorWithRed:251.0 / 255.0 green:240.0 / 255.0 blue:217.0 / 255.0 alpha:1.0];
+        _meaningView.backgroundColor = [UIColor meaningViewBackgroundColor];
         _meaningView.editable = NO;
         _meaningView.scrollEnabled = NO;
-        _meaningView.userInteractionEnabled = NO;
         [self addSubview:_meaningView];
     }
     return _meaningView;
@@ -66,7 +65,7 @@ const float screenWidth = 320;
 - (instancetype)initWithWord:(NSString*)word andMeaning:(NSString*)meaning
 {
     if (self = [super init]) {
-        self.backgroundColor = [UIColor colorWithRed:251.0 / 255.0 green:240.0 / 255.0 blue:217.0 / 255.0 alpha:1.0];
+        self.backgroundColor = [UIColor meaningViewBackgroundColor];
         self.wordTitle.text = word;
         self.meaningView.attributedText = [NSAttributedString getAttributeStringFromHtmlString:meaning];
         self.oldAttributed = self.meaningView.attributedText;

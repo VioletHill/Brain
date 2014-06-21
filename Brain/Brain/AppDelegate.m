@@ -17,6 +17,7 @@
     [NewRelicAgent startWithApplicationToken:@"AA6231ce5c5e791ff62630a17c1645f77a5cbf4516"];
 
     [[WordManager sharedWordManager] preparedWord];
+
     return YES;
 }
 

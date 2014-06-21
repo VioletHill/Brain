@@ -49,7 +49,6 @@
 		240F488E18BA1D5100CAB141 /* MagicalRecord+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F487018BA1D5100CAB141 /* MagicalRecord+Setup.m */; };
 		240F488F18BA1D5100CAB141 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F487218BA1D5100CAB141 /* MagicalRecord+ShorthandSupport.m */; };
 		240F489018BA1D5100CAB141 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F487418BA1D5100CAB141 /* MagicalRecord.m */; };
-		240F489818BA1F1100CAB141 /* WordPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 240F489718BA1F1100CAB141 /* WordPlist.plist */; };
 		24834F4B191E71DB00F8109C /* WordD.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834F4A191E71DB00F8109C /* WordD.m */; };
 		24834F4E191E71DC00F8109C /* WordE.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834F4D191E71DC00F8109C /* WordE.m */; };
 		24834F51191E71DC00F8109C /* WordM.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834F50191E71DC00F8109C /* WordM.m */; };
@@ -80,6 +79,7 @@
 		24834F9C191E71DD00F8109C /* WordV.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834F9B191E71DD00F8109C /* WordV.m */; };
 		24834F9F191E725B00F8109C /* WordEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834F9E191E725B00F8109C /* WordEntity.m */; };
 		2493954C191E6B54002A4A0B /* Word.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2493954A191E6B54002A4A0B /* Word.xcdatamodeld */; };
+		24C72C2319554BC10047546D /* WordPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24C72C2219554BC10047546D /* WordPlist.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,7 +168,6 @@
 		240F487418BA1D5100CAB141 /* MagicalRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalRecord.m; sourceTree = "<group>"; };
 		240F487518BA1D5100CAB141 /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		240F487618BA1D5100CAB141 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
-		240F489718BA1F1100CAB141 /* WordPlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = WordPlist.plist; sourceTree = "<group>"; };
 		24834F49191E71DB00F8109C /* WordD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordD.h; sourceTree = "<group>"; };
 		24834F4A191E71DB00F8109C /* WordD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordD.m; sourceTree = "<group>"; };
 		24834F4C191E71DC00F8109C /* WordE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordE.h; sourceTree = "<group>"; };
@@ -228,6 +227,7 @@
 		24834F9D191E725B00F8109C /* WordEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordEntity.h; sourceTree = "<group>"; };
 		24834F9E191E725B00F8109C /* WordEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordEntity.m; sourceTree = "<group>"; };
 		2493954B191E6B54002A4A0B /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
+		24C72C2219554BC10047546D /* WordPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = WordPlist.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				2406BC1419547DC3006A42B9 /* RelationWord.plist */,
-				240F489718BA1F1100CAB141 /* WordPlist.plist */,
+				24C72C2219554BC10047546D /* WordPlist.plist */,
 				240F483B18BA1D5100CAB141 /* MagicalRecord */,
 				240F481218BA1D2800CAB141 /* AppDelegate.h */,
 				240F481318BA1D2800CAB141 /* AppDelegate.m */,
@@ -575,10 +575,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				240F489818BA1F1100CAB141 /* WordPlist.plist in Resources */,
 				240F481A18BA1D2800CAB141 /* Main_iPad.storyboard in Resources */,
 				240F481F18BA1D2800CAB141 /* Images.xcassets in Resources */,
 				240F481718BA1D2800CAB141 /* Main_iPhone.storyboard in Resources */,
+				24C72C2319554BC10047546D /* WordPlist.plist in Resources */,
 				2406BC1519547DC3006A42B9 /* RelationWord.plist in Resources */,
 				240F480E18BA1D2800CAB141 /* InfoPlist.strings in Resources */,
 			);
@@ -748,7 +748,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -782,7 +782,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -797,7 +797,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrainDatabase/BrainDatabase-Prefix.pch";
 				INFOPLIST_FILE = "BrainDatabase/BrainDatabase-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -811,7 +811,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrainDatabase/BrainDatabase-Prefix.pch";
 				INFOPLIST_FILE = "BrainDatabase/BrainDatabase-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

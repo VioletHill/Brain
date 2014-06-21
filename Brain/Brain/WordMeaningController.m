@@ -10,10 +10,10 @@
 #import "WordManager.h"
 #import "WordMeaningView.h"
 #import "WordMeaningRootScrollView.h"
-
+#import "RelatedWordTableView.h"
 #import "HintViewController.h"
 
-@interface WordMeaningController () <WordMeaingViewTapProtocol>
+@interface WordMeaningController () <WordMeaingViewTapProtocol, RelatedWordTableViewProtocol>
 
 @property (strong, nonatomic) WordMeaningRootScrollView* scrollView;
 
@@ -112,23 +112,32 @@
     [self.meaningViewArray removeAllObjects];
 }
 
-- (void)resetWordWithWord:(Word*)word
+- (NSArray*)getTheKeyArrayWithWord:(Word*)word
 {
-    self.title = word.word;
-
-    [self clearAllMeaningViews];
-
     //sort
     NSMutableArray* keyArray = [[NSMutableArray alloc] init];
     for (id obj in word.meaning) {
         [keyArray addObject:obj];
     }
     [keyArray sortUsingComparator:^NSComparisonResult(NSString* a, NSString* b) {
-            return [a compare:b];
+        return [a compare:b];
     }];
+    return keyArray;
+}
+
+- (void)resetWordWithWord:(Word*)word
+{
+    self.title = word.word;
+
+    [self clearAllMeaningViews];
+
+    NSArray* keyArray = [self getTheKeyArrayWithWord:word];
 
     //add new subview
     float height = 20;
+
+    CGRect relaViewRect;
+
     for (id obj in keyArray) {
         WordMeaningView* meaingView = [[WordMeaningView alloc] initWithWord:obj andMeaning:[word.meaning objectForKey:obj]];
         meaingView.delegate = self;
@@ -137,16 +146,33 @@
         [self.meaningViewArray addObject:meaingView];
         [self.scrollView addSubview:meaingView];
         height += meaingView.frame.size.height + 20;
+        relaViewRect = meaingView.frame;
     }
 
+    //add relatedwordTable view
+    relaViewRect.origin.y = height;
+
+    RelatedWordTableView* relatedWordTableView = [self getRelaWordViewWithRect:relaViewRect];
+    height += relatedWordTableView.frame.size.height+20;
+    [self.scrollView addSubview:relatedWordTableView];
+    
     self.scrollView.contentOffset = CGPointMake(0, 0);
     if (height < self.view.frame.size.height - 63) {
         height = self.view.frame.size.height - 63;
     }
+
     [self.scrollView setContentSize:CGSizeMake(0, height)];
     self.scrollView.scrollEnabled = YES;
 }
 
+/**
+ *  checked the touch word is need to special jump;
+ *  some words hint need to be jump to the html file  it was save to the hint.plist
+ *
+ *  @param touchWord touchword string
+ *
+ *  @return yes or no
+ */
 - (BOOL)isNeedHintWithWord:(NSString*)touchWord
 {
     NSDictionary* item = [self.hint objectForKey:self.word.word];
@@ -193,15 +219,30 @@
     @catch (NSException* exception)
     {
     }
-    @finally
-    {
-    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - related word
+
+- (RelatedWordTableView*)getRelaWordViewWithRect:(CGRect)rect
+{
+    NSArray* array = self.word.releatedWord;
+    if (array == nil || array.count == 0)
+        return nil;
+
+    RelatedWordTableView* relatedWordTableView = [[RelatedWordTableView alloc] initWithData:array andRect:rect];
+    relatedWordTableView.relaDelegate = self;
+    return relatedWordTableView;
+}
+
+- (void)selectWordAtRelaWordView:(NSString*)wordStr
+{
+    [self wordTapCallBack:wordStr];
 }
 
 @end

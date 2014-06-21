@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol RelatedWordTableViewProtocol <NSObject>
+
+- (void)selectWordAtRelaWordView:(NSString*)wordStr;
+
+@end
+
 @interface RelatedWordTableView : UITableView
 
--(instancetype) initWithData:(NSArray*)data;
+- (instancetype)initWithData:(NSArray*)data andRect:(CGRect)rect;
+
+@property (nonatomic, weak) id<RelatedWordTableViewProtocol> relaDelegate;
 
 @end
