@@ -79,7 +79,6 @@
 		24834F9C191E71DD00F8109C /* WordV.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834F9B191E71DD00F8109C /* WordV.m */; };
 		24834F9F191E725B00F8109C /* WordEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834F9E191E725B00F8109C /* WordEntity.m */; };
 		2493954C191E6B54002A4A0B /* Word.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2493954A191E6B54002A4A0B /* Word.xcdatamodeld */; };
-		24C72C2319554BC10047546D /* WordPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24C72C2219554BC10047546D /* WordPlist.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,7 +226,6 @@
 		24834F9D191E725B00F8109C /* WordEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordEntity.h; sourceTree = "<group>"; };
 		24834F9E191E725B00F8109C /* WordEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordEntity.m; sourceTree = "<group>"; };
 		2493954B191E6B54002A4A0B /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
-		24C72C2219554BC10047546D /* WordPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = WordPlist.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				2406BC1419547DC3006A42B9 /* RelationWord.plist */,
-				24C72C2219554BC10047546D /* WordPlist.plist */,
 				240F483B18BA1D5100CAB141 /* MagicalRecord */,
 				240F481218BA1D2800CAB141 /* AppDelegate.h */,
 				240F481318BA1D2800CAB141 /* AppDelegate.m */,
@@ -578,7 +575,6 @@
 				240F481A18BA1D2800CAB141 /* Main_iPad.storyboard in Resources */,
 				240F481F18BA1D2800CAB141 /* Images.xcassets in Resources */,
 				240F481718BA1D2800CAB141 /* Main_iPhone.storyboard in Resources */,
-				24C72C2319554BC10047546D /* WordPlist.plist in Resources */,
 				2406BC1519547DC3006A42B9 /* RelationWord.plist in Resources */,
 				240F480E18BA1D2800CAB141 /* InfoPlist.strings in Resources */,
 			);

@@ -221,6 +221,8 @@
         relaA = [[NSMutableArray alloc] init];
     if (relaB == nil)
         relaB = [[NSMutableArray alloc] init];
+    [relaA removeObject:wordB.word];
+    [relaB removeObject:wordA.word];
     [relaA addObject:wordB.word];
     [relaB addObject:wordA.word];
     wordA.releatedWord = [relaA copy];
