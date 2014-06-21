@@ -153,9 +153,9 @@
     relaViewRect.origin.y = height;
 
     RelatedWordTableView* relatedWordTableView = [self getRelaWordViewWithRect:relaViewRect];
-    height += relatedWordTableView.frame.size.height+20;
+    height += relatedWordTableView.frame.size.height + 20;
     [self.scrollView addSubview:relatedWordTableView];
-    
+
     self.scrollView.contentOffset = CGPointMake(0, 0);
     if (height < self.view.frame.size.height - 63) {
         height = self.view.frame.size.height - 63;
@@ -234,6 +234,10 @@
     NSArray* array = self.word.releatedWord;
     if (array == nil || array.count == 0)
         return nil;
+
+    array = [array sortedArrayUsingComparator:^NSComparisonResult(NSString* a, NSString* b) {
+        return [a compare:b];
+    }];
 
     RelatedWordTableView* relatedWordTableView = [[RelatedWordTableView alloc] initWithData:array andRect:rect];
     relatedWordTableView.relaDelegate = self;
