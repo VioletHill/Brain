@@ -56,15 +56,15 @@
     UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, selfFrame.size.width, 44)];
     view.backgroundColor = [UIColor meaningViewBackgroundColor];
 
-    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, selfFrame.size.width-10, 44 - 6)];
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, selfFrame.size.width - 10, 44 - 6)];
     label.text = @"Related Words";
     label.textColor = [UIColor titleLableColor];
     [view addSubview:label];
 
     UIView* cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44 - 6, selfFrame.size.width, 6)];
-    cutOff.backgroundColor = [UIColor colorWithRed:214.0 / 255.0 green:207.0 / 255.0 blue:195.0 / 255.0 alpha:1];
+    cutOff.backgroundColor = [UIColor cutOffColor];
     [view addSubview:cutOff];
-    
+
     return view;
 }
 

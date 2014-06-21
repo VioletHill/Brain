@@ -12,4 +12,8 @@
 
 + (UserData*)sharedUserData;
 
+- (void)addHistoryWord:(NSString*)wordStr;
+
+@property (nonatomic, strong) NSArray* historyWords;
+
 @end

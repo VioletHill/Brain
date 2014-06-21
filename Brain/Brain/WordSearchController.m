@@ -11,6 +11,7 @@
 #import "WordMeaningController.h"
 #import "WordManager.h"
 #import "NSAttributedString+Html2Attributed.h"
+#import "UserData.h"
 
 @interface WordSearchController ()
 @property (weak, nonatomic) IBOutlet UITableView* tableView;
@@ -75,11 +76,14 @@
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.data == nil || self.data.count == 0)
+    NSArray* array = [UserData sharedUserData].historyWords;
+
+    if ((self.data == nil || self.data.count == 0) && array.count == 0)
         self.tableView.hidden = YES;
     else
         self.tableView.hidden = NO;
-    return self.data.count;
+
+    return self.data.count == 0 ? array.count : self.data.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
@@ -87,7 +91,10 @@
     UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"MyCell"];
 
     // Configure the cell...
-    cell.textLabel.text = [self.data objectAtIndex:indexPath.row];
+    if (self.data == nil || self.data.count == 0)
+        cell.textLabel.text = [UserData sharedUserData].historyWords[indexPath.row];
+    else
+        cell.textLabel.text = [self.data objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -98,13 +105,18 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
+
     if ([sender isKindOfClass:[UIBarButtonItem class]]) {
         return;
     }
     UITableViewCell* cell = sender;
     int selectIndex = (cell == nil) ? 0 : (int)[self.tableView indexPathForCell:cell].row;
     WordMeaningController* wordMeaningController = segue.destinationViewController;
-    wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:[self.data objectAtIndex:selectIndex]];
+
+    NSString* word = self.data.count == 0 ? [UserData sharedUserData].historyWords[selectIndex] : self.data[selectIndex];
+    [[UserData sharedUserData] addHistoryWord:word];
+    
+    wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar*)searchBar
