@@ -13,8 +13,7 @@
 
 + (WordManager*)sharedWordManager;
 
-
--(void)preparedWord;
+- (void)preparedWord;
 
 - (Word*)findWordByCompleteWord:(NSString*)word;
 

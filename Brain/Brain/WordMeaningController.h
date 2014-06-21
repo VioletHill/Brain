@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Word.h"
 
-@interface WordMeaningController : UIViewController;
+@interface WordMeaningController : UIViewController
 
-@property (nonatomic,strong) Word* word;
+@property (nonatomic, strong) Word* word;
 
 @end

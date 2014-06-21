@@ -10,8 +10,7 @@
 
 @implementation UIScrollView (UITouch)
 
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
 {
     //if(!self.dragging)
     {
@@ -20,7 +19,7 @@
     [super touchesBegan:touches withEvent:event];
     //NSLog(@"MyScrollView touch Began");
 }
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event
 {
     //if(!self.dragging)
     {
@@ -29,7 +28,7 @@
     [super touchesMoved:touches withEvent:event];
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event
 {
     //if(!self.dragging)
     {
@@ -38,9 +37,7 @@
     [super touchesEnded:touches withEvent:event];
 }
 
-
 @end
-
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -50,4 +47,3 @@
     // Drawing code
 }
 */
-

@@ -10,13 +10,12 @@
 
 @implementation NSString (sortString)
 
--(NSString*)getSortString
+- (NSString*)getSortString
 {
-    if ([self characterAtIndex:0]=='-')
-    {
+    if ([self characterAtIndex:0] == '-') {
         return [[self.lowercaseString substringFromIndex:1] copy];
-    }
-    else return [self.lowercaseString copy];
+    } else
+        return [self.lowercaseString copy];
 }
 
 @end

@@ -14,7 +14,7 @@
 
 @implementation HintViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -23,16 +23,15 @@
     return self;
 }
 
--(instancetype) initWithHtmlFile:(NSString*)html
+- (instancetype)initWithHtmlFile:(NSString*)html
 {
-    if (self=[super init])
-    {
-        NSLog(@"%f %f",self.view.frame.origin.y, self.view.frame.size.height);
-        NSString* filePath=[[NSBundle mainBundle] pathForResource:html ofType:@"html"];
-        NSURL* url=[NSURL fileURLWithPath:filePath];
-        NSURLRequest* request=[NSURLRequest requestWithURL:url];
-        
-        UIWebView* webView=[[UIWebView alloc] initWithFrame:self.view.frame];
+    if (self = [super init]) {
+        NSLog(@"%f %f", self.view.frame.origin.y, self.view.frame.size.height);
+        NSString* filePath = [[NSBundle mainBundle] pathForResource:html ofType:@"html"];
+        NSURL* url = [NSURL fileURLWithPath:filePath];
+        NSURLRequest* request = [NSURLRequest requestWithURL:url];
+
+        UIWebView* webView = [[UIWebView alloc] initWithFrame:self.view.frame];
         [webView loadRequest:request];
         [self.view addSubview:webView];
     }
@@ -42,11 +41,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor colorWithRed:251.0/255.0 green:240.0/255.0 blue:217.0/255.0 alpha:1.0];
-    self.title=@"Hint";
-	// Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor colorWithRed:251.0 / 255.0 green:240.0 / 255.0 blue:217.0 / 255.0 alpha:1.0];
+    self.title = @"Hint";
+    // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning
 {

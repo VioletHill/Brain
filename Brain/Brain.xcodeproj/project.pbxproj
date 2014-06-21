@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241EC75019552FD4006647BA /* RelatedWordTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241EC74F19552FD4006647BA /* RelatedWordTableView.m */; };
 		2437EE8E186470D100F9389F /* WordMeaningRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */; };
 		2438830B18617A1F0082B056 /* WordMeaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2438830A18617A1F0082B056 /* WordMeaningView.m */; };
 		243F341C18B9D80D001E9E90 /* Hint.plist in Resources */ = {isa = PBXBuildFile; fileRef = 243F341B18B9D80D001E9E90 /* Hint.plist */; };
@@ -85,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		241EC74E19552FD4006647BA /* RelatedWordTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedWordTableView.h; sourceTree = "<group>"; };
+		241EC74F19552FD4006647BA /* RelatedWordTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedWordTableView.m; sourceTree = "<group>"; };
 		2437EE8C186470D100F9389F /* WordMeaningRootScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningRootScrollView.h; sourceTree = "<group>"; };
 		2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningRootScrollView.m; sourceTree = "<group>"; };
 		2438830918617A1F0082B056 /* WordMeaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningView.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */,
 				243F341F18B9DC6F001E9E90 /* HintViewController.h */,
 				243F342018B9DC6F001E9E90 /* HintViewController.m */,
+				241EC74E19552FD4006647BA /* RelatedWordTableView.h */,
+				241EC74F19552FD4006647BA /* RelatedWordTableView.m */,
 			);
 			name = WordMeaning;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */,
 				24834FE1191E7BFA00F8109C /* WordPrefix.m in Sources */,
 				24834FDE191E7BFA00F8109C /* WordP.m in Sources */,
+				241EC75019552FD4006647BA /* RelatedWordTableView.m in Sources */,
 				24834FDB191E7BF900F8109C /* WordE.m in Sources */,
 				24834FC6191E7BF900F8109C /* WordS.m in Sources */,
 				24834FBA191E7BF900F8109C /* WordL.m in Sources */,

@@ -10,7 +10,6 @@
 
 @interface NSAttributedString (Html2Attributed)
 
-+(NSAttributedString*)getAttributeStringFromHtmlString:(NSString*)htmlStr;
-
++ (NSAttributedString*)getAttributeStringFromHtmlString:(NSString*)htmlStr;
 
 @end

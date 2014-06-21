@@ -10,6 +10,6 @@
 
 @interface HintViewController : UIViewController
 
--(instancetype) initWithHtmlFile:(NSString*)html ;
+- (instancetype)initWithHtmlFile:(NSString*)html;
 
 @end

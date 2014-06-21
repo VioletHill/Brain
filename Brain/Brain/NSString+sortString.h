@@ -10,6 +10,6 @@
 
 @interface NSString (sortString)
 
--(NSString*)getSortString;
+- (NSString*)getSortString;
 
 @end

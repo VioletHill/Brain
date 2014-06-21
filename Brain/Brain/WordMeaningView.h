@@ -12,16 +12,16 @@
 
 @optional
 
--(void) wordTapCallBack:(NSString*)word;
+- (void)wordTapCallBack:(NSString*)word;
 
 @end
 
 @interface WordMeaningView : UIView
 
--(instancetype) initWithWord:(NSString*)word andMeaning:(NSString*)meaning;
+- (instancetype)initWithWord:(NSString*)word andMeaning:(NSString*)meaning;
 
-@property (nonatomic,weak) NSString* word;
+@property (nonatomic, weak) NSString* word;
 
-@property (nonatomic,weak) id<WordMeaingViewTapProtocol> delegate;
+@property (nonatomic, weak) id<WordMeaingViewTapProtocol> delegate;
 
 @end

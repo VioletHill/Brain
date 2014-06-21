@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WordSearchController : UIViewController<UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate,UIScrollViewDelegate>
+@interface WordSearchController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-
+@property (weak, nonatomic) IBOutlet UISearchBar* searchBar;
 
 @end

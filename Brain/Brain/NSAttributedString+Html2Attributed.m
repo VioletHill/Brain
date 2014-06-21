@@ -10,14 +10,16 @@
 
 @implementation NSAttributedString (Html2Attributed)
 
-+(NSAttributedString*)getAttributeStringFromHtmlString:(NSString*)str
++ (NSAttributedString*)getAttributeStringFromHtmlString:(NSString*)str
 {
-    NSMutableString* html=[str mutableCopy];
-    NSMutableAttributedString* att = [[[NSAttributedString alloc] initWithData:[html dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]} documentAttributes:nil error:nil] mutableCopy];
-    
+    NSMutableString* html = [str mutableCopy];
+    NSDictionary* attrDictionary = @{
+        NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
+        NSCharacterEncodingDocumentAttribute : [NSNumber numberWithInt:NSUTF8StringEncoding]
+    };
+    NSMutableAttributedString* att = [[[NSAttributedString alloc] initWithData:[html dataUsingEncoding:NSUTF8StringEncoding] options:attrDictionary documentAttributes:nil error:nil] mutableCopy];
+
     return att;
 }
-
-
 
 @end
