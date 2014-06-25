@@ -206,15 +206,13 @@
     for (NSString* key in relaArray) {
         NSArray* relaWords = relaArray[key];
         for (NSString* relaWord in relaWords) {
-            [self addRelationWordA:key andWordB:relaWord];
+            [self addRelationWithStrWordA:key andWordB:relaWord];
         }
     }
 }
 
-- (void)addRelationWordA:(NSString*)a andWordB:(NSString*)b
+- (void)addRelation:(Word*)wordA andWordB:(Word*)wordB
 {
-    Word* wordA = [Word findFirstByAttribute:@"word" withValue:a];
-    Word* wordB = [Word findFirstByAttribute:@"word" withValue:b];
     if (wordA == nil || wordB == nil)
         return;
     NSMutableArray* relaA = [wordA.releatedWord mutableCopy];
@@ -230,6 +228,17 @@
     wordA.releatedWord = [relaA copy];
     wordB.releatedWord = [relaB copy];
     [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
+}
+
+- (void)addRelationWithStrWordA:(NSString*)a andWordB:(NSString*)b
+{
+    NSArray* wordAArr = [Word findByAttribute:@"word" withValue:a]; //beacuse _the may have two in database
+    NSArray* wordBArr = [Word findByAttribute:@"word" withValue:b];
+    for (Word* a in wordAArr) {
+        for (Word* b in wordBArr) {
+            [self addRelation:a andWordB:b];
+        }
+    }
 }
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions

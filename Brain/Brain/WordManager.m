@@ -288,6 +288,7 @@
         NSEntityDescription* entity = [NSEntityDescription entityForName:@"WordS" inManagedObjectContext:self.managedObjectContext];
         [request setEntity:entity];
         _wordS = [self getEntityWithRequest:request];
+        NSLog(@"%d",_wordS.count);
     }
     return _wordS;
 }

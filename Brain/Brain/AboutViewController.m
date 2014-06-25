@@ -46,6 +46,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
 {
     // Return the number of sections.
+    NSLog(@"%d",[super numberOfSectionsInTableView:tableView]);
     return [super numberOfSectionsInTableView:tableView];
 }
 
@@ -62,9 +63,10 @@
     return cell;
 }
 
+#define EVALUTE_SECTIION 2
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    if (indexPath.section == 1) {
+    if (indexPath.section == EVALUTE_SECTIION) {
         if (indexPath.row == 0) {
             [self evaluate];
         } else if (indexPath.row == 1) {

@@ -13,6 +13,7 @@
 #import "RelatedWordTableView.h"
 #import "HintViewController.h"
 #import "UIColor+AppColor.h"
+#import "MarkWordManager.h"
 
 @interface WordMeaningController () <WordMeaingViewTapProtocol, RelatedWordTableViewProtocol>
 
@@ -23,6 +24,8 @@
 @property (nonatomic) BOOL isNeedPop;
 
 @property (nonatomic, strong) NSDictionary* hint;
+
+@property (nonatomic, strong) UIBarButtonItem* wordListBarButton;
 
 @end
 
@@ -53,7 +56,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithRed:93.0 / 255.0 green:63.0 / 255.0 blue:39.0 / 255.0 alpha:1] forKey:NSForegroundColorAttributeName];
-
+    self.navigationItem.rightBarButtonItem = self.wordListBarButton;
     [self resetWordWithWord:self.word];
 }
 
@@ -242,14 +245,28 @@
 
     RelatedWordTableView* relatedWordTableView = [[RelatedWordTableView alloc] initWithData:array andRect:rect];
     relatedWordTableView.relaDelegate = self;
-    //   UIView* view = [[UIView alloc] initWithFrame:relatedWordTableView.frame];
-    //  return view;
     return relatedWordTableView;
 }
 
 - (void)selectWordAtRelaWordView:(NSString*)wordStr
 {
     [self wordTapCallBack:wordStr];
+}
+
+#pragma mark - mark to word list
+
+- (UIBarButtonItem*)wordListBarButton
+{
+    if (_wordListBarButton == nil) {
+        _wordListBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(toggleWordListBarButton:)];
+    }
+    return _wordListBarButton;
+}
+
+- (void)toggleWordListBarButton:(id)sender
+{
+    NSLog(@"click mark to word list");
+    [[MarkWordManager sharedMarkWordManager] toggleWordList:self.word.word];
 }
 
 @end

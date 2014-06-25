@@ -18,6 +18,7 @@
 		243F342918B9F22F001E9E90 /* zero.html in Resources */ = {isa = PBXBuildFile; fileRef = 243F342518B9F22F001E9E90 /* zero.html */; };
 		24421ED718994FE0006270A8 /* AbbreviationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24421ED618994FE0006270A8 /* AbbreviationViewController.m */; };
 		2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2452801C1873C3E300220AD5 /* NSString+sortString.m */; };
+		2473FD40195AC41500378E4F /* WordListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473FD3F195AC41500378E4F /* WordListTableViewController.m */; };
 		248273DF185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */; };
 		24834FA2191E7BA400F8109C /* Word.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24834FA0191E7BA400F8109C /* Word.xcdatamodeld */; };
 		24834FA5191E7BF800F8109C /* WordO.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834FA4191E7BF800F8109C /* WordO.m */; };
@@ -64,6 +65,8 @@
 		24B1F4591898AD2700F3274A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1F4581898AD2700F3274A /* AboutViewController.m */; };
 		24B1F45D1898BC3800F3274A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B1F45C1898BC3700F3274A /* MessageUI.framework */; };
 		24B4031719541E7C0015D194 /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B4031619541E7C0015D194 /* NewRelicAgent.framework */; };
+		24BBC17E195ACFA9007A90F7 /* UserWord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24BBC17C195ACFA9007A90F7 /* UserWord.xcdatamodeld */; };
+		24BBC181195AD2F4007A90F7 /* MarkWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBC180195AD2F4007A90F7 /* MarkWord.m */; };
 		24C5047B182884090048B6C0 /* WordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C5047A182884090048B6C0 /* WordManager.m */; };
 		24C72C2B19554DEC0047546D /* WordMeaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C72C2A19554DEC0047546D /* WordMeaningController.m */; };
 		24C72C2E195552810047546D /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C72C2D195552810047546D /* UIColor+AppColor.m */; };
@@ -75,6 +78,8 @@
 		24D6B0E01955E6D700989D59 /* Brain.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 24D6B0DD1955E6D700989D59 /* Brain.sqlite-wal */; };
 		24D6B0E11955E6D700989D59 /* Brain.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24D6B0DE1955E6D700989D59 /* Brain.sqlite */; };
 		24D6B0E21955E6D700989D59 /* Brain.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 24D6B0DF1955E6D700989D59 /* Brain.sqlite-shm */; };
+		24FED234195ABEF700A9F0DA /* MarkWordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FED233195ABEF700A9F0DA /* MarkWordManager.m */; };
+		CD568E9E8B544D6FA32704B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F2FCB10B2A4CBCA98A1331 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08F2FCB10B2A4CBCA98A1331 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		241EC74E19552FD4006647BA /* RelatedWordTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedWordTableView.h; sourceTree = "<group>"; };
 		241EC74F19552FD4006647BA /* RelatedWordTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedWordTableView.m; sourceTree = "<group>"; };
 		2437EE8C186470D100F9389F /* WordMeaningRootScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningRootScrollView.h; sourceTree = "<group>"; };
@@ -108,8 +114,8 @@
 		24421ED618994FE0006270A8 /* AbbreviationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbbreviationViewController.m; sourceTree = "<group>"; };
 		2452801B1873C3E300220AD5 /* NSString+sortString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sortString.h"; sourceTree = "<group>"; };
 		2452801C1873C3E300220AD5 /* NSString+sortString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sortString.m"; sourceTree = "<group>"; };
-		247CF79418BA2E2B001A0092 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		247CF79518BA2E2B001A0092 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		2473FD3E195AC41500378E4F /* WordListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListTableViewController.h; sourceTree = "<group>"; };
+		2473FD3F195AC41500378E4F /* WordListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListTableViewController.m; sourceTree = "<group>"; };
 		248273DD185AFF9800CACE60 /* NSAttributedString+Html2Attributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Html2Attributed.h"; sourceTree = "<group>"; };
 		248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Html2Attributed.m"; sourceTree = "<group>"; };
 		24834FA1191E7BA400F8109C /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
@@ -191,6 +197,9 @@
 		24B1F4581898AD2700F3274A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		24B1F45C1898BC3700F3274A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		24B4031619541E7C0015D194 /* NewRelicAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewRelicAgent.framework; sourceTree = "<group>"; };
+		24BBC17D195ACFA9007A90F7 /* UserWord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserWord.xcdatamodel; sourceTree = "<group>"; };
+		24BBC17F195AD2F4007A90F7 /* MarkWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkWord.h; sourceTree = "<group>"; };
+		24BBC180195AD2F4007A90F7 /* MarkWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkWord.m; sourceTree = "<group>"; };
 		24C50479182884090048B6C0 /* WordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordManager.h; sourceTree = "<group>"; };
 		24C5047A182884090048B6C0 /* WordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordManager.m; sourceTree = "<group>"; };
 		24C72C2A19554DEC0047546D /* WordMeaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningController.m; sourceTree = "<group>"; };
@@ -205,6 +214,9 @@
 		24D6B0DD1955E6D700989D59 /* Brain.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-wal"; sourceTree = "<group>"; };
 		24D6B0DE1955E6D700989D59 /* Brain.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brain.sqlite; sourceTree = "<group>"; };
 		24D6B0DF1955E6D700989D59 /* Brain.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-shm"; sourceTree = "<group>"; };
+		24FED232195ABEF700A9F0DA /* MarkWordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkWordManager.h; sourceTree = "<group>"; };
+		24FED233195ABEF700A9F0DA /* MarkWordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkWordManager.m; sourceTree = "<group>"; };
+		6256CE17F5284E359294E9FD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +232,7 @@
 				24A8FB281826827A00957AFA /* CoreGraphics.framework in Frameworks */,
 				24A8FB2A1826827A00957AFA /* UIKit.framework in Frameworks */,
 				24A8FB261826827A00957AFA /* Foundation.framework in Frameworks */,
+				CD568E9E8B544D6FA32704B7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +364,8 @@
 				24B1F4581898AD2700F3274A /* AboutViewController.m */,
 				24421ED518994FE0006270A8 /* AbbreviationViewController.h */,
 				24421ED618994FE0006270A8 /* AbbreviationViewController.m */,
+				2473FD3E195AC41500378E4F /* WordListTableViewController.h */,
+				2473FD3F195AC41500378E4F /* WordListTableViewController.m */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -362,6 +377,7 @@
 				24A8FB4A1826827A00957AFA /* BrainTests */,
 				24A8FB241826827A00957AFA /* Frameworks */,
 				24A8FB231826827A00957AFA /* Products */,
+				6256CE17F5284E359294E9FD /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -386,6 +402,7 @@
 				24A8FB271826827A00957AFA /* CoreGraphics.framework */,
 				24A8FB291826827A00957AFA /* UIKit.framework */,
 				24A8FB441826827A00957AFA /* XCTest.framework */,
+				08F2FCB10B2A4CBCA98A1331 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -449,11 +466,16 @@
 		24C50475182883CF0048B6C0 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				24834FF7191E7C0700F8109C /* WordDataBase */,
-				24B1F41B1897B54C00F3274A /* sqlite */,
 				24C50479182884090048B6C0 /* WordManager.h */,
 				24C5047A182884090048B6C0 /* WordManager.m */,
+				24FED232195ABEF700A9F0DA /* MarkWordManager.h */,
+				24FED233195ABEF700A9F0DA /* MarkWordManager.m */,
+				24834FF7191E7C0700F8109C /* WordDataBase */,
+				24B1F41B1897B54C00F3274A /* sqlite */,
 				243F341B18B9D80D001E9E90 /* Hint.plist */,
+				24BBC17C195ACFA9007A90F7 /* UserWord.xcdatamodeld */,
+				24BBC17F195AD2F4007A90F7 /* MarkWord.h */,
+				24BBC180195AD2F4007A90F7 /* MarkWord.m */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -474,9 +496,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A8FB541826827A00957AFA /* Build configuration list for PBXNativeTarget "Brain" */;
 			buildPhases = (
+				94C3E31FD3A740B9A727E87E /* Check Pods Manifest.lock */,
 				24A8FB1E1826827A00957AFA /* Sources */,
 				24A8FB1F1826827A00957AFA /* Frameworks */,
 				24A8FB201826827A00957AFA /* Resources */,
+				0538CCAD2BF94228BE6667A8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -578,6 +602,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0538CCAD2BF94228BE6667A8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94C3E31FD3A740B9A727E87E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24A8FB1E1826827A00957AFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -590,6 +647,7 @@
 				24834FDE191E7BFA00F8109C /* WordP.m in Sources */,
 				241EC75019552FD4006647BA /* RelatedWordTableView.m in Sources */,
 				24834FDB191E7BF900F8109C /* WordE.m in Sources */,
+				24BBC17E195ACFA9007A90F7 /* UserWord.xcdatamodeld in Sources */,
 				24834FC6191E7BF900F8109C /* WordS.m in Sources */,
 				24834FBA191E7BF900F8109C /* WordL.m in Sources */,
 				24834FA2191E7BA400F8109C /* Word.xcdatamodeld in Sources */,
@@ -610,6 +668,7 @@
 				24834FF0191E7BFA00F8109C /* WordK.m in Sources */,
 				24834FEA191E7BFA00F8109C /* WordR.m in Sources */,
 				24B1F4591898AD2700F3274A /* AboutViewController.m in Sources */,
+				24BBC181195AD2F4007A90F7 /* MarkWord.m in Sources */,
 				24834FE4191E7BFA00F8109C /* WordQ.m in Sources */,
 				24834FED191E7BFA00F8109C /* WordZ.m in Sources */,
 				243F342118B9DC6F001E9E90 /* HintViewController.m in Sources */,
@@ -617,10 +676,12 @@
 				24834FC0191E7BF900F8109C /* WordX.m in Sources */,
 				24834FC9191E7BF900F8109C /* WordT.m in Sources */,
 				2438830B18617A1F0082B056 /* WordMeaningView.m in Sources */,
+				24FED234195ABEF700A9F0DA /* MarkWordManager.m in Sources */,
 				24834FCF191E7BF900F8109C /* WordC.m in Sources */,
 				24A8FB361826827A00957AFA /* AppDelegate.m in Sources */,
 				24834FAE191E7BF900F8109C /* WordM.m in Sources */,
 				24C72C2E195552810047546D /* UIColor+AppColor.m in Sources */,
+				2473FD40195AC41500378E4F /* WordListTableViewController.m in Sources */,
 				24834FA5191E7BF800F8109C /* WordO.m in Sources */,
 				24834FBD191E7BF900F8109C /* WordW.m in Sources */,
 				24834FF3191E7BFA00F8109C /* WordV.m in Sources */,
@@ -663,8 +724,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				24A8FB381826827A00957AFA /* Base */,
-				247CF79418BA2E2B001A0092 /* zh-Hant */,
-				247CF79518BA2E2B001A0092 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -746,6 +805,7 @@
 		};
 		24A8FB551826827A00957AFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6256CE17F5284E359294E9FD /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -753,17 +813,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/VioletHill/Documents/项目/Brain",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Brain/Brain-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\"";
 				INFOPLIST_FILE = "Brain/Brain-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/VioletHill/Documents/项目/Brain/Brain/MagicRecord/Project\\ Files/Tests/Support/Vendor/Specta/test/vendor/expecta",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Brain;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -773,6 +830,7 @@
 		};
 		24A8FB561826827A00957AFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6256CE17F5284E359294E9FD /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -780,17 +838,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/VioletHill/Documents/项目/Brain",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Brain/Brain-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\"";
 				INFOPLIST_FILE = "Brain/Brain-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/VioletHill/Documents/项目/Brain/Brain/MagicRecord/Project\\ Files/Tests/Support/Vendor/Specta/test/vendor/expecta",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Brain;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -880,6 +935,16 @@
 			);
 			currentVersion = 24834FA1191E7BA400F8109C /* Word.xcdatamodel */;
 			path = Word.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		24BBC17C195ACFA9007A90F7 /* UserWord.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				24BBC17D195ACFA9007A90F7 /* UserWord.xcdatamodel */,
+			);
+			currentVersion = 24BBC17D195ACFA9007A90F7 /* UserWord.xcdatamodel */;
+			path = UserWord.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

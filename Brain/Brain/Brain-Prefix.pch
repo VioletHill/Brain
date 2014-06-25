@@ -17,4 +17,7 @@
 
     #import <NewRelicAgent/NewRelic.h>
 
+    #import <CoreData+MagicalRecord.h>
+
+
 #endif
