@@ -45,8 +45,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
 {
-    // Return the number of sections.
-    NSLog(@"%d",[super numberOfSectionsInTableView:tableView]);
     return [super numberOfSectionsInTableView:tableView];
 }
 
@@ -165,7 +163,6 @@
 
 - (void)evaluate
 {
-
     NSString* str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", @"813629612"];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 }

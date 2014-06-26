@@ -278,7 +278,7 @@
             </objects>
             <point key="canvasLocation" x="874" y="-1198"/>
         </scene>
-        <!--Word List Table View Controller-->
+        <!--Word List Table View Controller - WordList-->
         <scene sceneID="8L9-z1-r0d">
             <objects>
                 <tableViewController id="f6F-wn-WRy" customClass="WordListTableViewController" sceneMemberID="viewController">
@@ -294,6 +294,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ygp-yK-DHq" kind="push" id="6Wg-X9-X4s"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -301,7 +304,7 @@
                             <outlet property="delegate" destination="f6F-wn-WRy" id="M9w-lf-3I3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="g72-dL-Zmg"/>
+                    <navigationItem key="navigationItem" title="WordList" id="g72-dL-Zmg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mp2-RZ-efU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -449,7 +452,7 @@ The etymoline dictionary is indeed a gift for people who love English words all 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9C-k2-rVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="914"/>
+            <point key="canvasLocation" x="1848" y="-1926"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7sA-MR-v1B">
@@ -475,4 +478,7 @@ The etymoline dictionary is indeed a gift for people who love English words all 
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="3tm-mM-Q1I"/>
+    </inferredMetricsTieBreakers>
 </document>

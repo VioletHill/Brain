@@ -105,10 +105,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
-
-    if ([sender isKindOfClass:[UIBarButtonItem class]]) {
+    if ([sender isKindOfClass:[UIBarButtonItem class]])
         return;
-    }
 
     UITableViewCell* cell = sender;
     WordMeaningController* wordMeaningController = segue.destinationViewController;

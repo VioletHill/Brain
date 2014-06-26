@@ -7,6 +7,7 @@
 //
 
 #import "UIColor+AppColor.h"
+#import "MarkWord.h"
 
 @implementation UIColor (AppColor)
 
@@ -24,5 +25,17 @@
 {
     return [UIColor colorWithRed:214.0 / 255.0 green:207.0 / 255.0 blue:195.0 / 255.0 alpha:1];
 }
+
++(UIColor*)markWorkColorWithWord:(NSString*)word
+{
+    MarkWord* markWord=[MarkWord MR_findFirstByAttribute:@"word" withValue:word];
+    if (markWord==nil || ![markWord.isMark boolValue]){
+        return [UIColor blueColor];
+    }
+    else{
+        return [UIColor redColor];
+    }
+}
+
 
 @end

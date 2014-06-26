@@ -259,6 +259,7 @@
 {
     if (_wordListBarButton == nil) {
         _wordListBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(toggleWordListBarButton:)];
+        _wordListBarButton.tintColor=[UIColor markWorkColorWithWord:self.word.word];
     }
     return _wordListBarButton;
 }
@@ -267,6 +268,7 @@
 {
     NSLog(@"click mark to word list");
     [[MarkWordManager sharedMarkWordManager] toggleWordList:self.word.word];
+    self.wordListBarButton.tintColor = [UIColor markWorkColorWithWord:self.word.word];
 }
 
 @end

@@ -9,6 +9,7 @@
 #import "WordListTableViewController.h"
 #import "MarkWordManager.h"
 #import "WordManager.h"
+#import "WordMeaningController.h"
 
 @interface WordListTableViewController ()
 
@@ -38,15 +39,32 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor blackColor] forKey:NSForegroundColorAttributeName];
+    [self loadData];
+    [self.tableView reloadData];
+}
+
 - (NSArray*)data
 {
     if (_data == nil) {
-        _data = [MarkWord MR_findAll];
-        if (_data == nil) {
-            _data = [[NSArray alloc] init];
-        }
+        [self loadData];
     }
     return _data;
+}
+
+- (void)loadData
+{
+    _data = [MarkWord MR_findByAttribute:@"isMark" withValue:@(YES)];
+    if (_data == nil) {
+        _data = [[NSArray alloc] init];
+    }
+    _data=[_data sortedArrayUsingComparator:^NSComparisonResult(MarkWord* a, MarkWord*b){
+        return [a.word.lowercaseString compare:b.word.lowercaseString];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,27 +98,27 @@
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        UITableViewCell* cell=[self.tableView cellForRowAtIndexPath:indexPath];
+        [[MarkWordManager sharedMarkWordManager] deleteWordFromList:cell.textLabel.text];
+        [self loadData];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -118,15 +136,19 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UITableViewCell* cell = sender;
+    WordMeaningController* wordMeaningController = segue.destinationViewController;
+    
+    NSString* word = cell.textLabel.text;
+    
+    wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
 }
-*/
+
 
 @end

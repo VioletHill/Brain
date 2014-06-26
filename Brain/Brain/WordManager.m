@@ -288,7 +288,6 @@
         NSEntityDescription* entity = [NSEntityDescription entityForName:@"WordS" inManagedObjectContext:self.managedObjectContext];
         [request setEntity:entity];
         _wordS = [self getEntityWithRequest:request];
-        NSLog(@"%d",_wordS.count);
     }
     return _wordS;
 }
@@ -418,7 +417,7 @@
     int r = (int)[arr count];
     while (l < r) {
         int mid = (l + r) >> 1;
-        Word* findWord = [arr objectAtIndex:mid];
+        Word* findWord = arr[mid];
 
         if ([findWord.word compare:wordText] == NSOrderedSame)
             return mid;
@@ -514,15 +513,16 @@
     searchText = searchText.lowercaseString;
 
     NSArray* searchArray = [self getSearchArrayByWord:searchText];
-
+    
     NSMutableArray* data = [[NSMutableArray alloc] init];
     int l = 0;
     int r = (int)searchArray.count;
 
     while (l < r) {
         int mid = (l + r) >> 1;
-        NSString* a = [((Word*)[searchArray objectAtIndex:mid]).word getSortString];
+        NSString* a = [((Word*)searchArray[mid]).word getSortString];
         NSComparisonResult result = [a compare:[searchText getSortString]];
+        
         if (result == NSOrderedSame) {
             l = mid;
             break;
@@ -534,7 +534,7 @@
 
     //单词有重复的 比如 china 和 China
     while (l >= 1) {
-        NSComparisonResult result = [[((Word*)[searchArray objectAtIndex:l - 1]).word getSortString] compare:[searchText getSortString]];
+        NSComparisonResult result = [[((Word*)searchArray[l - 1]).word getSortString] compare:[searchText getSortString]];
         if (result == NSOrderedSame)
             l--;
         else
@@ -542,7 +542,7 @@
     }
 
     for (int i = l; i < MIN(l + 25, searchArray.count); i++) {
-        [data addObject:((Word*)[searchArray objectAtIndex:i]).word];
+        [data addObject:((Word*)searchArray[i]).word];
     }
     return data;
 }

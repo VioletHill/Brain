@@ -32,6 +32,7 @@
 {
     if (self = [super init]) {
         selfFrame = rect;
+        self.layer.cornerRadius=10;
         self.data = data;
         self.delegate = self;
         self.dataSource = self;

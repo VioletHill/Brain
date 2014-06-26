@@ -35,43 +35,128 @@
     return result;
 }
 
-- (int)getWord:(NSString*)wordText indexAtTmpArray:(NSArray*)arr
+- (Word*)getWordEntityWithCh:(char)ch
 {
-    if (arr == nil || arr.count == 0)
-        return 0;
+    switch (ch) {
+    case 'a':
+        return [WordA createEntity];
+    case 'b':
+        return [WordB createEntity];
+    case 'c':
+        return [WordC createEntity];
+    case 'd':
+        return [WordD createEntity];
+    case 'e':
+        return [WordE createEntity];
+    case 'f':
+        return [WordF createEntity];
+    case 'g':
+        return [WordG createEntity];
+    case 'h':
+        return [WordH createEntity];
+    case 'i':
+        return [WordI createEntity];
+    case 'j':
+        return [WordJ createEntity];
+    case 'k':
+        return [WordK createEntity];
+    case 'l':
+        return [WordL createEntity];
+    case 'm':
+        return [WordM createEntity];
+    case 'n':
+        return [WordN createEntity];
+    case 'o':
+        return [WordO createEntity];
+    case 'p':
+        return [WordP createEntity];
+    case 'q':
+        return [WordQ createEntity];
+    case 'r':
+        return [WordR createEntity];
+    case 's':
+        return [WordS createEntity];
+    case 't':
+        return [WordT createEntity];
+    case 'u':
+        return [WordU createEntity];
+    case 'v':
+        return [WordV createEntity];
+    case 'w':
+        return [WordW createEntity];
+    case 'x':
+        return [WordX createEntity];
+        break;
+    case 'y':
+        return [WordY createEntity];
+    case 'z':
+        return [WordZ createEntity];
+    default:
+        break;
+    }
+    return nil;
+}
+
+- (BOOL)isLetter:(char)ch
+{
+    if (ch >= 'a' && ch <= 'z')
+        return YES;
+    if (ch >= 'A' && ch <= 'Z')
+        return YES;
+    return NO;
+}
+
+- (int)getIndexAtTmpArray:(NSString*)word
+{
+    // [self showTmpWord];
     int l = 0;
-    int r = (int)[arr count];
+    int r = tmpWord.count;
     while (l < r) {
         int mid = (l + r) >> 1;
-        Word* findWord = [arr objectAtIndex:mid];
-
-        if ([findWord.word compare:wordText] == NSOrderedSame)
+        Word* indexWord = tmpWord[mid];
+        if ([indexWord.word isEqualToString:word])
             return mid;
-
-        if ([findWord.word compare:wordText] == NSOrderedAscending) {
-            l = mid + 1;
-        } else {
+        else if ([indexWord.word compare:word] == NSOrderedDescending)
             r = mid;
-        }
+        else
+            l = mid + 1;
     }
     return l;
+}
+
+- (void)showTmpWord
+{
+    int i = 0;
+    for (Word* word in tmpWord) {
+        NSLog(@"%d  %@", i++, word.word);
+    }
+}
+
+- (void)insertIntoTmpWord:(Word*)word atIndex:(int)index
+{
+    [tmpWord insertObject:word atIndex:index];
+    // [self showTmpWord];
 }
 
 - (void)setupDatabase
 {
     BOOL isPrefix;
     array = [[self getData] copy];
-
     tmpWord = [[NSMutableArray alloc] init];
+
     for (int i = 0; i < array.count; i++) {
         NSString* wordKey = [[array objectAtIndex:i] objectForKey:@"word"];
         NSString* meaning = [[array objectAtIndex:i] objectForKey:@"meaning"];
         NSString* wordText = [self getWordTextWithoutProperty:wordKey];
 
-        char ch = [wordKey characterAtIndex:0];
+        char ch = [wordText characterAtIndex:0];
         if (ch == '-') {
             isPrefix = YES;
-            ch = [wordKey characterAtIndex:1];
+            for (int i = 0; i < 100; i++) {
+                ch = [wordText characterAtIndex:i];
+                if ([self isLetter:ch])
+                    break;
+            }
         } else {
             isPrefix = NO;
         }
@@ -82,102 +167,23 @@
         Word* newWord = nil;
         Word* prefixWord = nil;
 
-        int index = [self getWord:wordText indexAtTmpArray:tmpWord];
-        if (tmpWord.count > index)
-            newWord = [tmpWord objectAtIndex:index];
-
-        if (newWord == nil || [newWord.word compare:wordText] != NSOrderedSame) {
-            switch (ch) {
-            case 'a':
-                newWord = [WordA createEntity];
-                break;
-            case 'b':
-                newWord = [WordB createEntity];
-                break;
-            case 'c':
-                newWord = [WordC createEntity];
-                break;
-            case 'd':
-                newWord = [WordD createEntity];
-                break;
-            case 'e':
-                newWord = [WordE createEntity];
-                break;
-            case 'f':
-                newWord = [WordF createEntity];
-                break;
-            case 'g':
-                newWord = [WordG createEntity];
-                break;
-            case 'h':
-                newWord = [WordH createEntity];
-                break;
-            case 'i':
-                newWord = [WordI createEntity];
-                break;
-            case 'j':
-                newWord = [WordJ createEntity];
-                break;
-            case 'k':
-                newWord = [WordK createEntity];
-                break;
-            case 'l':
-                newWord = [WordL createEntity];
-                break;
-            case 'm':
-                newWord = [WordM createEntity];
-                break;
-            case 'n':
-                newWord = [WordN createEntity];
-                break;
-            case 'o':
-                newWord = [WordO createEntity];
-                break;
-            case 'p':
-                newWord = [WordP createEntity];
-                break;
-            case 'q':
-                newWord = [WordQ createEntity];
-                break;
-            case 'r':
-                newWord = [WordR createEntity];
-                break;
-            case 's':
-                newWord = [WordS createEntity];
-                break;
-            case 't':
-                newWord = [WordT createEntity];
-                break;
-            case 'u':
-                newWord = [WordU createEntity];
-                break;
-            case 'v':
-                newWord = [WordV createEntity];
-                break;
-            case 'w':
-                newWord = [WordW createEntity];
-                break;
-            case 'x':
-                newWord = [WordX createEntity];
-                break;
-            case 'y':
-                newWord = [WordY createEntity];
-                break;
-            case 'z':
-                newWord = [WordZ createEntity];
-                break;
-            default:
-                break;
-            }
-
-            newWord.word = wordText;
+        int index = [self getIndexAtTmpArray:wordText];
+        if (tmpWord.count <= index || ![((Word*)tmpWord[index]).word isEqualToString:wordText]) {
+            newWord = [self getWordEntityWithCh:ch];
             newWord.meaning = [[NSDictionary alloc] init];
-            [tmpWord insertObject:newWord atIndex:index];
+            newWord.word = wordText;
+            [self insertIntoTmpWord:newWord atIndex:index];
 
             if (isPrefix) {
                 prefixWord = [WordPrefix createEntity];
-                prefixWord.word = wordText;
                 prefixWord.meaning = [[NSDictionary alloc] init];
+                prefixWord.word = wordText;
+            }
+
+        } else {
+            newWord = tmpWord[index];
+            if (isPrefix) {
+                prefixWord = [WordPrefix findFirstByAttribute:@"word" withValue:wordText];
             }
         }
 
@@ -192,8 +198,6 @@
         }
     }
     [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
-    NSLog(@"%d", [WordS findAll].count);
-    NSLog(@"%d", [WordPrefix findAll].count);
 }
 
 - (void)setupRela
@@ -227,13 +231,37 @@
     [relaB addObject:wordA.word];
     wordA.releatedWord = [relaA copy];
     wordB.releatedWord = [relaB copy];
-    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
 }
 
 - (void)addRelationWithStrWordA:(NSString*)a andWordB:(NSString*)b
 {
-    NSArray* wordAArr = [Word findByAttribute:@"word" withValue:a]; //beacuse _the may have two in database
-    NSArray* wordBArr = [Word findByAttribute:@"word" withValue:b];
+    int indexA = [self getIndexAtTmpArray:a];
+    int indexB = [self getIndexAtTmpArray:b];
+    // NSLog(@"%@ %@", a, b);
+
+    NSMutableArray* wordAArr = [[NSMutableArray alloc] init];
+    NSMutableArray* wordBArr = [[NSMutableArray alloc] init];
+    if (tmpWord.count > indexA && [((Word*)tmpWord[indexA]).word isEqualToString:a]) {
+        [wordAArr addObject:tmpWord[indexA]];
+    }
+
+    if (tmpWord.count > indexB && [((Word*)tmpWord[indexB]).word isEqualToString:b]) {
+        [wordBArr addObject:tmpWord[indexB]];
+    }
+
+    if ([a characterAtIndex:0] == '-') {
+        WordPrefix* prefix = [WordPrefix findFirstByAttribute:@"word" withValue:a];
+        if (prefix != nil) {
+            [wordAArr addObject:prefix];
+        }
+    }
+    if ([b characterAtIndex:0] == '-') {
+        WordPrefix* prefix = [WordPrefix findFirstByAttribute:@"word" withValue:b];
+        if (prefix != nil) {
+            [wordBArr addObject:prefix];
+        }
+    }
+
     for (Word* a in wordAArr) {
         for (Word* b in wordBArr) {
             [self addRelation:a andWordB:b];
@@ -249,6 +277,8 @@
 
     [self setupDatabase];
     [self setupRela];
+    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
+
     NSArray* array = [Word findAll];
     NSLog(@"%d", array.count);
 

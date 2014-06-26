@@ -43,7 +43,8 @@
 - (void)toggleWordList:(NSString*)wordStr
 {
     MarkWord* markWord = [MarkWord MR_findFirstByAttribute:@"word" withValue:wordStr];
-    if (markWord == nil || markWord.isMark) {
+    NSLog(@"%@",markWord.isMark);
+    if (markWord == nil || ![markWord.isMark boolValue]) {
         [self addWordToList:wordStr];
     } else {
         [self deleteWordFromList:wordStr];
