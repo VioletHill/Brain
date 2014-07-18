@@ -29,7 +29,6 @@
 @implementation WordMeaningController {
     BOOL isInit;
     BOOL isNeedResetPosition;
-    BOOL wordChange;
 }
 
 - (instancetype)init
@@ -62,14 +61,6 @@
         } else {
             self.scrollView.contentOffset = CGPointMake(0, 0);
         }
-    }
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    if (wordChange) {
-        [self resetWordWithWord:self.word];
     }
 }
 
@@ -120,7 +111,6 @@
 
 - (void)resetWordWithWord:(Word*)word
 {
-    wordChange = NO;
     self.title = word.word;
     self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
 
@@ -181,7 +171,7 @@
     return NO;
 }
 
-- (void)wordTapCallBack:(NSString*)word isGoNew:(BOOL)is
+- (void)wordTapCallBack:(NSString*)word
 {
     Word* wordEntity = nil;
     NSLog(@"%@", word);
@@ -195,13 +185,12 @@
         if (wordEntity == nil)
             wordEntity = [[WordManager sharedWordManager] findWordByCompleteWord:word.lowercaseString];
 
-        if (!is || (wordEntity != nil && [wordEntity.word isEqualToString:self.word.word])) {
+        if (wordEntity != nil && [wordEntity.word isEqualToString:self.word.word]) {
             isNeedResetPosition = NO;
             WordMeaningController* nextController = [[WordMeaningController alloc] init];
             nextController.word = wordEntity;
             nextController.isNeedPop = YES;
             [self.navigationController pushViewController:nextController animated:YES];
-
         } else if (wordEntity != nil && ![wordEntity.word isEqualToString:self.word.word]) {
             isNeedResetPosition = YES;
             WordMeaningController* nextController = [[WordMeaningController alloc] init];
@@ -239,12 +228,7 @@
 
 - (void)selectWordAtRelaWordView:(NSString*)wordStr
 {
-    Word* word = [[WordManager sharedWordManager] findWordByCompleteWord:wordStr];
-    if (word == nil)
-        word = [[WordManager sharedWordManager] findWordByCompleteWord:wordStr.lowercaseString];
-    wordChange = YES;
-    self.word = word;
-    [self wordTapCallBack:wordStr isGoNew:NO];
+    [self wordTapCallBack:wordStr];
 }
 
 #pragma mark - mark to word list

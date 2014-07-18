@@ -43,7 +43,7 @@ const float screenWidth = 320;
 {
     if (_wordTitle == nil) {
         _wordTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, width - 5, 44)];
-        _wordTitle.font=[UIFont systemFontOfSize:22];
+        _wordTitle.font = [UIFont systemFontOfSize:22];
         _wordTitle.textColor = [UIColor titleLableColor];
         [self addSubview:self.wordTitle];
         [self addSubview:self.cutOff];
@@ -86,7 +86,7 @@ const float screenWidth = 320;
     UITextView* textView = [[UITextView alloc] init];
     textView.attributedText = [NSAttributedString getAttributeStringFromHtmlString:str];
     CGSize size = [self.meaningView sizeThatFits:CGSizeMake(self.meaningView.frame.size.width, FLT_MAX)];
-    self.meaningView.frame = CGRectMake(self.meaningView.frame.origin.x, self.meaningView.frame.origin.y, self.meaningView.frame.size.width, size.height-20);
+    self.meaningView.frame = CGRectMake(self.meaningView.frame.origin.x, self.meaningView.frame.origin.y, self.meaningView.frame.size.width, size.height - 20);
 }
 
 - (NSString*)getStringAtIndex:(NSInteger)index
@@ -212,8 +212,8 @@ const float screenWidth = 320;
         lastRange.length = 0;
     }
 
-    if (self.selectString != nil && ![self.selectString isEqualToString:@""] && [self.delegate respondsToSelector:@selector(wordTapCallBack:isGoNew:)]) {
-        [self.delegate wordTapCallBack:self.selectString isGoNew:YES];
+    if (self.selectString != nil && ![self.selectString isEqualToString:@""] && [self.delegate respondsToSelector:@selector(wordTapCallBack:)]) {
+        [self.delegate wordTapCallBack:self.selectString];
     }
 }
 

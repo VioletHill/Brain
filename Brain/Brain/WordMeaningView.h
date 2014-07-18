@@ -12,7 +12,7 @@
 
 @optional
 
-- (void)wordTapCallBack:(NSString*)word isGoNew:(BOOL)is;
+- (void)wordTapCallBack:(NSString*)word;
 
 @end
 
