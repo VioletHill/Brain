@@ -19,34 +19,23 @@
 
 @property (strong, nonatomic) WordMeaningRootScrollView* scrollView;
 
-@property (nonatomic, strong) NSMutableArray* meaningViewArray;
-
 @property (nonatomic) BOOL isNeedPop;
 
 @property (nonatomic, strong) NSDictionary* hint;
-
-@property (nonatomic, strong) UIBarButtonItem* wordListBarButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem* wordListBarButton;
 
 @end
 
 @implementation WordMeaningController {
     BOOL isInit;
     BOOL isNeedResetPosition;
+    BOOL wordChange;
 }
 
 - (instancetype)init
 {
     if (self = [super init]) {
         isInit = YES;
-    }
-    return self;
-}
-
-- (id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -62,6 +51,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
     if (self.isNeedPop) {
         [self.navigationController popViewControllerAnimated:NO];
@@ -72,6 +62,14 @@
         } else {
             self.scrollView.contentOffset = CGPointMake(0, 0);
         }
+    }
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    if (wordChange) {
+        [self resetWordWithWord:self.word];
     }
 }
 
@@ -100,20 +98,11 @@
     return _scrollView;
 }
 
-- (NSMutableArray*)meaningViewArray
-{
-    if (_meaningViewArray == nil) {
-        _meaningViewArray = [[NSMutableArray alloc] init];
-    }
-    return _meaningViewArray;
-}
-
 - (void)clearAllMeaningViews
 {
-    for (UIView* view in self.meaningViewArray) {
+    for (UIView* view in self.scrollView.subviews) {
         [view removeFromSuperview];
     }
-    [self.meaningViewArray removeAllObjects];
 }
 
 - (NSArray*)getTheKeyArrayWithWord:(Word*)word
@@ -131,7 +120,9 @@
 
 - (void)resetWordWithWord:(Word*)word
 {
+    wordChange = NO;
     self.title = word.word;
+    self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
 
     [self clearAllMeaningViews];
 
@@ -147,7 +138,6 @@
         meaingView.delegate = self;
         meaingView.word = self.word.word;
         meaingView.frame = CGRectMake(meaingView.frame.origin.x, height, meaingView.frame.size.width, meaingView.frame.size.height);
-        [self.meaningViewArray addObject:meaingView];
         [self.scrollView addSubview:meaingView];
         height += meaingView.frame.size.height + 20;
         relaViewRect = meaingView.frame;
@@ -164,7 +154,6 @@
     if (height < self.view.frame.size.height - 63) {
         height = self.view.frame.size.height - 63;
     }
-
     [self.scrollView setContentSize:CGSizeMake(0, height)];
     self.scrollView.scrollEnabled = YES;
 }
@@ -192,7 +181,7 @@
     return NO;
 }
 
-- (void)wordTapCallBack:(NSString*)word
+- (void)wordTapCallBack:(NSString*)word isGoNew:(BOOL)is
 {
     Word* wordEntity = nil;
     NSLog(@"%@", word);
@@ -206,14 +195,14 @@
         if (wordEntity == nil)
             wordEntity = [[WordManager sharedWordManager] findWordByCompleteWord:word.lowercaseString];
 
-        if (wordEntity != nil && [wordEntity.word isEqualToString:self.word.word]) {
+        if (!is || (wordEntity != nil && [wordEntity.word isEqualToString:self.word.word])) {
             isNeedResetPosition = NO;
             WordMeaningController* nextController = [[WordMeaningController alloc] init];
             nextController.word = wordEntity;
             nextController.isNeedPop = YES;
             [self.navigationController pushViewController:nextController animated:YES];
-        }
-        if (wordEntity != nil && ![wordEntity.word isEqualToString:self.word.word]) {
+
+        } else if (wordEntity != nil && ![wordEntity.word isEqualToString:self.word.word]) {
             isNeedResetPosition = YES;
             WordMeaningController* nextController = [[WordMeaningController alloc] init];
             nextController.word = wordEntity;
@@ -250,25 +239,21 @@
 
 - (void)selectWordAtRelaWordView:(NSString*)wordStr
 {
-    [self wordTapCallBack:wordStr];
+    Word* word = [[WordManager sharedWordManager] findWordByCompleteWord:wordStr];
+    if (word == nil)
+        word = [[WordManager sharedWordManager] findWordByCompleteWord:wordStr.lowercaseString];
+    wordChange = YES;
+    self.word = word;
+    [self wordTapCallBack:wordStr isGoNew:NO];
 }
 
 #pragma mark - mark to word list
 
-- (UIBarButtonItem*)wordListBarButton
-{
-    if (_wordListBarButton == nil) {
-        _wordListBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(toggleWordListBarButton:)];
-        _wordListBarButton.tintColor=[UIColor markWorkColorWithWord:self.word.word];
-    }
-    return _wordListBarButton;
-}
-
-- (void)toggleWordListBarButton:(id)sender
+- (IBAction)toggleWordListBarButton:(id)sender
 {
     NSLog(@"click mark to word list");
     [[MarkWordManager sharedMarkWordManager] toggleWordList:self.word.word];
-    self.wordListBarButton.tintColor = [UIColor markWorkColorWithWord:self.word.word];
+    self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
 }
 
 @end

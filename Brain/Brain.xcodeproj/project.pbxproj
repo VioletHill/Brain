@@ -18,7 +18,7 @@
 		243F342918B9F22F001E9E90 /* zero.html in Resources */ = {isa = PBXBuildFile; fileRef = 243F342518B9F22F001E9E90 /* zero.html */; };
 		24421ED718994FE0006270A8 /* AbbreviationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24421ED618994FE0006270A8 /* AbbreviationViewController.m */; };
 		2452801D1873C3E300220AD5 /* NSString+sortString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2452801C1873C3E300220AD5 /* NSString+sortString.m */; };
-		2473FD40195AC41500378E4F /* WordListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473FD3F195AC41500378E4F /* WordListTableViewController.m */; };
+		2473FD40195AC41500378E4F /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473FD3F195AC41500378E4F /* WordListViewController.m */; };
 		248273DF185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */; };
 		24834FA2191E7BA400F8109C /* Word.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24834FA0191E7BA400F8109C /* Word.xcdatamodeld */; };
 		24834FA5191E7BF800F8109C /* WordO.m in Sources */ = {isa = PBXBuildFile; fileRef = 24834FA4191E7BF800F8109C /* WordO.m */; };
@@ -52,7 +52,6 @@
 		24A8FB261826827A00957AFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB251826827A00957AFA /* Foundation.framework */; };
 		24A8FB281826827A00957AFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB271826827A00957AFA /* CoreGraphics.framework */; };
 		24A8FB2A1826827A00957AFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FB291826827A00957AFA /* UIKit.framework */; };
-		24A8FB301826827A00957AFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FB2E1826827A00957AFA /* InfoPlist.strings */; };
 		24A8FB321826827A00957AFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FB311826827A00957AFA /* main.m */; };
 		24A8FB361826827A00957AFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FB351826827A00957AFA /* AppDelegate.m */; };
 		24A8FB391826827A00957AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FB371826827A00957AFA /* Main.storyboard */; };
@@ -64,12 +63,8 @@
 		24A8FB511826827A00957AFA /* BrainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FB501826827A00957AFA /* BrainTests.m */; };
 		24B1F4591898AD2700F3274A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1F4581898AD2700F3274A /* AboutViewController.m */; };
 		24B1F45D1898BC3800F3274A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B1F45C1898BC3700F3274A /* MessageUI.framework */; };
-		24B4031719541E7C0015D194 /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B4031619541E7C0015D194 /* NewRelicAgent.framework */; };
 		24BBC17E195ACFA9007A90F7 /* UserWord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24BBC17C195ACFA9007A90F7 /* UserWord.xcdatamodeld */; };
 		24BBC181195AD2F4007A90F7 /* MarkWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBC180195AD2F4007A90F7 /* MarkWord.m */; };
-		24BFBA54195C15F60097E6DF /* Brain.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 24BFBA51195C15F60097E6DF /* Brain.sqlite-wal */; };
-		24BFBA55195C15F60097E6DF /* Brain.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24BFBA52195C15F60097E6DF /* Brain.sqlite */; };
-		24BFBA56195C15F60097E6DF /* Brain.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 24BFBA53195C15F60097E6DF /* Brain.sqlite-shm */; };
 		24C5047B182884090048B6C0 /* WordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C5047A182884090048B6C0 /* WordManager.m */; };
 		24C72C2B19554DEC0047546D /* WordMeaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C72C2A19554DEC0047546D /* WordMeaningController.m */; };
 		24C72C2E195552810047546D /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C72C2D195552810047546D /* UIColor+AppColor.m */; };
@@ -78,6 +73,11 @@
 		24D026EF189EA0B80070039C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026EE189EA0B80070039C /* CoreTelephony.framework */; };
 		24D026F1189EA1BC0070039C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026F0189EA1BC0070039C /* SystemConfiguration.framework */; };
 		24D026F3189EA1C80070039C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D026F2189EA1C80070039C /* libz.dylib */; };
+		24E629C11978C4FB00D2F7A8 /* Brain.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24E629BE1978C4FB00D2F7A8 /* Brain.sqlite */; };
+		24E629C21978C4FB00D2F7A8 /* Brain.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 24E629BF1978C4FB00D2F7A8 /* Brain.sqlite-shm */; };
+		24E629C31978C4FB00D2F7A8 /* Brain.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 24E629C01978C4FB00D2F7A8 /* Brain.sqlite-wal */; };
+		24E629D6197917E700D2F7A8 /* BrainTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E629D5197917E700D2F7A8 /* BrainTests-Info.plist */; };
+		24E629DB1979181300D2F7A8 /* Brain-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E629DA1979181300D2F7A8 /* Brain-Info.plist */; };
 		24FED234195ABEF700A9F0DA /* MarkWordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FED233195ABEF700A9F0DA /* MarkWordManager.m */; };
 		CD568E9E8B544D6FA32704B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F2FCB10B2A4CBCA98A1331 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -100,9 +100,6 @@
 		2437EE8D186470D100F9389F /* WordMeaningRootScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningRootScrollView.m; sourceTree = "<group>"; };
 		2438830918617A1F0082B056 /* WordMeaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningView.h; sourceTree = "<group>"; };
 		2438830A18617A1F0082B056 /* WordMeaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningView.m; sourceTree = "<group>"; };
-		243F341418B9D467001E9E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		243F341818B9D545001E9E90 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		243F341A18B9D558001E9E90 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		243F341B18B9D80D001E9E90 /* Hint.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hint.plist; sourceTree = "<group>"; };
 		243F341F18B9DC6F001E9E90 /* HintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintViewController.h; sourceTree = "<group>"; };
 		243F342018B9DC6F001E9E90 /* HintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintViewController.m; sourceTree = "<group>"; };
@@ -114,8 +111,8 @@
 		24421ED618994FE0006270A8 /* AbbreviationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbbreviationViewController.m; sourceTree = "<group>"; };
 		2452801B1873C3E300220AD5 /* NSString+sortString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sortString.h"; sourceTree = "<group>"; };
 		2452801C1873C3E300220AD5 /* NSString+sortString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sortString.m"; sourceTree = "<group>"; };
-		2473FD3E195AC41500378E4F /* WordListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListTableViewController.h; sourceTree = "<group>"; };
-		2473FD3F195AC41500378E4F /* WordListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListTableViewController.m; sourceTree = "<group>"; };
+		2473FD3E195AC41500378E4F /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
+		2473FD3F195AC41500378E4F /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
 		248273DD185AFF9800CACE60 /* NSAttributedString+Html2Attributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Html2Attributed.h"; sourceTree = "<group>"; };
 		248273DE185AFF9800CACE60 /* NSAttributedString+Html2Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Html2Attributed.m"; sourceTree = "<group>"; };
 		24834FA1191E7BA400F8109C /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
@@ -180,7 +177,6 @@
 		24A8FB251826827A00957AFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24A8FB271826827A00957AFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		24A8FB291826827A00957AFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		24A8FB2D1826827A00957AFA /* Brain-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Brain-Info.plist"; sourceTree = "<group>"; };
 		24A8FB311826827A00957AFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24A8FB331826827A00957AFA /* Brain-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brain-Prefix.pch"; sourceTree = "<group>"; };
 		24A8FB341826827A00957AFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,9 +196,6 @@
 		24BBC17D195ACFA9007A90F7 /* UserWord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserWord.xcdatamodel; sourceTree = "<group>"; };
 		24BBC17F195AD2F4007A90F7 /* MarkWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkWord.h; sourceTree = "<group>"; };
 		24BBC180195AD2F4007A90F7 /* MarkWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkWord.m; sourceTree = "<group>"; };
-		24BFBA51195C15F60097E6DF /* Brain.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-wal"; sourceTree = "<group>"; };
-		24BFBA52195C15F60097E6DF /* Brain.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brain.sqlite; sourceTree = "<group>"; };
-		24BFBA53195C15F60097E6DF /* Brain.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-shm"; sourceTree = "<group>"; };
 		24C50479182884090048B6C0 /* WordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordManager.h; sourceTree = "<group>"; };
 		24C5047A182884090048B6C0 /* WordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordManager.m; sourceTree = "<group>"; };
 		24C72C2A19554DEC0047546D /* WordMeaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningController.m; sourceTree = "<group>"; };
@@ -214,6 +207,11 @@
 		24D026EE189EA0B80070039C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		24D026F0189EA1BC0070039C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		24D026F2189EA1C80070039C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		24E629BE1978C4FB00D2F7A8 /* Brain.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brain.sqlite; sourceTree = "<group>"; };
+		24E629BF1978C4FB00D2F7A8 /* Brain.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-shm"; sourceTree = "<group>"; };
+		24E629C01978C4FB00D2F7A8 /* Brain.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brain.sqlite-wal"; sourceTree = "<group>"; };
+		24E629D5197917E700D2F7A8 /* BrainTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BrainTests-Info.plist"; sourceTree = "<group>"; };
+		24E629DA1979181300D2F7A8 /* Brain-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Brain-Info.plist"; sourceTree = "<group>"; };
 		24FED232195ABEF700A9F0DA /* MarkWordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkWordManager.h; sourceTree = "<group>"; };
 		24FED233195ABEF700A9F0DA /* MarkWordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkWordManager.m; sourceTree = "<group>"; };
 		6256CE17F5284E359294E9FD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 				24D026F3189EA1C80070039C /* libz.dylib in Frameworks */,
 				24D026F1189EA1BC0070039C /* SystemConfiguration.framework in Frameworks */,
 				24D026EF189EA0B80070039C /* CoreTelephony.framework in Frameworks */,
-				24B4031719541E7C0015D194 /* NewRelicAgent.framework in Frameworks */,
 				24B1F45D1898BC3800F3274A /* MessageUI.framework in Frameworks */,
 				24A8FB281826827A00957AFA /* CoreGraphics.framework in Frameworks */,
 				24A8FB2A1826827A00957AFA /* UIKit.framework in Frameworks */,
@@ -364,8 +361,8 @@
 				24B1F4581898AD2700F3274A /* AboutViewController.m */,
 				24421ED518994FE0006270A8 /* AbbreviationViewController.h */,
 				24421ED618994FE0006270A8 /* AbbreviationViewController.m */,
-				2473FD3E195AC41500378E4F /* WordListTableViewController.h */,
-				2473FD3F195AC41500378E4F /* WordListTableViewController.m */,
+				2473FD3E195AC41500378E4F /* WordListViewController.h */,
+				2473FD3F195AC41500378E4F /* WordListViewController.m */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -428,8 +425,7 @@
 		24A8FB2C1826827A00957AFA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				24A8FB2D1826827A00957AFA /* Brain-Info.plist */,
-				24A8FB2E1826827A00957AFA /* InfoPlist.strings */,
+				24E629DA1979181300D2F7A8 /* Brain-Info.plist */,
 				24A8FB311826827A00957AFA /* main.m */,
 				24A8FB331826827A00957AFA /* Brain-Prefix.pch */,
 			);
@@ -439,6 +435,7 @@
 		24A8FB4A1826827A00957AFA /* BrainTests */ = {
 			isa = PBXGroup;
 			children = (
+				24E629D5197917E700D2F7A8 /* BrainTests-Info.plist */,
 				24A8FB501826827A00957AFA /* BrainTests.m */,
 				24A8FB4B1826827A00957AFA /* Supporting Files */,
 			);
@@ -456,9 +453,9 @@
 		24B1F41B1897B54C00F3274A /* sqlite */ = {
 			isa = PBXGroup;
 			children = (
-				24BFBA51195C15F60097E6DF /* Brain.sqlite-wal */,
-				24BFBA52195C15F60097E6DF /* Brain.sqlite */,
-				24BFBA53195C15F60097E6DF /* Brain.sqlite-shm */,
+				24E629BE1978C4FB00D2F7A8 /* Brain.sqlite */,
+				24E629BF1978C4FB00D2F7A8 /* Brain.sqlite-shm */,
+				24E629C01978C4FB00D2F7A8 /* Brain.sqlite-wal */,
 			);
 			name = sqlite;
 			sourceTree = "<group>";
@@ -578,18 +575,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24BFBA55195C15F60097E6DF /* Brain.sqlite in Resources */,
-				24BFBA56195C15F60097E6DF /* Brain.sqlite-shm in Resources */,
 				243F342718B9F22F001E9E90 /* imutation.html in Resources */,
 				243F342918B9F22F001E9E90 /* zero.html in Resources */,
 				243F342618B9F22F001E9E90 /* baloney.html in Resources */,
 				24D026EB189E99F50070039C /* Abbreviation.html in Resources */,
+				24E629C21978C4FB00D2F7A8 /* Brain.sqlite-shm in Resources */,
+				24E629C11978C4FB00D2F7A8 /* Brain.sqlite in Resources */,
 				24A8FB3E1826827A00957AFA /* Images.xcassets in Resources */,
-				24A8FB301826827A00957AFA /* InfoPlist.strings in Resources */,
+				24E629DB1979181300D2F7A8 /* Brain-Info.plist in Resources */,
 				24A8FB391826827A00957AFA /* Main.storyboard in Resources */,
+				24E629C31978C4FB00D2F7A8 /* Brain.sqlite-wal in Resources */,
 				243F341C18B9D80D001E9E90 /* Hint.plist in Resources */,
 				243F342818B9F22F001E9E90 /* wolf.html in Resources */,
-				24BFBA54195C15F60097E6DF /* Brain.sqlite-wal in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +594,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E629D6197917E700D2F7A8 /* BrainTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,7 +679,7 @@
 				24A8FB361826827A00957AFA /* AppDelegate.m in Sources */,
 				24834FAE191E7BF900F8109C /* WordM.m in Sources */,
 				24C72C2E195552810047546D /* UIColor+AppColor.m in Sources */,
-				2473FD40195AC41500378E4F /* WordListTableViewController.m in Sources */,
+				2473FD40195AC41500378E4F /* WordListViewController.m in Sources */,
 				24834FA5191E7BF800F8109C /* WordO.m in Sources */,
 				24834FBD191E7BF900F8109C /* WordW.m in Sources */,
 				24834FF3191E7BFA00F8109C /* WordV.m in Sources */,
@@ -710,16 +708,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		24A8FB2E1826827A00957AFA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				243F341418B9D467001E9E90 /* Base */,
-				243F341818B9D545001E9E90 /* zh-Hant */,
-				243F341A18B9D558001E9E90 /* zh-Hans */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		24A8FB371826827A00957AFA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

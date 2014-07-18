@@ -16,7 +16,9 @@
 
 + (UIColor*)cutOffColor;
 
-+ (UIColor*)markWorkColorWithWord:(NSString*)word;
++ (UIColor*)markWordColorWithWord:(NSString*)word;
 
+
++(UIColor*)relatedWordsTitleColor;
 
 @end

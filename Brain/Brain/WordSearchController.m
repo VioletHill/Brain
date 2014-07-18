@@ -111,8 +111,9 @@
     UITableViewCell* cell = sender;
     WordMeaningController* wordMeaningController = segue.destinationViewController;
 
+    
     NSString* word = cell.textLabel.text;
-
+    [[UserData sharedUserData] addHistoryWord:word];
     wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
 }
 

@@ -26,16 +26,21 @@
     return [UIColor colorWithRed:214.0 / 255.0 green:207.0 / 255.0 blue:195.0 / 255.0 alpha:1];
 }
 
-+(UIColor*)markWorkColorWithWord:(NSString*)word
++(UIColor*)markWordColorWithWord:(NSString*)word
 {
     MarkWord* markWord=[MarkWord MR_findFirstByAttribute:@"word" withValue:word];
     if (markWord==nil || ![markWord.isMark boolValue]){
-        return [UIColor blueColor];
+        return [UIColor lightGrayColor];
     }
     else{
         return [UIColor redColor];
     }
 }
 
+
++(UIColor*)relatedWordsTitleColor
+{
+    return [UIColor colorWithRed:214/255.0 green:207/255.0 blue:195/255.0 alpha:1];
+}
 
 @end

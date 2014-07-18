@@ -202,17 +202,22 @@
 
 - (void)setupRela
 {
+
     NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"WordRela" ofType:@"plist"];
     NSData* data = [NSData dataWithContentsOfFile:plistPath];
     NSError* error;
     NSPropertyListFormat format;
-    NSDictionary* relaArray = [NSPropertyListSerialization propertyListWithData:data options:0 format:&format error:&error];
-    for (NSString* key in relaArray) {
-        NSArray* relaWords = relaArray[key];
-        for (NSString* relaWord in relaWords) {
-            [self addRelationWithStrWordA:key andWordB:relaWord];
+    NSArray* relaArray = [NSPropertyListSerialization propertyListWithData:data options:0 format:&format error:&error];
+    for (NSArray* wordsRela in relaArray) {
+        if (wordsRela.count >= 1) {
+            NSString* key = wordsRela[0];
+            for (int j = 1; j < wordsRela.count; j++) {
+                NSString* relaWord = wordsRela[j];
+                [self addRelationWithStrWordA:key andWordB:relaWord];
+            }
         }
     }
+    [[NSManagedObjectContext defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 - (void)addRelation:(Word*)wordA andWordB:(Word*)wordB
@@ -238,9 +243,9 @@
     int indexA = [self getIndexAtTmpArray:a];
     int indexB = [self getIndexAtTmpArray:b];
     // NSLog(@"%@ %@", a, b);
-
     NSMutableArray* wordAArr = [[NSMutableArray alloc] init];
     NSMutableArray* wordBArr = [[NSMutableArray alloc] init];
+
     if (tmpWord.count > indexA && [((Word*)tmpWord[indexA]).word isEqualToString:a]) {
         [wordAArr addObject:tmpWord[indexA]];
     }

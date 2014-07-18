@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pVZ-T2-UHE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pVZ-T2-UHE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -9,8 +9,8 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="WordSearchController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vVB-6l-twg"/>
-                        <viewControllerLayoutGuide type="bottom" id="f3G-HM-ICk"/>
+                        <viewControllerLayoutGuide type="top" id="jps-AC-TQW"/>
+                        <viewControllerLayoutGuide type="bottom" id="cHX-7N-dz5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -22,6 +22,10 @@
                                 <offsetWrapper key="searchTextPositionAdjustment" horizontal="4" vertical="0.0"/>
                                 <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eee-2p-xui">
                                 <rect key="frame" x="0.0" y="108" width="320" height="460"/>
@@ -43,13 +47,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="x8g-Gy-Bnp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="13u-gy-VsN"/>
-                            <constraint firstItem="x8g-Gy-Bnp" firstAttribute="top" secondItem="vVB-6l-twg" secondAttribute="bottom" id="1yp-Ny-t8N"/>
-                            <constraint firstItem="x8g-Gy-Bnp" firstAttribute="bottom" secondItem="eee-2p-xui" secondAttribute="top" id="GtK-8o-JZm"/>
-                            <constraint firstItem="x8g-Gy-Bnp" firstAttribute="trailing" secondItem="eee-2p-xui" secondAttribute="trailing" id="Oip-OF-d5d"/>
-                            <constraint firstAttribute="bottom" secondItem="eee-2p-xui" secondAttribute="bottom" id="ckQ-8c-Bkl"/>
-                            <constraint firstItem="x8g-Gy-Bnp" firstAttribute="leading" secondItem="eee-2p-xui" secondAttribute="leading" id="iEo-kE-NrG"/>
-                            <constraint firstAttribute="trailing" secondItem="x8g-Gy-Bnp" secondAttribute="trailing" id="nOB-JR-Ig7"/>
+                            <constraint firstAttribute="bottom" secondItem="eee-2p-xui" secondAttribute="bottom" id="0zd-v6-j7J"/>
+                            <constraint firstItem="eee-2p-xui" firstAttribute="top" secondItem="x8g-Gy-Bnp" secondAttribute="bottom" id="Dvd-lB-JRE"/>
+                            <constraint firstItem="eee-2p-xui" firstAttribute="top" secondItem="x8g-Gy-Bnp" secondAttribute="bottom" id="Hfu-ci-sZJ"/>
+                            <constraint firstItem="eee-2p-xui" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="YeE-ND-Qvg"/>
+                            <constraint firstAttribute="trailing" secondItem="eee-2p-xui" secondAttribute="trailing" id="fTx-Mz-B6j"/>
+                            <constraint firstAttribute="bottom" secondItem="eee-2p-xui" secondAttribute="bottom" id="fUt-EO-FZK"/>
+                            <constraint firstItem="eee-2p-xui" firstAttribute="trailing" secondItem="x8g-Gy-Bnp" secondAttribute="trailing" id="lLc-BT-8Rv"/>
+                            <constraint firstItem="x8g-Gy-Bnp" firstAttribute="top" secondItem="jps-AC-TQW" secondAttribute="bottom" id="qlN-YF-JOJ"/>
+                            <constraint firstItem="eee-2p-xui" firstAttribute="leading" secondItem="x8g-Gy-Bnp" secondAttribute="leading" id="xTe-ig-cNS"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -79,32 +85,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="JIr-rz-kPe">
-                            <rect key="frame" x="0.0" y="369" width="320" height="120"/>
+                            <rect key="frame" x="0.0" y="433" width="320" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="培根词汇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iea-zm-t86">
                                     <rect key="frame" x="126" y="22" width="68" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-Ei-1I6">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-Ei-1I6">
                                     <rect key="frame" x="126" y="40" width="68" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright (c) 2014 Douglas Harper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqj-as-NXG">
                                     <rect key="frame" x="56" y="58" width="209" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <sections>
+                            <tableViewSection id="cLn-gJ-j8o">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="bLd-R2-u0B" detailTextLabel="7Ns-JZ-gKh" style="IBUITableViewCellStyleValue1" id="mEQ-fM-7AE">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mEQ-fM-7AE" id="LPV-7Q-QLG">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Bookmarks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bLd-R2-u0B">
+                                                    <rect key="frame" x="15" y="11" width="88" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ns-JZ-gKh">
+                                                    <rect key="frame" x="241" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="HIl-TW-8Mx" kind="push" id="FhW-DL-piJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection id="SPg-X2-mFT">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Rze-Pl-0S1" style="IBUITableViewCellStyleDefault" id="MPh-yD-eMz">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MPh-yD-eMz" id="MQ9-uK-edp">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -128,7 +168,7 @@
                             <tableViewSection id="tHp-hX-vXg">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="IUL-FL-i9B" detailTextLabel="1pn-hV-Hp8" style="IBUITableViewCellStyleValue1" id="d1M-jF-h4Y">
-                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="227" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d1M-jF-h4Y" id="Yad-sA-ldK">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -152,7 +192,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="lH1-Bv-DxS" detailTextLabel="lr0-KQ-5eF" style="IBUITableViewCellStyleValue1" id="MZF-OU-6QC">
-                                        <rect key="frame" x="0.0" y="207" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="271" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MZF-OU-6QC" id="MfO-4c-8j6">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -180,7 +220,7 @@
                             <tableViewSection id="asl-m0-jye">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0HC-fX-tMC" detailTextLabel="fDw-VB-8ao" style="IBUITableViewCellStyleValue1" id="aWs-xK-mv6">
-                                        <rect key="frame" x="0.0" y="271" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="335" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aWs-xK-mv6" id="Xpz-Eb-voh">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -207,7 +247,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YaN-W9-kVI" detailTextLabel="jvm-Ue-sSW" style="IBUITableViewCellStyleValue1" id="wUD-bq-eoH">
-                                        <rect key="frame" x="0.0" y="315" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="379" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wUD-bq-eoH" id="AEc-11-Hh5">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -245,32 +285,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avq-SY-7yq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="-430"/>
+            <point key="canvasLocation" x="874" y="-1198"/>
         </scene>
         <!--Abbreviation View Controller - Introduction and abbreviations-->
         <scene sceneID="Wlg-d9-s8W">
             <objects>
                 <viewController id="W2M-bQ-39h" customClass="AbbreviationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ywL-s6-owj"/>
-                        <viewControllerLayoutGuide type="bottom" id="6Wx-wG-vSo"/>
+                        <viewControllerLayoutGuide type="top" id="ein-b9-Ebs"/>
+                        <viewControllerLayoutGuide type="bottom" id="paf-Z2-u9i"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oZb-ad-vDA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3w-5s-uqh">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3w-5s-uqh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="w3w-5s-uqh" secondAttribute="trailing" id="1en-7f-tmx"/>
-                            <constraint firstItem="w3w-5s-uqh" firstAttribute="leading" secondItem="oZb-ad-vDA" secondAttribute="leading" id="374-o0-Zgp"/>
-                            <constraint firstAttribute="bottom" secondItem="w3w-5s-uqh" secondAttribute="bottom" id="7ag-uJ-UEM"/>
-                            <constraint firstItem="w3w-5s-uqh" firstAttribute="top" secondItem="oZb-ad-vDA" secondAttribute="top" id="sdE-bn-fY6"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Introduction and abbreviations" id="0YR-cD-3ah"/>
                     <connections>
@@ -279,21 +313,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5y1-mW-R9W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1484" y="-552"/>
+            <point key="canvasLocation" x="1420" y="-1266"/>
         </scene>
         <!--View Controller - Douglas Harper-->
         <scene sceneID="pXn-vr-kwY">
             <objects>
                 <viewController id="H2i-hG-Gnv" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1NX-ko-mgH"/>
-                        <viewControllerLayoutGuide type="bottom" id="8ko-QG-mC3"/>
+                        <viewControllerLayoutGuide type="top" id="SMR-kl-IvK"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZyY-hv-tFb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aNQ-KO-yhY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYo-Zn-dKL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYo-Zn-dKL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Hello, and welcome to Etymonline. This dictionary of the history of English words was created in 2001. It strives to bring the best scholarship in language history to the Internet in a form that can be understood and used by non-specialists. It has been expanded and refined continuously since then, and the work continues today.
@@ -308,40 +342,32 @@ I made etymonline partly because I wanted a reliable place online to find answer
 
 As the world grows smaller and people far apart must learn to speak to one another, it gives me great pleasure to offer this material to mobile device users in China and its region. I hope it is a gift of learning and joy for you to use, as it has been for me to make.
 
-I made etymonline so people with questions could find good answers about the histories of words. Since I began etymonline, I have heard from many teachers of English abroad, and students of English from non-English cultures, who tell me they find this presentation of the vocabulary of English especially helpful in their learning. I hope you have as much fun using it as I do making it.
-
-</string>
+I made etymonline so people with questions could find good answers about the histories of words. Since I began etymonline, I have heard from many teachers of English abroad, and students of English from non-English cultures, who tell me they find this presentation of the vocabulary of English especially helpful in their learning. I hope you have as much fun using it as I do making it.  </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="pYo-Zn-dKL" secondAttribute="bottom" id="3XX-Rj-Ti5"/>
-                            <constraint firstItem="pYo-Zn-dKL" firstAttribute="leading" secondItem="aNQ-KO-yhY" secondAttribute="leading" id="Knm-cl-5aR"/>
-                            <constraint firstAttribute="trailing" secondItem="pYo-Zn-dKL" secondAttribute="trailing" id="Mvi-Ja-LAg"/>
-                            <constraint firstItem="pYo-Zn-dKL" firstAttribute="top" secondItem="aNQ-KO-yhY" secondAttribute="top" id="ryj-jr-4M4"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Douglas Harper" id="d4p-YD-0XW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iri-iy-SIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268" y="-130"/>
+            <point key="canvasLocation" x="1439" y="142"/>
         </scene>
         <!--About Liu View Controller - Chongwei Liu-->
         <scene sceneID="WHj-rX-WLf">
             <objects>
                 <viewController id="ncJ-ZP-39M" customClass="AboutLiuViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kDy-pi-f6D"/>
-                        <viewControllerLayoutGuide type="bottom" id="bi3-S1-Oes"/>
+                        <viewControllerLayoutGuide type="top" id="y1x-JD-ycC"/>
+                        <viewControllerLayoutGuide type="bottom" id="jFh-TU-nRY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dfN-82-a7O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB1-po-oAW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB1-po-oAW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">The Internet is magical. You could always find a tool that meets your needs - any need - often immediately. The etymonline website is definitely one of them.
@@ -358,38 +384,112 @@ The etymoline dictionary is indeed a gift for people who love English words all 
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gB1-po-oAW" firstAttribute="leading" secondItem="dfN-82-a7O" secondAttribute="leading" id="GK5-BB-h4p"/>
-                            <constraint firstAttribute="bottom" secondItem="gB1-po-oAW" secondAttribute="bottom" id="QFj-6P-4u0"/>
-                            <constraint firstItem="gB1-po-oAW" firstAttribute="top" secondItem="dfN-82-a7O" secondAttribute="top" id="REv-Qm-juD"/>
-                            <constraint firstAttribute="trailing" secondItem="gB1-po-oAW" secondAttribute="trailing" id="bWa-IT-nVd"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chongwei Liu" id="p9Q-p3-d1u"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKI-JZ-jPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="-443"/>
+            <point key="canvasLocation" x="1439" y="-593"/>
+        </scene>
+        <!--Word List View Controller - Bookmarks-->
+        <scene sceneID="a15-Av-Mh3">
+            <objects>
+                <viewController id="HIl-TW-8Mx" customClass="WordListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ca0-si-VtN"/>
+                        <viewControllerLayoutGuide type="bottom" id="hcD-fW-Jxz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FXu-wN-i0d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIa-6K-QFt">
+                                <rect key="frame" x="20" y="136" width="280" height="200"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="gIi-WO-Jrd"/>
+                                    <constraint firstAttribute="width" constant="280" id="mJ6-c9-EDb"/>
+                                </constraints>
+                                <string key="text">No Bookmarks.
+ Search and tap the bookmark icon top right of the dictionary's page to create a bookmark.
+</string>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CEW-pC-bzO">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell appearanceType="aqua" tag="1" contentMode="scaleToFill" restorationIdentifier="WordListCell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WordListCell" rowHeight="50" id="1Aa-Eg-YXx">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Aa-Eg-YXx" id="C5h-3c-eVm">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ygp-yK-DHq" kind="push" id="LEe-eZ-8ye"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HIl-TW-8Mx" id="71Q-Ne-Gf7"/>
+                                    <outlet property="delegate" destination="HIl-TW-8Mx" id="RYy-ba-mdF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hcD-fW-Jxz" firstAttribute="top" secondItem="yIa-6K-QFt" secondAttribute="bottom" constant="183" id="K94-Xr-LAt"/>
+                            <constraint firstItem="CEW-pC-bzO" firstAttribute="leading" secondItem="FXu-wN-i0d" secondAttribute="leading" id="MJ8-dm-86b"/>
+                            <constraint firstItem="CEW-pC-bzO" firstAttribute="top" secondItem="Ca0-si-VtN" secondAttribute="bottom" id="SR3-BF-QnC"/>
+                            <constraint firstAttribute="bottom" secondItem="CEW-pC-bzO" secondAttribute="bottom" id="WuM-0q-Fj6"/>
+                            <constraint firstItem="CEW-pC-bzO" firstAttribute="centerX" secondItem="yIa-6K-QFt" secondAttribute="centerX" id="YTd-uG-uNq"/>
+                            <constraint firstItem="yIa-6K-QFt" firstAttribute="top" secondItem="Ca0-si-VtN" secondAttribute="bottom" constant="72" id="fKf-AU-ewE"/>
+                            <constraint firstItem="yIa-6K-QFt" firstAttribute="leading" secondItem="FXu-wN-i0d" secondAttribute="leading" constant="20" id="pHf-Wd-F7o"/>
+                            <constraint firstAttribute="trailing" secondItem="yIa-6K-QFt" secondAttribute="trailing" constant="20" id="txo-oi-Oz7"/>
+                            <constraint firstAttribute="trailing" secondItem="CEW-pC-bzO" secondAttribute="trailing" id="ukK-ca-1W4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="Bg4-bx-7QN"/>
+                    <connections>
+                        <outlet property="tableView" destination="CEW-pC-bzO" id="kRg-ae-cen"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCP-jl-Txa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="-1834"/>
         </scene>
         <!--Word Meaning Controller-->
         <scene sceneID="DvM-Cj-C3v">
             <objects>
                 <viewController storyboardIdentifier="WordMeaningController" automaticallyAdjustsScrollViewInsets="NO" id="Ygp-yK-DHq" customClass="WordMeaningController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="its-jN-0VR"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hso-tz-3Bc"/>
+                        <viewControllerLayoutGuide type="top" id="md5-Ot-QwS"/>
+                        <viewControllerLayoutGuide type="bottom" id="j3d-PT-Acl"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vwV-r0-4lp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="pmx-FE-FKA"/>
+                    <navigationItem key="navigationItem" id="pmx-FE-FKA">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="oLP-0D-2Ut">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="toggleWordListBarButton:" destination="Ygp-yK-DHq" id="E1K-qt-ZR9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="wordListBarButton" destination="oLP-0D-2Ut" id="psP-vp-J9W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9C-k2-rVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="370"/>
+            <point key="canvasLocation" x="1915" y="-1784"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7sA-MR-v1B">
@@ -415,4 +515,7 @@ The etymoline dictionary is indeed a gift for people who love English words all 
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="LEe-eZ-8ye"/>
+    </inferredMetricsTieBreakers>
 </document>

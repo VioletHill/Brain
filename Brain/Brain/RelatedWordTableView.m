@@ -32,7 +32,6 @@
 {
     if (self = [super init]) {
         selfFrame = rect;
-        self.layer.cornerRadius=10;
         self.data = data;
         self.delegate = self;
         self.dataSource = self;
@@ -57,12 +56,13 @@
     UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, selfFrame.size.width, 44)];
     view.backgroundColor = [UIColor meaningViewBackgroundColor];
 
-    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, selfFrame.size.width - 10, 44 - 6)];
-    label.text = @"Related Words";
-    label.textColor = [UIColor titleLableColor];
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, selfFrame.size.width - 10, 44 - 2)];
+    label.text = @"RELATED WORDS";
+    label.font = [UIFont systemFontOfSize:18];
+    label.textColor = [UIColor relatedWordsTitleColor];
     [view addSubview:label];
 
-    UIView* cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44 - 6, selfFrame.size.width, 6)];
+    UIView* cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44 - 2, selfFrame.size.width, 2)];
     cutOff.backgroundColor = [UIColor cutOffColor];
     [view addSubview:cutOff];
 
