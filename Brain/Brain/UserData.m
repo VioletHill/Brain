@@ -45,7 +45,14 @@ const int totalHistoryWords = 25;
     NSMutableArray* array = [self.historyWords mutableCopy];
     [array removeObject:wordStr];
     [array insertObject:wordStr atIndex:0];
-    self.historyWords=[array copy];
+    self.historyWords = [array copy];
+}
+
+- (void)deleteHistoryWord:(NSString*)wordStr
+{
+    NSMutableArray* array = [self.historyWords mutableCopy];
+    [array removeObject:wordStr];
+    self.historyWords = [array copy];
 }
 
 @end

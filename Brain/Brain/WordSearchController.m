@@ -98,6 +98,26 @@
     return cell;
 }
 
+- (BOOL)tableView:(UITableView*)tableView canEditRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    if (self.data.count == 0)
+        return YES;
+    else
+        return NO;
+}
+
+- (void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSString* str = [[UserData sharedUserData] historyWords][indexPath.row];
+        [[UserData sharedUserData] deleteHistoryWord:str];
+        [self.tableView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationFade];
+        if ([[UserData sharedUserData] historyWords].count==0){
+            self.tableView.hidden=YES;
+        }
+    }
+}
+
 - (void)scrollViewWillBeginDragging:(UIScrollView*)scrollView
 {
     [self.searchBar resignFirstResponder];
@@ -111,7 +131,6 @@
     UITableViewCell* cell = sender;
     WordMeaningController* wordMeaningController = segue.destinationViewController;
 
-    
     NSString* word = cell.textLabel.text;
     [[UserData sharedUserData] addHistoryWord:word];
     wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];

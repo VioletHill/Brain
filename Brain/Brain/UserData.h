@@ -14,6 +14,8 @@
 
 - (void)addHistoryWord:(NSString*)wordStr;
 
+- (void)deleteHistoryWord:(NSString*)wordStr;
+
 @property (nonatomic, strong) NSArray* historyWords;
 
 @end
