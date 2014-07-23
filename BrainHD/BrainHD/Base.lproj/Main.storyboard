@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWr-qL-reA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="-1921"/>
+            <point key="canvasLocation" x="208" y="-1891"/>
         </scene>
         <!--MainViewController-->
         <scene sceneID="Nze-Du-RyH">
@@ -158,7 +158,7 @@
             </objects>
             <point key="canvasLocation" x="-278" y="-1921"/>
         </scene>
-        <!--Word Meaning Controller-->
+        <!--Word Meaning Controller - Welcome-->
         <scene sceneID="anK-1f-LFV">
             <objects>
                 <viewController storyboardIdentifier="WordMeaningController" automaticallyAdjustsScrollViewInsets="NO" id="i3M-jk-ola" customClass="WordMeaningController" sceneMemberID="viewController">
@@ -172,7 +172,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="FZY-tE-OWg"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="FZY-tE-OWg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9e-FS-Lqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,7 +456,7 @@ I made etymonline so people with questions could find good answers about the his
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fts-wc-f9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="-2702"/>
+            <point key="canvasLocation" x="1762" y="-3088"/>
         </scene>
         <!--About Liu View Controller - Chongwei Liu-->
         <scene sceneID="6OP-hF-spR">
@@ -499,7 +499,7 @@ The etymoline dictionary is indeed a gift for people who love English words all 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEi-cN-fZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863" y="-2243"/>
+            <point key="canvasLocation" x="1663" y="-2147"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

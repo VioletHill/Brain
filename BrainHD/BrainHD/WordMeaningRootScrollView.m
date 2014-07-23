@@ -14,27 +14,27 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //if(!self.dragging)
-    {
-        [[self nextResponder] touchesBegan:touches withEvent:event];
-    }
+//    {
+//        [[self nextResponder] touchesBegan:touches withEvent:event];
+//    }
     [super touchesBegan:touches withEvent:event];
     //NSLog(@"MyScrollView touch Began");
 }
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //if(!self.dragging)
-    {
-        [[self nextResponder] touchesMoved:touches withEvent:event];
-    }
+//    {
+//        [[self nextResponder] touchesMoved:touches withEvent:event];
+//    }
     [super touchesMoved:touches withEvent:event];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //if(!self.dragging)
-    {
-        [[self nextResponder] touchesEnded:touches withEvent:event];
-    }
+//    {
+//        [[self nextResponder] touchesEnded:touches withEvent:event];
+//    }
     [super touchesEnded:touches withEvent:event];
 }
 
