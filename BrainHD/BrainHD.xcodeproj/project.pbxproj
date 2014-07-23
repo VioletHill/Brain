@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2468EBFB197F6173003876C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFA197F6173003876C0 /* Foundation.framework */; };
+		2468EBFD197F6173003876C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFC197F6173003876C0 /* CoreGraphics.framework */; };
+		2468EBFF197F6173003876C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFE197F6173003876C0 /* UIKit.framework */; };
+		2468EC05197F6173003876C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC03197F6173003876C0 /* InfoPlist.strings */; };
+		2468EC07197F6173003876C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC06197F6173003876C0 /* main.m */; };
+		2468EC0B197F6173003876C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC0A197F6173003876C0 /* AppDelegate.m */; };
+		2468EC0E197F6173003876C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC0C197F6173003876C0 /* Main.storyboard */; };
+		2468EC13197F6173003876C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC12197F6173003876C0 /* Images.xcassets */; };
+		2468EC1A197F6173003876C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EC19197F6173003876C0 /* XCTest.framework */; };
+		2468EC1B197F6173003876C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFA197F6173003876C0 /* Foundation.framework */; };
+		2468EC1C197F6173003876C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFE197F6173003876C0 /* UIKit.framework */; };
+		2468EC24197F6173003876C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC22197F6173003876C0 /* InfoPlist.strings */; };
+		2468EC26197F6173003876C0 /* BrainHDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC25197F6173003876C0 /* BrainHDTests.m */; };
+		2468EC7C197F6FC5003876C0 /* AbbreviationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC66197F6FC5003876C0 /* AbbreviationViewController.m */; };
+		2468EC7D197F6FC5003876C0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC68197F6FC5003876C0 /* AboutViewController.m */; };
+		2468EC7E197F6FC5003876C0 /* Abbreviation.html in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC69197F6FC5003876C0 /* Abbreviation.html */; };
+		2468EC7F197F6FC5003876C0 /* baloney.html in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC6A197F6FC5003876C0 /* baloney.html */; };
+		2468EC80197F6FC5003876C0 /* imutation.html in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC6B197F6FC5003876C0 /* imutation.html */; };
+		2468EC81197F6FC5003876C0 /* wolf.html in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC6C197F6FC5003876C0 /* wolf.html */; };
+		2468EC82197F6FC5003876C0 /* zero.html in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC6D197F6FC5003876C0 /* zero.html */; };
+		2468EC83197F6FC5003876C0 /* HintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC6F197F6FC5003876C0 /* HintViewController.m */; };
+		2468EC84197F6FC5003876C0 /* WordMeaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC71197F6FC5003876C0 /* WordMeaningController.m */; };
+		2468EC85197F6FC5003876C0 /* WordMeaningRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC73197F6FC5003876C0 /* WordMeaningRootScrollView.m */; };
+		2468EC86197F6FC5003876C0 /* WordMeaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC75197F6FC5003876C0 /* WordMeaningView.m */; };
+		2468EC87197F6FC5003876C0 /* WordSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC77197F6FC5003876C0 /* WordSearchController.m */; };
+		2468EC88197F6FC5003876C0 /* NSAttributedString+Html2Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC79197F6FC5003876C0 /* NSAttributedString+Html2Attributed.m */; };
+		2468EC89197F6FC5003876C0 /* NSString+sortString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC7B197F6FC5003876C0 /* NSString+sortString.m */; };
+		2468EC95197F703C003876C0 /* Word.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC8F197F703C003876C0 /* Word.xcdatamodel */; };
+		2468EC96197F703C003876C0 /* WordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC91197F703C003876C0 /* WordManager.m */; };
+		2468EC97197F703C003876C0 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC93197F703C003876C0 /* Word.m */; };
+		2468EC98197F703C003876C0 /* Hint.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC94197F703C003876C0 /* Hint.plist */; };
+		2468ECB4197F7051003876C0 /* BrainA.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC99197F7051003876C0 /* BrainA.sqlite */; };
+		2468ECB5197F7051003876C0 /* BrainB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC9A197F7051003876C0 /* BrainB.sqlite */; };
+		2468ECB6197F7051003876C0 /* BrainC.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC9B197F7051003876C0 /* BrainC.sqlite */; };
+		2468ECB7197F7051003876C0 /* BrainD.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC9C197F7051003876C0 /* BrainD.sqlite */; };
+		2468ECB8197F7051003876C0 /* BrainE.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC9D197F7051003876C0 /* BrainE.sqlite */; };
+		2468ECB9197F7051003876C0 /* BrainF.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC9E197F7051003876C0 /* BrainF.sqlite */; };
+		2468ECBA197F7051003876C0 /* BrainG.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC9F197F7051003876C0 /* BrainG.sqlite */; };
+		2468ECBB197F7051003876C0 /* BrainH.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA0197F7051003876C0 /* BrainH.sqlite */; };
+		2468ECBC197F7051003876C0 /* BrainI.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA1197F7051003876C0 /* BrainI.sqlite */; };
+		2468ECBD197F7051003876C0 /* BrainJ.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA2197F7051003876C0 /* BrainJ.sqlite */; };
+		2468ECBE197F7051003876C0 /* BrainK.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA3197F7051003876C0 /* BrainK.sqlite */; };
+		2468ECBF197F7051003876C0 /* BrainL.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA4197F7051003876C0 /* BrainL.sqlite */; };
+		2468ECC0197F7051003876C0 /* BrainM.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA5197F7051003876C0 /* BrainM.sqlite */; };
+		2468ECC1197F7051003876C0 /* BrainN.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA6197F7051003876C0 /* BrainN.sqlite */; };
+		2468ECC2197F7051003876C0 /* BrainO.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA7197F7051003876C0 /* BrainO.sqlite */; };
+		2468ECC3197F7051003876C0 /* BrainP.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA8197F7051003876C0 /* BrainP.sqlite */; };
+		2468ECC4197F7051003876C0 /* BrainPrefix.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECA9197F7051003876C0 /* BrainPrefix.sqlite */; };
+		2468ECC5197F7051003876C0 /* BrainQ.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECAA197F7051003876C0 /* BrainQ.sqlite */; };
+		2468ECC6197F7051003876C0 /* BrainR.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECAB197F7051003876C0 /* BrainR.sqlite */; };
+		2468ECC7197F7051003876C0 /* BrainS.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECAC197F7051003876C0 /* BrainS.sqlite */; };
+		2468ECC8197F7051003876C0 /* BrainT.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECAD197F7051003876C0 /* BrainT.sqlite */; };
+		2468ECC9197F7051003876C0 /* BrainU.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECAE197F7051003876C0 /* BrainU.sqlite */; };
+		2468ECCA197F7051003876C0 /* BrainV.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECAF197F7051003876C0 /* BrainV.sqlite */; };
+		2468ECCB197F7051003876C0 /* BrainW.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECB0197F7051003876C0 /* BrainW.sqlite */; };
+		2468ECCC197F7051003876C0 /* BrainX.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECB1197F7051003876C0 /* BrainX.sqlite */; };
+		2468ECCD197F7051003876C0 /* BrainY.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECB2197F7051003876C0 /* BrainY.sqlite */; };
+		2468ECCE197F7051003876C0 /* BrainZ.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2468ECB3197F7051003876C0 /* BrainZ.sqlite */; };
+		2468ECD1197F713B003876C0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468ECD0197F713B003876C0 /* MainViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2468EC1D197F6173003876C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2468EBEF197F6173003876C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2468EBF6197F6173003876C0;
+			remoteInfo = BrainHD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2468EBF7197F6173003876C0 /* BrainHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2468EBFA197F6173003876C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2468EBFC197F6173003876C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2468EBFE197F6173003876C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2468EC02197F6173003876C0 /* BrainHD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrainHD-Info.plist"; sourceTree = "<group>"; };
+		2468EC04197F6173003876C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2468EC06197F6173003876C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2468EC08197F6173003876C0 /* BrainHD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BrainHD-Prefix.pch"; sourceTree = "<group>"; };
+		2468EC09197F6173003876C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2468EC0A197F6173003876C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2468EC0D197F6173003876C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2468EC12197F6173003876C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2468EC18197F6173003876C0 /* BrainHDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainHDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2468EC19197F6173003876C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2468EC21197F6173003876C0 /* BrainHDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrainHDTests-Info.plist"; sourceTree = "<group>"; };
+		2468EC23197F6173003876C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2468EC25197F6173003876C0 /* BrainHDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrainHDTests.m; sourceTree = "<group>"; };
+		2468EC65197F6FC5003876C0 /* AbbreviationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbbreviationViewController.h; sourceTree = "<group>"; };
+		2468EC66197F6FC5003876C0 /* AbbreviationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbbreviationViewController.m; sourceTree = "<group>"; };
+		2468EC67197F6FC5003876C0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		2468EC68197F6FC5003876C0 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		2468EC69197F6FC5003876C0 /* Abbreviation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Abbreviation.html; sourceTree = "<group>"; };
+		2468EC6A197F6FC5003876C0 /* baloney.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = baloney.html; sourceTree = "<group>"; };
+		2468EC6B197F6FC5003876C0 /* imutation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = imutation.html; sourceTree = "<group>"; };
+		2468EC6C197F6FC5003876C0 /* wolf.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wolf.html; sourceTree = "<group>"; };
+		2468EC6D197F6FC5003876C0 /* zero.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = zero.html; sourceTree = "<group>"; };
+		2468EC6E197F6FC5003876C0 /* HintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintViewController.h; sourceTree = "<group>"; };
+		2468EC6F197F6FC5003876C0 /* HintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintViewController.m; sourceTree = "<group>"; };
+		2468EC70197F6FC5003876C0 /* WordMeaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningController.h; sourceTree = "<group>"; };
+		2468EC71197F6FC5003876C0 /* WordMeaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningController.m; sourceTree = "<group>"; };
+		2468EC72197F6FC5003876C0 /* WordMeaningRootScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningRootScrollView.h; sourceTree = "<group>"; };
+		2468EC73197F6FC5003876C0 /* WordMeaningRootScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningRootScrollView.m; sourceTree = "<group>"; };
+		2468EC74197F6FC5003876C0 /* WordMeaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningView.h; sourceTree = "<group>"; };
+		2468EC75197F6FC5003876C0 /* WordMeaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningView.m; sourceTree = "<group>"; };
+		2468EC76197F6FC5003876C0 /* WordSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSearchController.h; sourceTree = "<group>"; };
+		2468EC77197F6FC5003876C0 /* WordSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSearchController.m; sourceTree = "<group>"; };
+		2468EC78197F6FC5003876C0 /* NSAttributedString+Html2Attributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Html2Attributed.h"; sourceTree = "<group>"; };
+		2468EC79197F6FC5003876C0 /* NSAttributedString+Html2Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Html2Attributed.m"; sourceTree = "<group>"; };
+		2468EC7A197F6FC5003876C0 /* NSString+sortString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sortString.h"; sourceTree = "<group>"; };
+		2468EC7B197F6FC5003876C0 /* NSString+sortString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sortString.m"; sourceTree = "<group>"; };
+		2468EC8F197F703C003876C0 /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
+		2468EC90197F703C003876C0 /* WordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordManager.h; sourceTree = "<group>"; };
+		2468EC91197F703C003876C0 /* WordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordManager.m; sourceTree = "<group>"; };
+		2468EC92197F703C003876C0 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		2468EC93197F703C003876C0 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		2468EC94197F703C003876C0 /* Hint.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hint.plist; sourceTree = "<group>"; };
+		2468EC99197F7051003876C0 /* BrainA.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainA.sqlite; sourceTree = "<group>"; };
+		2468EC9A197F7051003876C0 /* BrainB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainB.sqlite; sourceTree = "<group>"; };
+		2468EC9B197F7051003876C0 /* BrainC.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainC.sqlite; sourceTree = "<group>"; };
+		2468EC9C197F7051003876C0 /* BrainD.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainD.sqlite; sourceTree = "<group>"; };
+		2468EC9D197F7051003876C0 /* BrainE.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainE.sqlite; sourceTree = "<group>"; };
+		2468EC9E197F7051003876C0 /* BrainF.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainF.sqlite; sourceTree = "<group>"; };
+		2468EC9F197F7051003876C0 /* BrainG.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainG.sqlite; sourceTree = "<group>"; };
+		2468ECA0197F7051003876C0 /* BrainH.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainH.sqlite; sourceTree = "<group>"; };
+		2468ECA1197F7051003876C0 /* BrainI.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainI.sqlite; sourceTree = "<group>"; };
+		2468ECA2197F7051003876C0 /* BrainJ.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainJ.sqlite; sourceTree = "<group>"; };
+		2468ECA3197F7051003876C0 /* BrainK.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainK.sqlite; sourceTree = "<group>"; };
+		2468ECA4197F7051003876C0 /* BrainL.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainL.sqlite; sourceTree = "<group>"; };
+		2468ECA5197F7051003876C0 /* BrainM.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainM.sqlite; sourceTree = "<group>"; };
+		2468ECA6197F7051003876C0 /* BrainN.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainN.sqlite; sourceTree = "<group>"; };
+		2468ECA7197F7051003876C0 /* BrainO.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainO.sqlite; sourceTree = "<group>"; };
+		2468ECA8197F7051003876C0 /* BrainP.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainP.sqlite; sourceTree = "<group>"; };
+		2468ECA9197F7051003876C0 /* BrainPrefix.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainPrefix.sqlite; sourceTree = "<group>"; };
+		2468ECAA197F7051003876C0 /* BrainQ.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainQ.sqlite; sourceTree = "<group>"; };
+		2468ECAB197F7051003876C0 /* BrainR.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainR.sqlite; sourceTree = "<group>"; };
+		2468ECAC197F7051003876C0 /* BrainS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainS.sqlite; sourceTree = "<group>"; };
+		2468ECAD197F7051003876C0 /* BrainT.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainT.sqlite; sourceTree = "<group>"; };
+		2468ECAE197F7051003876C0 /* BrainU.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainU.sqlite; sourceTree = "<group>"; };
+		2468ECAF197F7051003876C0 /* BrainV.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainV.sqlite; sourceTree = "<group>"; };
+		2468ECB0197F7051003876C0 /* BrainW.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainW.sqlite; sourceTree = "<group>"; };
+		2468ECB1197F7051003876C0 /* BrainX.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainX.sqlite; sourceTree = "<group>"; };
+		2468ECB2197F7051003876C0 /* BrainY.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainY.sqlite; sourceTree = "<group>"; };
+		2468ECB3197F7051003876C0 /* BrainZ.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrainZ.sqlite; sourceTree = "<group>"; };
+		2468ECCF197F713B003876C0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2468ECD0197F713B003876C0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2468EBF4197F6173003876C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2468EBFD197F6173003876C0 /* CoreGraphics.framework in Frameworks */,
+				2468EBFF197F6173003876C0 /* UIKit.framework in Frameworks */,
+				2468EBFB197F6173003876C0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2468EC15197F6173003876C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2468EC1A197F6173003876C0 /* XCTest.framework in Frameworks */,
+				2468EC1C197F6173003876C0 /* UIKit.framework in Frameworks */,
+				2468EC1B197F6173003876C0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2468EBEE197F6173003876C0 = {
+			isa = PBXGroup;
+			children = (
+				2468EC00197F6173003876C0 /* BrainHD */,
+				2468EC1F197F6173003876C0 /* BrainHDTests */,
+				2468EBF9197F6173003876C0 /* Frameworks */,
+				2468EBF8197F6173003876C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2468EBF8197F6173003876C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2468EBF7197F6173003876C0 /* BrainHD.app */,
+				2468EC18197F6173003876C0 /* BrainHDTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2468EBF9197F6173003876C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2468EBFA197F6173003876C0 /* Foundation.framework */,
+				2468EBFC197F6173003876C0 /* CoreGraphics.framework */,
+				2468EBFE197F6173003876C0 /* UIKit.framework */,
+				2468EC19197F6173003876C0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2468EC00197F6173003876C0 /* BrainHD */ = {
+			isa = PBXGroup;
+			children = (
+				2468EC8E197F702F003876C0 /* Database */,
+				2468EC8D197F7014003876C0 /* Category */,
+				2468EC8C197F7005003876C0 /* WordSearch */,
+				2468EC8A197F6FD0003876C0 /* About */,
+				2468EC8B197F6FE4003876C0 /* WordMeaning */,
+				2468EC09197F6173003876C0 /* AppDelegate.h */,
+				2468EC0A197F6173003876C0 /* AppDelegate.m */,
+				2468EC0C197F6173003876C0 /* Main.storyboard */,
+				2468ECCF197F713B003876C0 /* MainViewController.h */,
+				2468ECD0197F713B003876C0 /* MainViewController.m */,
+				2468EC12197F6173003876C0 /* Images.xcassets */,
+				2468EC01197F6173003876C0 /* Supporting Files */,
+			);
+			path = BrainHD;
+			sourceTree = "<group>";
+		};
+		2468EC01197F6173003876C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2468EC02197F6173003876C0 /* BrainHD-Info.plist */,
+				2468EC03197F6173003876C0 /* InfoPlist.strings */,
+				2468EC06197F6173003876C0 /* main.m */,
+				2468EC08197F6173003876C0 /* BrainHD-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2468EC1F197F6173003876C0 /* BrainHDTests */ = {
+			isa = PBXGroup;
+			children = (
+				2468EC25197F6173003876C0 /* BrainHDTests.m */,
+				2468EC20197F6173003876C0 /* Supporting Files */,
+			);
+			path = BrainHDTests;
+			sourceTree = "<group>";
+		};
+		2468EC20197F6173003876C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2468EC21197F6173003876C0 /* BrainHDTests-Info.plist */,
+				2468EC22197F6173003876C0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2468EC8A197F6FD0003876C0 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				2468EC65197F6FC5003876C0 /* AbbreviationViewController.h */,
+				2468EC66197F6FC5003876C0 /* AbbreviationViewController.m */,
+				2468EC67197F6FC5003876C0 /* AboutViewController.h */,
+				2468EC68197F6FC5003876C0 /* AboutViewController.m */,
+				2468EC69197F6FC5003876C0 /* Abbreviation.html */,
+				2468EC6A197F6FC5003876C0 /* baloney.html */,
+				2468EC6B197F6FC5003876C0 /* imutation.html */,
+				2468EC6C197F6FC5003876C0 /* wolf.html */,
+				2468EC6D197F6FC5003876C0 /* zero.html */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		2468EC8B197F6FE4003876C0 /* WordMeaning */ = {
+			isa = PBXGroup;
+			children = (
+				2468EC6E197F6FC5003876C0 /* HintViewController.h */,
+				2468EC6F197F6FC5003876C0 /* HintViewController.m */,
+				2468EC70197F6FC5003876C0 /* WordMeaningController.h */,
+				2468EC71197F6FC5003876C0 /* WordMeaningController.m */,
+				2468EC72197F6FC5003876C0 /* WordMeaningRootScrollView.h */,
+				2468EC73197F6FC5003876C0 /* WordMeaningRootScrollView.m */,
+				2468EC74197F6FC5003876C0 /* WordMeaningView.h */,
+				2468EC75197F6FC5003876C0 /* WordMeaningView.m */,
+			);
+			name = WordMeaning;
+			sourceTree = "<group>";
+		};
+		2468EC8C197F7005003876C0 /* WordSearch */ = {
+			isa = PBXGroup;
+			children = (
+				2468EC76197F6FC5003876C0 /* WordSearchController.h */,
+				2468EC77197F6FC5003876C0 /* WordSearchController.m */,
+			);
+			name = WordSearch;
+			sourceTree = "<group>";
+		};
+		2468EC8D197F7014003876C0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2468EC78197F6FC5003876C0 /* NSAttributedString+Html2Attributed.h */,
+				2468EC79197F6FC5003876C0 /* NSAttributedString+Html2Attributed.m */,
+				2468EC7A197F6FC5003876C0 /* NSString+sortString.h */,
+				2468EC7B197F6FC5003876C0 /* NSString+sortString.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		2468EC8E197F702F003876C0 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2468EC99197F7051003876C0 /* BrainA.sqlite */,
+				2468EC9A197F7051003876C0 /* BrainB.sqlite */,
+				2468EC9B197F7051003876C0 /* BrainC.sqlite */,
+				2468EC9C197F7051003876C0 /* BrainD.sqlite */,
+				2468EC9D197F7051003876C0 /* BrainE.sqlite */,
+				2468EC9E197F7051003876C0 /* BrainF.sqlite */,
+				2468EC9F197F7051003876C0 /* BrainG.sqlite */,
+				2468ECA0197F7051003876C0 /* BrainH.sqlite */,
+				2468ECA1197F7051003876C0 /* BrainI.sqlite */,
+				2468ECA2197F7051003876C0 /* BrainJ.sqlite */,
+				2468ECA3197F7051003876C0 /* BrainK.sqlite */,
+				2468ECA4197F7051003876C0 /* BrainL.sqlite */,
+				2468ECA5197F7051003876C0 /* BrainM.sqlite */,
+				2468ECA6197F7051003876C0 /* BrainN.sqlite */,
+				2468ECA7197F7051003876C0 /* BrainO.sqlite */,
+				2468ECA8197F7051003876C0 /* BrainP.sqlite */,
+				2468ECA9197F7051003876C0 /* BrainPrefix.sqlite */,
+				2468ECAA197F7051003876C0 /* BrainQ.sqlite */,
+				2468ECAB197F7051003876C0 /* BrainR.sqlite */,
+				2468ECAC197F7051003876C0 /* BrainS.sqlite */,
+				2468ECAD197F7051003876C0 /* BrainT.sqlite */,
+				2468ECAE197F7051003876C0 /* BrainU.sqlite */,
+				2468ECAF197F7051003876C0 /* BrainV.sqlite */,
+				2468ECB0197F7051003876C0 /* BrainW.sqlite */,
+				2468ECB1197F7051003876C0 /* BrainX.sqlite */,
+				2468ECB2197F7051003876C0 /* BrainY.sqlite */,
+				2468ECB3197F7051003876C0 /* BrainZ.sqlite */,
+				2468EC8F197F703C003876C0 /* Word.xcdatamodel */,
+				2468EC90197F703C003876C0 /* WordManager.h */,
+				2468EC91197F703C003876C0 /* WordManager.m */,
+				2468EC92197F703C003876C0 /* Word.h */,
+				2468EC93197F703C003876C0 /* Word.m */,
+				2468EC94197F703C003876C0 /* Hint.plist */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2468EBF6197F6173003876C0 /* BrainHD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2468EC29197F6173003876C0 /* Build configuration list for PBXNativeTarget "BrainHD" */;
+			buildPhases = (
+				2468EBF3197F6173003876C0 /* Sources */,
+				2468EBF4197F6173003876C0 /* Frameworks */,
+				2468EBF5197F6173003876C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrainHD;
+			productName = BrainHD;
+			productReference = 2468EBF7197F6173003876C0 /* BrainHD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2468EC17197F6173003876C0 /* BrainHDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2468EC2C197F6173003876C0 /* Build configuration list for PBXNativeTarget "BrainHDTests" */;
+			buildPhases = (
+				2468EC14197F6173003876C0 /* Sources */,
+				2468EC15197F6173003876C0 /* Frameworks */,
+				2468EC16197F6173003876C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2468EC1E197F6173003876C0 /* PBXTargetDependency */,
+			);
+			name = BrainHDTests;
+			productName = BrainHDTests;
+			productReference = 2468EC18197F6173003876C0 /* BrainHDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2468EBEF197F6173003876C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = TongjiUniversity;
+				TargetAttributes = {
+					2468EC17197F6173003876C0 = {
+						TestTargetID = 2468EBF6197F6173003876C0;
+					};
+				};
+			};
+			buildConfigurationList = 2468EBF2197F6173003876C0 /* Build configuration list for PBXProject "BrainHD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2468EBEE197F6173003876C0;
+			productRefGroup = 2468EBF8197F6173003876C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2468EBF6197F6173003876C0 /* BrainHD */,
+				2468EC17197F6173003876C0 /* BrainHDTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2468EBF5197F6173003876C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2468ECBA197F7051003876C0 /* BrainG.sqlite in Resources */,
+				2468ECC8197F7051003876C0 /* BrainT.sqlite in Resources */,
+				2468ECCB197F7051003876C0 /* BrainW.sqlite in Resources */,
+				2468EC7F197F6FC5003876C0 /* baloney.html in Resources */,
+				2468EC81197F6FC5003876C0 /* wolf.html in Resources */,
+				2468ECCC197F7051003876C0 /* BrainX.sqlite in Resources */,
+				2468EC13197F6173003876C0 /* Images.xcassets in Resources */,
+				2468ECCE197F7051003876C0 /* BrainZ.sqlite in Resources */,
+				2468ECC4197F7051003876C0 /* BrainPrefix.sqlite in Resources */,
+				2468EC05197F6173003876C0 /* InfoPlist.strings in Resources */,
+				2468ECC5197F7051003876C0 /* BrainQ.sqlite in Resources */,
+				2468ECB6197F7051003876C0 /* BrainC.sqlite in Resources */,
+				2468ECC0197F7051003876C0 /* BrainM.sqlite in Resources */,
+				2468ECC9197F7051003876C0 /* BrainU.sqlite in Resources */,
+				2468EC82197F6FC5003876C0 /* zero.html in Resources */,
+				2468EC98197F703C003876C0 /* Hint.plist in Resources */,
+				2468ECB4197F7051003876C0 /* BrainA.sqlite in Resources */,
+				2468ECB9197F7051003876C0 /* BrainF.sqlite in Resources */,
+				2468ECCA197F7051003876C0 /* BrainV.sqlite in Resources */,
+				2468EC7E197F6FC5003876C0 /* Abbreviation.html in Resources */,
+				2468ECBF197F7051003876C0 /* BrainL.sqlite in Resources */,
+				2468ECBD197F7051003876C0 /* BrainJ.sqlite in Resources */,
+				2468EC0E197F6173003876C0 /* Main.storyboard in Resources */,
+				2468ECBB197F7051003876C0 /* BrainH.sqlite in Resources */,
+				2468ECC2197F7051003876C0 /* BrainO.sqlite in Resources */,
+				2468ECC1197F7051003876C0 /* BrainN.sqlite in Resources */,
+				2468ECC3197F7051003876C0 /* BrainP.sqlite in Resources */,
+				2468ECB7197F7051003876C0 /* BrainD.sqlite in Resources */,
+				2468ECB5197F7051003876C0 /* BrainB.sqlite in Resources */,
+				2468ECC7197F7051003876C0 /* BrainS.sqlite in Resources */,
+				2468ECBE197F7051003876C0 /* BrainK.sqlite in Resources */,
+				2468ECB8197F7051003876C0 /* BrainE.sqlite in Resources */,
+				2468ECBC197F7051003876C0 /* BrainI.sqlite in Resources */,
+				2468EC80197F6FC5003876C0 /* imutation.html in Resources */,
+				2468ECCD197F7051003876C0 /* BrainY.sqlite in Resources */,
+				2468ECC6197F7051003876C0 /* BrainR.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2468EC16197F6173003876C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2468EC24197F6173003876C0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2468EBF3197F6173003876C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2468EC7C197F6FC5003876C0 /* AbbreviationViewController.m in Sources */,
+				2468EC83197F6FC5003876C0 /* HintViewController.m in Sources */,
+				2468EC7D197F6FC5003876C0 /* AboutViewController.m in Sources */,
+				2468ECD1197F713B003876C0 /* MainViewController.m in Sources */,
+				2468EC0B197F6173003876C0 /* AppDelegate.m in Sources */,
+				2468EC97197F703C003876C0 /* Word.m in Sources */,
+				2468EC86197F6FC5003876C0 /* WordMeaningView.m in Sources */,
+				2468EC89197F6FC5003876C0 /* NSString+sortString.m in Sources */,
+				2468EC96197F703C003876C0 /* WordManager.m in Sources */,
+				2468EC84197F6FC5003876C0 /* WordMeaningController.m in Sources */,
+				2468EC07197F6173003876C0 /* main.m in Sources */,
+				2468EC88197F6FC5003876C0 /* NSAttributedString+Html2Attributed.m in Sources */,
+				2468EC95197F703C003876C0 /* Word.xcdatamodel in Sources */,
+				2468EC85197F6FC5003876C0 /* WordMeaningRootScrollView.m in Sources */,
+				2468EC87197F6FC5003876C0 /* WordSearchController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2468EC14197F6173003876C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2468EC26197F6173003876C0 /* BrainHDTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2468EC1E197F6173003876C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2468EBF6197F6173003876C0 /* BrainHD */;
+			targetProxy = 2468EC1D197F6173003876C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2468EC03197F6173003876C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2468EC04197F6173003876C0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2468EC0C197F6173003876C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2468EC0D197F6173003876C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2468EC22197F6173003876C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2468EC23197F6173003876C0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2468EC27197F6173003876C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		2468EC28197F6173003876C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2468EC2A197F6173003876C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BrainHD/BrainHD-Prefix.pch";
+				INFOPLIST_FILE = "BrainHD/BrainHD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2468EC2B197F6173003876C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BrainHD/BrainHD-Prefix.pch";
+				INFOPLIST_FILE = "BrainHD/BrainHD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2468EC2D197F6173003876C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BrainHD.app/BrainHD";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BrainHD/BrainHD-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BrainHDTests/BrainHDTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2468EC2E197F6173003876C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BrainHD.app/BrainHD";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BrainHD/BrainHD-Prefix.pch";
+				INFOPLIST_FILE = "BrainHDTests/BrainHDTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2468EBF2197F6173003876C0 /* Build configuration list for PBXProject "BrainHD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2468EC27197F6173003876C0 /* Debug */,
+				2468EC28197F6173003876C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2468EC29197F6173003876C0 /* Build configuration list for PBXNativeTarget "BrainHD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2468EC2A197F6173003876C0 /* Debug */,
+				2468EC2B197F6173003876C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2468EC2C197F6173003876C0 /* Build configuration list for PBXNativeTarget "BrainHDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2468EC2D197F6173003876C0 /* Debug */,
+				2468EC2E197F6173003876C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2468EBEF197F6173003876C0 /* Project object */;
+}
