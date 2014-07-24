@@ -10,6 +10,8 @@
 #import "MarkWordManager.h"
 #import "WordManager.h"
 #import "WordMeaningController.h"
+#import "MainViewController.h"
+#import "NSString+sortString.h"
 
 @interface WordListViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -25,7 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:BOOKMARKS_CHANGE_AT_MEANINGVIEW object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wordChange:) name:BOOKMARKS_CHANGE_AT_MEANINGVIEW object:nil];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
 
@@ -71,7 +74,7 @@
         result = [[NSArray alloc] init];
     }
     self.data = [[result sortedArrayUsingComparator:^NSComparisonResult(MarkWord* a, MarkWord* b) {
-        return [a.word.lowercaseString compare:b.word.lowercaseString];
+        return [a.word.getSortString compare:b.word.getSortString];
     }] mutableCopy];
 }
 
@@ -113,6 +116,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         UITableViewCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
         [[MarkWordManager sharedMarkWordManager] deleteWordFromList:cell.textLabel.text];
+        [[NSNotificationCenter defaultCenter] postNotificationName:BOOKMARKS_CHANGE_AT_LISTVIEW object:cell.textLabel.text];
         [self.data removeObjectAtIndex:indexPath.row];
         if (self.data.count == 0) {
             self.tableView.hidden = YES;
@@ -121,17 +125,28 @@
     }
 }
 
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    UITableViewCell* cell = sender;
-    WordMeaningController* wordMeaningController = segue.destinationViewController;
+    WordMeaningController* wordMeaningController = [WordMeaningController instanceViewController];
+    MarkWord* markWord = self.data[indexPath.row];
+    NSString* wordText = markWord.word;
+    Word* word = [[WordManager sharedWordManager] findWordByCompleteWord:wordText];
+    [wordMeaningController.navigationController popToRootViewControllerAnimated:NO];
+    [WordMeaningController rootViewController].word = word;
+    [[WordMeaningController rootViewController] resetWordWithWord:word];
+}
 
-    NSString* word = cell.textLabel.text;
+- (void)wordChange:(NSNotification*)notification
+{
+    NSLog(@"receive notification %@", notification.object);
+    [self loadData];
+    [self.tableView reloadData];
+}
 
-    wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
+- (void)dealloc
+{
+    NSLog(@"delloc");
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

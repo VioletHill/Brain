@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "MarkWord.h"
 
+#define BOOKMARKS_CHANGE_AT_MEANINGVIEW @"bookmarks_change_at_meaningview"
+#define BOOKMARKS_CHANGE_AT_LISTVIEW @"bookmarks_change_at_listview"
+
 @interface MarkWordManager : NSObject
 
 + (MarkWordManager*)sharedMarkWordManager;

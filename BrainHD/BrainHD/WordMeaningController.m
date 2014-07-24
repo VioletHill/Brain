@@ -24,7 +24,7 @@
 
 @property (nonatomic, strong) NSDictionary* hint;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem* wordListBarButton;
+@property (strong, nonatomic) UIBarButtonItem* wordListBarButton;
 
 @end
 
@@ -48,9 +48,10 @@ static WordMeaningController* rootWordMeaningController;
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
-    NSMutableDictionary* arr = [NSMutableDictionary dictionaryWithObject:[UIColor titleLableColor] forKey:NSForegroundColorAttributeName];
-    [arr setObject:[UIFont systemFontOfSize:20] forKey:NSFontAttributeName];
-    self.navigationController.navigationBar.titleTextAttributes = arr;
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithRed:93.0 / 255.0 green:63.0 / 255.0 blue:39.0 / 255.0 alpha:1] forKey:NSForegroundColorAttributeName];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:BOOKMARKS_CHANGE_AT_LISTVIEW object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetBookmark:) name:BOOKMARKS_CHANGE_AT_LISTVIEW object:nil];
+    self.navigationItem.rightBarButtonItem = self.wordListBarButton;
     if (self.word == nil) {
         rootWordMeaningController = self;
         self.word = [[WordManager sharedWordManager] findWordByCompleteWord:@"welcome"];
@@ -77,6 +78,14 @@ static WordMeaningController* rootWordMeaningController;
             self.scrollView.contentOffset = CGPointMake(0, 0);
         }
     }
+}
+
+- (UIBarButtonItem*)wordListBarButton
+{
+    if (_wordListBarButton == nil) {
+        _wordListBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(toggleWordListBarButton:)];
+    }
+    return _wordListBarButton;
 }
 
 - (NSDictionary*)hint
@@ -280,11 +289,27 @@ static WordMeaningController* rootWordMeaningController;
 
 #pragma mark - mark to word list
 
-- (IBAction)toggleWordListBarButton:(id)sender
+- (void)toggleWordListBarButton:(id)sender
 {
     NSLog(@"click mark to word list");
     [[MarkWordManager sharedMarkWordManager] toggleWordList:self.word.word];
     self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
+    [[NSNotificationCenter defaultCenter] postNotificationName:BOOKMARKS_CHANGE_AT_MEANINGVIEW object:self.word.word];
+}
+
+- (void)resetBookmark:(NSNotification*)nofication
+{
+    NSLog(@"%@", nofication.object);
+    NSString* wordText = nofication.object;
+    if ([wordText isEqualToString:self.word.word]) {
+        self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
+    }
+}
+
+- (void)dealloc
+{
+    NSLog(@"delloc");
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

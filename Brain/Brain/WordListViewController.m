@@ -10,6 +10,7 @@
 #import "MarkWordManager.h"
 #import "WordManager.h"
 #import "WordMeaningController.h"
+#import "NSString+sortString.h"
 
 @interface WordListViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -71,7 +72,7 @@
         result = [[NSArray alloc] init];
     }
     self.data = [[result sortedArrayUsingComparator:^NSComparisonResult(MarkWord* a, MarkWord* b) {
-        return [a.word.lowercaseString compare:b.word.lowercaseString];
+        return [a.word.getSortString compare:b.word.getSortString];
     }] mutableCopy];
 }
 
@@ -120,22 +121,6 @@
         [tableView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Navigation
 
