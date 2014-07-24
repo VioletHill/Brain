@@ -267,7 +267,6 @@ static WordMeaningController* rootWordMeaningController;
 
     height = MAX(self.view.frame.size.height - 63, height);
     self.scrollView.contentSize = CGSizeMake(0, height);
-    NSLog(@"%f", height);
 }
 
 //only call when device rotate
@@ -295,7 +294,6 @@ static WordMeaningController* rootWordMeaningController;
 
 - (void)resetBookmark:(NSNotification*)nofication
 {
-    NSLog(@"%@", nofication.object);
     NSString* wordText = nofication.object;
     if ([wordText isEqualToString:self.word.word]) {
         self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
