@@ -22,7 +22,7 @@
 @property (nonatomic) BOOL isNeedPop;
 
 @property (nonatomic, strong) NSDictionary* hint;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem* wordListBarButton;
+@property (strong, nonatomic) UIBarButtonItem* wordListBarButton;
 
 @end
 
@@ -62,6 +62,14 @@
             self.scrollView.contentOffset = CGPointMake(0, 0);
         }
     }
+}
+
+- (UIBarButtonItem*)wordListBarButton
+{
+    if (_wordListBarButton == nil) {
+        _wordListBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(toggleWordListBarButton:)];
+    }
+    return _wordListBarButton;
 }
 
 - (NSDictionary*)hint

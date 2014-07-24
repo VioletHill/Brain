@@ -74,6 +74,8 @@
 		2468ED3E197FAF38003876C0 /* Brain.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 2468ED3B197FAF38003876C0 /* Brain.sqlite-wal */; };
 		2468ED41197FB03D003876C0 /* RelatedWordTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468ED40197FB03D003876C0 /* RelatedWordTableView.m */; };
 		2468ED44197FB3FD003876C0 /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468ED43197FB3FD003876C0 /* UIColor+AppColor.m */; };
+		249FF0791980D7C60014BEDC /* MarkWordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 249FF0781980D7C60014BEDC /* MarkWordManager.m */; };
+		249FF07C1980DEA70014BEDC /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249FF07B1980DEA70014BEDC /* WordListViewController.m */; };
 		6DEBAE0F5EFF44358E98168E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52261714BD8F49DAAF78F334 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -203,6 +205,10 @@
 		2468ED40197FB03D003876C0 /* RelatedWordTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedWordTableView.m; sourceTree = "<group>"; };
 		2468ED42197FB3FD003876C0 /* UIColor+AppColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColor.h"; sourceTree = "<group>"; };
 		2468ED43197FB3FD003876C0 /* UIColor+AppColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
+		249FF0771980D7C60014BEDC /* MarkWordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkWordManager.h; sourceTree = "<group>"; };
+		249FF0781980D7C60014BEDC /* MarkWordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkWordManager.m; sourceTree = "<group>"; };
+		249FF07A1980DEA70014BEDC /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
+		249FF07B1980DEA70014BEDC /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
 		52261714BD8F49DAAF78F334 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -319,6 +325,8 @@
 				2468EC66197F6FC5003876C0 /* AbbreviationViewController.m */,
 				2468EC67197F6FC5003876C0 /* AboutViewController.h */,
 				2468EC68197F6FC5003876C0 /* AboutViewController.m */,
+				249FF07A1980DEA70014BEDC /* WordListViewController.h */,
+				249FF07B1980DEA70014BEDC /* WordListViewController.m */,
 				2468EC69197F6FC5003876C0 /* Abbreviation.html */,
 				2468EC6A197F6FC5003876C0 /* baloney.html */,
 				2468EC6B197F6FC5003876C0 /* imutation.html */,
@@ -373,6 +381,8 @@
 				2468ED38197FAF15003876C0 /* sqlite */,
 				2468ED35197FAECC003876C0 /* WordManager.h */,
 				2468ED36197FAECC003876C0 /* WordManager.m */,
+				249FF0771980D7C60014BEDC /* MarkWordManager.h */,
+				249FF0781980D7C60014BEDC /* MarkWordManager.m */,
 				2468EC94197F703C003876C0 /* Hint.plist */,
 				2468ED31197FAE99003876C0 /* MarkWord */,
 				2468ED30197FAE38003876C0 /* module */,
@@ -652,6 +662,7 @@
 				2468EC07197F6173003876C0 /* main.m in Sources */,
 				2468EC88197F6FC5003876C0 /* NSAttributedString+Html2Attributed.m in Sources */,
 				2468ED34197FAEB1003876C0 /* MarkWord.m in Sources */,
+				249FF07C1980DEA70014BEDC /* WordListViewController.m in Sources */,
 				2468EC85197F6FC5003876C0 /* WordMeaningRootScrollView.m in Sources */,
 				2468ED44197FB3FD003876C0 /* UIColor+AppColor.m in Sources */,
 				2468ED2C197FAE34003876C0 /* WordT.m in Sources */,
@@ -660,6 +671,7 @@
 				2468ED02197FAE32003876C0 /* WordO.m in Sources */,
 				2468ED0E197FAE32003876C0 /* Word.m in Sources */,
 				2468ECD5197FABFD003876C0 /* UserData.m in Sources */,
+				249FF0791980D7C60014BEDC /* MarkWordManager.m in Sources */,
 				2468EC87197F6FC5003876C0 /* WordSearchController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -791,6 +803,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrainHD/BrainHD-Prefix.pch";
 				INFOPLIST_FILE = "BrainHD/BrainHD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -805,6 +818,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrainHD/BrainHD-Prefix.pch";
 				INFOPLIST_FILE = "BrainHD/BrainHD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pVZ-T2-UHE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pVZ-T2-UHE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -313,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5y1-mW-R9W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="-1266"/>
+            <point key="canvasLocation" x="1459" y="-1104"/>
         </scene>
         <!--View Controller - Douglas Harper-->
         <scene sceneID="pXn-vr-kwY">
@@ -417,45 +417,16 @@ The etymoline dictionary is indeed a gift for people who love English words all 
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CEW-pC-bzO">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell appearanceType="aqua" tag="1" contentMode="scaleToFill" restorationIdentifier="WordListCell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WordListCell" rowHeight="50" id="1Aa-Eg-YXx">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Aa-Eg-YXx" id="C5h-3c-eVm">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Ygp-yK-DHq" kind="push" id="LEe-eZ-8ye"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="HIl-TW-8Mx" id="71Q-Ne-Gf7"/>
-                                    <outlet property="delegate" destination="HIl-TW-8Mx" id="RYy-ba-mdF"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hcD-fW-Jxz" firstAttribute="top" secondItem="yIa-6K-QFt" secondAttribute="bottom" constant="183" id="K94-Xr-LAt"/>
-                            <constraint firstItem="CEW-pC-bzO" firstAttribute="leading" secondItem="FXu-wN-i0d" secondAttribute="leading" id="MJ8-dm-86b"/>
-                            <constraint firstItem="CEW-pC-bzO" firstAttribute="top" secondItem="Ca0-si-VtN" secondAttribute="bottom" id="SR3-BF-QnC"/>
-                            <constraint firstAttribute="bottom" secondItem="CEW-pC-bzO" secondAttribute="bottom" id="WuM-0q-Fj6"/>
-                            <constraint firstItem="CEW-pC-bzO" firstAttribute="centerX" secondItem="yIa-6K-QFt" secondAttribute="centerX" id="YTd-uG-uNq"/>
                             <constraint firstItem="yIa-6K-QFt" firstAttribute="top" secondItem="Ca0-si-VtN" secondAttribute="bottom" constant="72" id="fKf-AU-ewE"/>
                             <constraint firstItem="yIa-6K-QFt" firstAttribute="leading" secondItem="FXu-wN-i0d" secondAttribute="leading" constant="20" id="pHf-Wd-F7o"/>
                             <constraint firstAttribute="trailing" secondItem="yIa-6K-QFt" secondAttribute="trailing" constant="20" id="txo-oi-Oz7"/>
-                            <constraint firstAttribute="trailing" secondItem="CEW-pC-bzO" secondAttribute="trailing" id="ukK-ca-1W4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bookmarks" id="Bg4-bx-7QN"/>
-                    <connections>
-                        <outlet property="tableView" destination="CEW-pC-bzO" id="kRg-ae-cen"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCP-jl-Txa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -475,17 +446,7 @@ The etymoline dictionary is indeed a gift for people who love English words all 
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="pmx-FE-FKA">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="oLP-0D-2Ut">
-                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="toggleWordListBarButton:" destination="Ygp-yK-DHq" id="E1K-qt-ZR9"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="wordListBarButton" destination="oLP-0D-2Ut" id="psP-vp-J9W"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="pmx-FE-FKA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9C-k2-rVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -515,7 +476,4 @@ The etymoline dictionary is indeed a gift for people who love English words all 
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="LEe-eZ-8ye"/>
-    </inferredMetricsTieBreakers>
 </document>

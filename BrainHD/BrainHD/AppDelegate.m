@@ -17,6 +17,9 @@
     // [NewRelicAgent startWithApplicationToken:@"AAec08a1469f50ff11da645e86562d5fb30f2102ba"];
     [[WordManager sharedWordManager] preparedWord];
     // Override point for customization after application launch.
+    [MagicalRecord setDefaultModelNamed:@"UserWord.momd"];
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"UserWord.sqlite"];
+
     return YES;
 }
 
@@ -45,6 +48,7 @@
 - (void)applicationWillTerminate:(UIApplication*)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [MagicalRecord cleanUp];
 }
 
 @end

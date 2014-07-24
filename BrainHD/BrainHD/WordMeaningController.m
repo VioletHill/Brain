@@ -14,6 +14,7 @@
 #import "HintViewController.h"
 #import "RelatedWordTableView.h"
 #import "NSString+sortString.h"
+#import "MarkWordManager.h"
 
 @interface WordMeaningController () <WordMeaingViewTapProtocol, RelatedWordTableViewProtocol>
 
@@ -22,6 +23,8 @@
 @property (nonatomic) BOOL isNeedPop;
 
 @property (nonatomic, strong) NSDictionary* hint;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem* wordListBarButton;
 
 @end
 
@@ -88,11 +91,11 @@ static WordMeaningController* rootWordMeaningController;
 - (WordMeaningRootScrollView*)scrollView
 {
     if (_scrollView == nil) {
-        self.view.backgroundColor = [UIColor meaningViewBackgroundColor];
+        self.view.backgroundColor = [UIColor colorWithRed:172.0 / 255.0 green:154.0 / 255.0 blue:137.0 / 255.0 alpha:1.0];
         if (isInit) {
             _scrollView = (WordMeaningRootScrollView*)[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         } else {
-            _scrollView = (WordMeaningRootScrollView*)[[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
+            _scrollView = (WordMeaningRootScrollView*)[[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
         }
 
         [self.view addSubview:_scrollView];
@@ -110,7 +113,8 @@ static WordMeaningController* rootWordMeaningController;
 - (void)resetWordWithWord:(Word*)word
 {
     self.title = word.word;
-    
+    self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
+
     [self clearAllViews];
 
     //sort
@@ -137,7 +141,6 @@ static WordMeaningController* rootWordMeaningController;
 
     //add relatedwordTable view
     relaViewRect.origin.y = height;
-    relaViewRect.size.width = 1024;
     RelatedWordTableView* relatedWordTableView = [self getRelaWordViewWithRect:relaViewRect];
     height += relatedWordTableView.frame.size.height + 20;
     [self.scrollView addSubview:relatedWordTableView];
@@ -269,10 +272,19 @@ static WordMeaningController* rootWordMeaningController;
     if (isInit) {
         self.scrollView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     } else {
-        self.scrollView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height);
+        self.scrollView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64);
     }
 
     [self resetAllView];
+}
+
+#pragma mark - mark to word list
+
+- (IBAction)toggleWordListBarButton:(id)sender
+{
+    NSLog(@"click mark to word list");
+    [[MarkWordManager sharedMarkWordManager] toggleWordList:self.word.word];
+    self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
 }
 
 @end
