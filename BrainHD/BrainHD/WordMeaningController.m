@@ -15,6 +15,7 @@
 #import "RelatedWordTableView.h"
 #import "NSString+sortString.h"
 #import "MarkWordManager.h"
+#import "UserData.h"
 
 @interface WordMeaningController () <WordMeaingViewTapProtocol, RelatedWordTableViewProtocol>
 
@@ -54,7 +55,10 @@ static WordMeaningController* rootWordMeaningController;
     self.navigationItem.rightBarButtonItem = self.wordListBarButton;
     if (self.word == nil) {
         rootWordMeaningController = self;
-        self.word = [[WordManager sharedWordManager] findWordByCompleteWord:@"welcome"];
+        NSString* word = [[[UserData sharedUserData] historyWords] firstObject];
+        if (word == nil || [word isEqualToString:@""])
+            word = @"welcome";
+        self.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
         return;
     }
 }

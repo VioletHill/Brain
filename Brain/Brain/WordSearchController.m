@@ -112,8 +112,8 @@
         NSString* str = [[UserData sharedUserData] historyWords][indexPath.row];
         [[UserData sharedUserData] deleteHistoryWord:str];
         [self.tableView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationFade];
-        if ([[UserData sharedUserData] historyWords].count==0){
-            self.tableView.hidden=YES;
+        if ([[UserData sharedUserData] historyWords].count == 0) {
+            self.tableView.hidden = YES;
         }
     }
 }
@@ -136,6 +136,8 @@
     wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
 }
 
+#pragma mark - search delegate
+
 - (void)searchBarTextDidBeginEditing:(UISearchBar*)searchBar
 {
     [self.tableView setContentOffset:CGPointZero animated:YES];
@@ -143,8 +145,9 @@
 
 - (void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)searchText
 {
+    NSString* text = [searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     [self.data removeAllObjects];
-    self.data = [[[WordManager sharedWordManager] findWordContantArrayBySearchText:searchText] mutableCopy];
+    self.data = [[[WordManager sharedWordManager] findWordContantArrayBySearchText:text] mutableCopy];
     [self.tableView reloadData];
 }
 
