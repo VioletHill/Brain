@@ -158,11 +158,7 @@ static WordMeaningController* rootWordMeaningController;
     height += relatedWordTableView.frame.size.height + 20;
     [self.scrollView addSubview:relatedWordTableView];
 
-    if (isInit) {
-        height = MAX(height, self.view.frame.size.height - 63);
-    } else {
-        height = MAX(self.view.frame.size.height + 1, height);
-    }
+    height = MAX(self.view.frame.size.height - 63, height);
     self.scrollView.contentSize = CGSizeMake(0, height);
     self.scrollView.contentOffset = CGPointMake(0, 0);
     self.scrollView.scrollEnabled = YES;
@@ -263,19 +259,15 @@ static WordMeaningController* rootWordMeaningController;
             [meaningView resetMeaningView:self.view.frame.size.width - 20];
             meaningView.frame = CGRectMake(10, height, meaningView.frame.size.width, meaningView.frame.size.height);
             height += meaningView.frame.size.height + 20;
-        } else {
+        } else if ([view isKindOfClass:[RelatedWordTableView class]]) {
             view.frame = CGRectMake(10, height, self.view.frame.size.width - 20, view.frame.size.height);
             height += view.frame.size.height + 20;
         }
     }
-    height = height + 64;
-    if (isInit) {
-        height = MAX(self.view.frame.size.height - 63, height);
 
-    } else {
-        height = MAX(self.view.frame.size.height + 1, height);
-    }
+    height = MAX(self.view.frame.size.height - 63, height);
     self.scrollView.contentSize = CGSizeMake(0, height);
+    NSLog(@"%f", height);
 }
 
 //only call when device rotate

@@ -62,7 +62,7 @@
     label.textColor = [UIColor relatedWordsTitleColor];
     [view addSubview:label];
 
-    UIView* cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44 - 2, selfFrame.size.width, 2)];
+    UIView* cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44 - 2, 1024, 2)];
     cutOff.backgroundColor = [UIColor cutOffColor];
     [view addSubview:cutOff];
 
