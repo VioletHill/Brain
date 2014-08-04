@@ -15,6 +15,7 @@
 @interface WordListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView* tableView;
+@property (weak, nonatomic) IBOutlet UITextView* hintView;
 @property (nonatomic, strong) NSMutableArray* data;
 
 @end
@@ -56,7 +57,9 @@
         _data = data;
         if (_data == nil || _data.count == 0) {
             self.tableView.hidden = YES;
+            self.hintView.hidden = NO;
         } else {
+            self.hintView.hidden = YES;
             self.tableView.hidden = NO;
             dispatch_async(dispatch_get_main_queue(), ^() {
                 [self.tableView reloadData];
@@ -90,7 +93,7 @@
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"WordListCell" forIndexPath:indexPath];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"WordListCell"];
 
     if (cell == nil) {
         cell = [[UITableViewCell alloc] init];
@@ -117,6 +120,10 @@
         [self.data removeObjectAtIndex:indexPath.row];
         if (self.data.count == 0) {
             self.tableView.hidden = YES;
+            self.hintView.hidden = NO;
+        } else {
+            self.tableView.hidden = NO;
+            self.hintView.hidden = YES;
         }
         [tableView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationFade];
     }

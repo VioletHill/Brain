@@ -94,7 +94,7 @@
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.5.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-Ei-1I6">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.5.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-Ei-1I6">
                                     <rect key="frame" x="126" y="40" width="78" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -403,6 +403,28 @@ The etymoline dictionary is indeed a gift for people who love English words all 
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kx5-Ca-Zoz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WordListCell" id="P9Z-eM-BSt">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P9Z-eM-BSt" id="FLZ-jh-WA8">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ygp-yK-DHq" kind="push" id="eeE-R3-dR8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HIl-TW-8Mx" id="6zb-bz-y4R"/>
+                                    <outlet property="delegate" destination="HIl-TW-8Mx" id="v0b-qn-tIF"/>
+                                </connections>
+                            </tableView>
                             <textView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIa-6K-QFt">
                                 <rect key="frame" x="20" y="136" width="280" height="200"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -421,12 +443,20 @@ The etymoline dictionary is indeed a gift for people who love English words all 
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hcD-fW-Jxz" firstAttribute="top" secondItem="yIa-6K-QFt" secondAttribute="bottom" constant="183" id="K94-Xr-LAt"/>
+                            <constraint firstAttribute="trailing" secondItem="kx5-Ca-Zoz" secondAttribute="trailing" id="OEK-it-Bq2"/>
+                            <constraint firstItem="kx5-Ca-Zoz" firstAttribute="top" secondItem="FXu-wN-i0d" secondAttribute="top" id="Xt2-iZ-j0x"/>
+                            <constraint firstAttribute="bottom" secondItem="kx5-Ca-Zoz" secondAttribute="bottom" id="f0i-j7-3eY"/>
                             <constraint firstItem="yIa-6K-QFt" firstAttribute="top" secondItem="Ca0-si-VtN" secondAttribute="bottom" constant="72" id="fKf-AU-ewE"/>
                             <constraint firstItem="yIa-6K-QFt" firstAttribute="leading" secondItem="FXu-wN-i0d" secondAttribute="leading" constant="20" id="pHf-Wd-F7o"/>
                             <constraint firstAttribute="trailing" secondItem="yIa-6K-QFt" secondAttribute="trailing" constant="20" id="txo-oi-Oz7"/>
+                            <constraint firstItem="kx5-Ca-Zoz" firstAttribute="leading" secondItem="FXu-wN-i0d" secondAttribute="leading" id="zae-YQ-Kwa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bookmarks" id="Bg4-bx-7QN"/>
+                    <connections>
+                        <outlet property="hintView" destination="yIa-6K-QFt" id="Rjt-o8-wVG"/>
+                        <outlet property="tableView" destination="kx5-Ca-Zoz" id="jcq-NZ-ECW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCP-jl-Txa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -476,4 +506,7 @@ The etymoline dictionary is indeed a gift for people who love English words all 
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="eeE-R3-dR8"/>
+    </inferredMetricsTieBreakers>
 </document>
