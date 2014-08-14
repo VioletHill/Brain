@@ -1,4 +1,3 @@
 platform :ios, '7.0'
 pod 'MagicalRecord'
-pod 'FlurrySDK'
-pod 'NewRelicAgent'
+pod 'FlurrySDK', '~> 5.2.0'

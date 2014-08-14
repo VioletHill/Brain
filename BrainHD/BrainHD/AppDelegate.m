@@ -8,13 +8,14 @@
 
 #import "AppDelegate.h"
 #import "WordManager.h"
+#import <Flurry.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    [Flurry startSession:@"SVTKKWP3GGRXX8NTFQFS"];
 
-    // [NewRelicAgent startWithApplicationToken:@"AAec08a1469f50ff11da645e86562d5fb30f2102ba"];
     [[WordManager sharedWordManager] preparedWord];
     // Override point for customization after application launch.
     [MagicalRecord setDefaultModelNamed:@"UserWord.momd"];

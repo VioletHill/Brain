@@ -5,16 +5,13 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
-  - NewRelicAgent (3.343)
 
 DEPENDENCIES:
-  - FlurrySDK
+  - FlurrySDK (~> 5.2.0)
   - MagicalRecord
-  - NewRelicAgent
 
 SPEC CHECKSUMS:
   FlurrySDK: 5322b9eb0d0b538f1a1983a6717f3a2e2ba03047
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
-  NewRelicAgent: 95b45c10c8f53738fb8a65034e6d6ae72e90570f
 
 COCOAPODS: 0.33.1

@@ -10,7 +10,6 @@
 		2468EBFB197F6173003876C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFA197F6173003876C0 /* Foundation.framework */; };
 		2468EBFD197F6173003876C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFC197F6173003876C0 /* CoreGraphics.framework */; };
 		2468EBFF197F6173003876C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFE197F6173003876C0 /* UIKit.framework */; };
-		2468EC05197F6173003876C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC03197F6173003876C0 /* InfoPlist.strings */; };
 		2468EC07197F6173003876C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC06197F6173003876C0 /* main.m */; };
 		2468EC0B197F6173003876C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC0A197F6173003876C0 /* AppDelegate.m */; };
 		2468EC0E197F6173003876C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC0C197F6173003876C0 /* Main.storyboard */; };
@@ -18,7 +17,6 @@
 		2468EC1A197F6173003876C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EC19197F6173003876C0 /* XCTest.framework */; };
 		2468EC1B197F6173003876C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFA197F6173003876C0 /* Foundation.framework */; };
 		2468EC1C197F6173003876C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFE197F6173003876C0 /* UIKit.framework */; };
-		2468EC24197F6173003876C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2468EC22197F6173003876C0 /* InfoPlist.strings */; };
 		2468EC26197F6173003876C0 /* BrainHDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC25197F6173003876C0 /* BrainHDTests.m */; };
 		2468EC7C197F6FC5003876C0 /* AbbreviationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC66197F6FC5003876C0 /* AbbreviationViewController.m */; };
 		2468EC7D197F6FC5003876C0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC68197F6FC5003876C0 /* AboutViewController.m */; };
@@ -96,7 +94,6 @@
 		2468EBFC197F6173003876C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2468EBFE197F6173003876C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2468EC02197F6173003876C0 /* BrainHD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrainHD-Info.plist"; sourceTree = "<group>"; };
-		2468EC04197F6173003876C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2468EC06197F6173003876C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2468EC08197F6173003876C0 /* BrainHD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BrainHD-Prefix.pch"; sourceTree = "<group>"; };
 		2468EC09197F6173003876C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,7 +103,6 @@
 		2468EC18197F6173003876C0 /* BrainHDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainHDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2468EC19197F6173003876C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2468EC21197F6173003876C0 /* BrainHDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrainHDTests-Info.plist"; sourceTree = "<group>"; };
-		2468EC23197F6173003876C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2468EC25197F6173003876C0 /* BrainHDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrainHDTests.m; sourceTree = "<group>"; };
 		2468EC65197F6FC5003876C0 /* AbbreviationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbbreviationViewController.h; sourceTree = "<group>"; };
 		2468EC66197F6FC5003876C0 /* AbbreviationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbbreviationViewController.m; sourceTree = "<group>"; };
@@ -293,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				2468EC02197F6173003876C0 /* BrainHD-Info.plist */,
-				2468EC03197F6173003876C0 /* InfoPlist.strings */,
 				2468EC06197F6173003876C0 /* main.m */,
 				2468EC08197F6173003876C0 /* BrainHD-Prefix.pch */,
 			);
@@ -313,7 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				2468EC21197F6173003876C0 /* BrainHDTests-Info.plist */,
-				2468EC22197F6173003876C0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -564,7 +558,6 @@
 				2468EC7F197F6FC5003876C0 /* baloney.html in Resources */,
 				2468EC81197F6FC5003876C0 /* wolf.html in Resources */,
 				2468EC13197F6173003876C0 /* Images.xcassets in Resources */,
-				2468EC05197F6173003876C0 /* InfoPlist.strings in Resources */,
 				2468ED3D197FAF38003876C0 /* Brain.sqlite-shm in Resources */,
 				2468ED3C197FAF38003876C0 /* Brain.sqlite in Resources */,
 				2468EC82197F6FC5003876C0 /* zero.html in Resources */,
@@ -580,7 +573,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2468EC24197F6173003876C0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,28 +687,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2468EC03197F6173003876C0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2468EC04197F6173003876C0 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		2468EC0C197F6173003876C0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2468EC0D197F6173003876C0 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2468EC22197F6173003876C0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2468EC23197F6173003876C0 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
