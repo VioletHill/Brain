@@ -7,18 +7,20 @@
 //
 
 #import "NSAttributedString+Html2Attributed.h"
+#import <UIKit/UIKit.h>
 
 @implementation NSAttributedString (Html2Attributed)
 
 + (NSAttributedString*)getAttributeStringFromHtmlString:(NSString*)str
 {
     NSMutableString* html = [str mutableCopy];
-    NSLog(@"%@",html);
+    NSLog(@"%@", html);
     NSDictionary* attrDictionary = @{
         NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
         NSCharacterEncodingDocumentAttribute : [NSNumber numberWithInt:NSUTF8StringEncoding]
     };
-    NSMutableAttributedString* att = [[[NSAttributedString alloc] initWithData:[html dataUsingEncoding:NSUTF8StringEncoding] options:attrDictionary documentAttributes:nil error:nil] mutableCopy];
+
+    NSAttributedString* att = [[[NSAttributedString alloc] initWithData:[html dataUsingEncoding:NSUTF8StringEncoding] options:attrDictionary documentAttributes:nil error:nil] mutableCopy];
 
     return att;
 }

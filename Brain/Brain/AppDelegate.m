@@ -10,6 +10,7 @@
 #import "WordManager.h"
 #import <FlurrySDK/Flurry.h>
 #import <NewRelicAgent/NewRelicAgent.h>
+#import <MagicalRecord/CoreData+MagicalRecord.h>
 
 @implementation AppDelegate
 

@@ -27,14 +27,12 @@
 @end
 
 @implementation WordMeaningController {
-    BOOL isInit;
     BOOL isNeedResetPosition;
 }
 
 - (instancetype)init
 {
     if (self = [super init]) {
-        isInit = YES;
     }
     return self;
 }
@@ -54,13 +52,6 @@
     self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
     if (self.isNeedPop) {
         [self.navigationController popViewControllerAnimated:NO];
-    }
-    if (!isNeedResetPosition) {
-        if (isInit) {
-            self.scrollView.contentOffset = CGPointMake(0, -64);
-        } else {
-            self.scrollView.contentOffset = CGPointMake(0, 0);
-        }
     }
 }
 
@@ -86,13 +77,15 @@
     if (_scrollView == nil) {
         self.view.backgroundColor = [UIColor colorWithRed:172.0 / 255.0 green:154.0 / 255.0 blue:137.0 / 255.0 alpha:1.0];
 
-        if (isInit) {
-            _scrollView = (WordMeaningRootScrollView*)[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)];
-        } else {
-            _scrollView = (WordMeaningRootScrollView*)[[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, 320, self.view.frame.size.height - 64)];
-        }
-
+        _scrollView = (WordMeaningRootScrollView*)[[UIScrollView alloc] init];
         [self.view addSubview:_scrollView];
+
+        _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+        NSDictionary* dictionaryView = NSDictionaryOfVariableBindings(_scrollView);
+        NSArray* vlayout = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_scrollView]-0-|" options:0 metrics:nil views:dictionaryView];
+        NSArray* hlayout = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_scrollView]-0-|" options:0 metrics:nil views:dictionaryView];
+        [self.view addConstraints:vlayout];
+        [self.view addConstraints:hlayout];
     }
     return _scrollView;
 }

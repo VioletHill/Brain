@@ -8,6 +8,7 @@
 
 #import "UIColor+AppColor.h"
 #import "MarkWord.h"
+#import <MagicalRecord/CoreData+MagicalRecord.h>
 
 @implementation UIColor (AppColor)
 

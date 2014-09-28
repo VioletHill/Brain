@@ -118,10 +118,22 @@
     }
 }
 
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    WordMeaningController* wordMeaningController = [[WordMeaningController alloc] init];
+    wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:cell.textLabel.text];
+    [self.navigationController pushViewController:wordMeaningController animated:YES];
+}
+
+#pragma mark - scrollView delegate
+
 - (void)scrollViewWillBeginDragging:(UIScrollView*)scrollView
 {
     [self.searchBar resignFirstResponder];
 }
+
+#pragma mark - segue
 
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
@@ -154,7 +166,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar*)searchBar
 {
     if (self.data.count > 0) {
-        WordMeaningController* wordMeaningController = [self.storyboard instantiateViewControllerWithIdentifier:@"WordMeaningController"];
+        WordMeaningController* wordMeaningController = [[WordMeaningController alloc] init];
         wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:[self.data firstObject]];
         [self.navigationController pushViewController:wordMeaningController animated:YES];
     }

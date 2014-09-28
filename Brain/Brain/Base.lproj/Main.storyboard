@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pVZ-T2-UHE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pVZ-T2-UHE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Word Search Controller - Etymonline-->
+        <!--Etymonline-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="WordSearchController" sceneMemberID="viewController">
@@ -38,9 +38,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Ygp-yK-DHq" kind="push" id="3tm-mM-Q1I"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -76,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="524" y="-194"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--About-->
         <scene sceneID="Hey-8W-e0m">
             <objects>
                 <tableViewController id="Koe-sa-cN6" customClass="AboutViewController" sceneMemberID="viewController">
@@ -287,7 +284,7 @@
             </objects>
             <point key="canvasLocation" x="874" y="-1198"/>
         </scene>
-        <!--Abbreviation View Controller - Introduction and abbreviations-->
+        <!--Introduction and abbreviations-->
         <scene sceneID="Wlg-d9-s8W">
             <objects>
                 <viewController id="W2M-bQ-39h" customClass="AbbreviationViewController" sceneMemberID="viewController">
@@ -315,7 +312,7 @@
             </objects>
             <point key="canvasLocation" x="1459" y="-1104"/>
         </scene>
-        <!--View Controller - Douglas Harper-->
+        <!--Douglas Harper-->
         <scene sceneID="pXn-vr-kwY">
             <objects>
                 <viewController id="H2i-hG-Gnv" sceneMemberID="viewController">
@@ -355,7 +352,7 @@ I made etymonline so people with questions could find good answers about the his
             </objects>
             <point key="canvasLocation" x="1439" y="142"/>
         </scene>
-        <!--About Liu View Controller - Chongwei Liu-->
+        <!--Chongwei Liu-->
         <scene sceneID="WHj-rX-WLf">
             <objects>
                 <viewController id="ncJ-ZP-39M" customClass="AboutLiuViewController" sceneMemberID="viewController">
@@ -391,7 +388,7 @@ The etymoline dictionary is indeed a gift for people who love English words all 
             </objects>
             <point key="canvasLocation" x="1439" y="-593"/>
         </scene>
-        <!--Word List View Controller - Bookmarks-->
+        <!--Bookmarks-->
         <scene sceneID="a15-Av-Mh3">
             <objects>
                 <viewController id="HIl-TW-8Mx" customClass="WordListViewController" sceneMemberID="viewController">
@@ -403,12 +400,11 @@ The etymoline dictionary is indeed a gift for people who love English words all 
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kx5-Ca-Zoz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kx5-Ca-Zoz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WordListCell" id="P9Z-eM-BSt">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WordListCell" id="P9Z-eM-BSt">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P9Z-eM-BSt" id="FLZ-jh-WA8">
@@ -425,7 +421,7 @@ The etymoline dictionary is indeed a gift for people who love English words all 
                                     <outlet property="delegate" destination="HIl-TW-8Mx" id="v0b-qn-tIF"/>
                                 </connections>
                             </tableView>
-                            <textView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIa-6K-QFt">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIa-6K-QFt">
                                 <rect key="frame" x="20" y="136" width="280" height="200"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -506,7 +502,4 @@ The etymoline dictionary is indeed a gift for people who love English words all 
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="eeE-R3-dR8"/>
-    </inferredMetricsTieBreakers>
 </document>

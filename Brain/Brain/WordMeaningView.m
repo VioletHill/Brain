@@ -27,14 +27,13 @@
     NSRange lastRange;
 }
 
-const float width = 300;
-const float screenWidth = 320;
-
 - (UIView*)cutOff
 {
     if (_cutOff == nil) {
-        _cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44, width, 2)];
-        _cutOff.backgroundColor = [UIColor cutOffColor];
+        // _cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44, width, 2)];
+        NSDictionary* dictionaryView = NSDictionaryOfVariableBindings(_cutOff, _wordTitle);
+        NSArray* hLayout = [NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[_cutoff]-0-|" options:0 metrics:nil views:dictionaryView];
+        NSArray* vLayout = [NSLayoutConstraint constraintsWithVisualFormat:@"" options:<#(NSLayoutFormatOptions) #> metrics:<#(NSDictionary*)#> views:<#(NSDictionary*)#>] _cutOff.backgroundColor = [UIColor cutOffColor];
     }
     return _cutOff;
 }
@@ -42,7 +41,7 @@ const float screenWidth = 320;
 - (UILabel*)wordTitle
 {
     if (_wordTitle == nil) {
-        _wordTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, width - 5, 44)];
+        //_wordTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, width - 5, 44)];
         _wordTitle.font = [UIFont systemFontOfSize:22];
         _wordTitle.textColor = [UIColor titleLableColor];
         [self addSubview:self.wordTitle];
@@ -54,7 +53,7 @@ const float screenWidth = 320;
 - (UITextView*)meaningView
 {
     if (_meaningView == nil) {
-        _meaningView = [[UITextView alloc] initWithFrame:CGRectMake(0, 50, width, 300)];
+        //_meaningView = [[UITextView alloc] initWithFrame:CGRectMake(0, 50, width, 300)];
         _meaningView.backgroundColor = [UIColor meaningViewBackgroundColor];
         _meaningView.editable = NO;
         _meaningView.scrollEnabled = NO;
@@ -69,6 +68,8 @@ const float screenWidth = 320;
 {
     if (self = [super init]) {
         self.backgroundColor = [UIColor meaningViewBackgroundColor];
+        
+
         self.wordTitle.text = word;
         self.meaningView.attributedText = [NSAttributedString getAttributeStringFromHtmlString:meaning];
         self.oldAttributed = self.meaningView.attributedText;
