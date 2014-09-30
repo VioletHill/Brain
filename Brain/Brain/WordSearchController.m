@@ -119,9 +119,13 @@
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
     UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString* word = cell.textLabel.text;
     WordMeaningController* wordMeaningController = [[WordMeaningController alloc] init];
-    wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:cell.textLabel.text];
+    wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
     [self.navigationController pushViewController:wordMeaningController animated:YES];
+
+    [[UserData sharedUserData] addHistoryWord:word];
+    wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
 }
 
 #pragma mark - scrollView delegate
@@ -129,21 +133,6 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView*)scrollView
 {
     [self.searchBar resignFirstResponder];
-}
-
-#pragma mark - segue
-
-- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
-{
-    if ([sender isKindOfClass:[UIBarButtonItem class]])
-        return;
-
-    UITableViewCell* cell = sender;
-    WordMeaningController* wordMeaningController = segue.destinationViewController;
-
-    NSString* word = cell.textLabel.text;
-    [[UserData sharedUserData] addHistoryWord:word];
-    wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
 }
 
 #pragma mark - search delegate
@@ -166,6 +155,7 @@
     if (self.data.count > 0) {
         WordMeaningController* wordMeaningController = [[WordMeaningController alloc] init];
         wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:[self.data firstObject]];
+        [[UserData sharedUserData] addHistoryWord:[self.data firstObject]];
         [self.navigationController pushViewController:wordMeaningController animated:YES];
     }
 }

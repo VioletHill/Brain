@@ -151,11 +151,10 @@
     [self.scrollView addSubview:relatedWordTableView];
 
     self.scrollView.contentOffset = CGPointMake(0, 0);
-    if (height < self.view.frame.size.height - 63) {
-        height = self.view.frame.size.height - 63;
-    }
+    height = MAX(self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height + 1, height);
     [self.scrollView setContentSize:CGSizeMake(0, height)];
     self.scrollView.scrollEnabled = YES;
+    [self.view setNeedsLayout];
 }
 
 /**
