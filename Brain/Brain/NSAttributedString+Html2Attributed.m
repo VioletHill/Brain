@@ -14,7 +14,6 @@
 + (NSAttributedString*)getAttributeStringFromHtmlString:(NSString*)str
 {
     NSMutableString* html = [str mutableCopy];
-    NSLog(@"%@", html);
     NSDictionary* attrDictionary = @{
         NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
         NSCharacterEncodingDocumentAttribute : [NSNumber numberWithInt:NSUTF8StringEncoding]

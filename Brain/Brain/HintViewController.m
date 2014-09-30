@@ -15,26 +15,22 @@
 
 @implementation HintViewController
 
-- (id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (instancetype)initWithHtmlFile:(NSString*)html
 {
     if (self = [super init]) {
-        NSLog(@"%f %f", self.view.frame.origin.y, self.view.frame.size.height);
         NSString* filePath = [[NSBundle mainBundle] pathForResource:html ofType:@"html"];
         NSURL* url = [NSURL fileURLWithPath:filePath];
         NSURLRequest* request = [NSURLRequest requestWithURL:url];
 
-        UIWebView* webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-        [webView loadRequest:request];
+        UIWebView* webView = [[UIWebView alloc] init];
         [self.view addSubview:webView];
+        webView.translatesAutoresizingMaskIntoConstraints = NO;
+        NSDictionary* dictionaryView = NSDictionaryOfVariableBindings(webView);
+
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[webView]-0-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:dictionaryView]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[webView]-0-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:dictionaryView]];
+        
+        [webView loadRequest:request];
     }
     return self;
 }

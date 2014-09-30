@@ -43,7 +43,6 @@
     self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithRed:93.0 / 255.0 green:63.0 / 255.0 blue:39.0 / 255.0 alpha:1] forKey:NSForegroundColorAttributeName];
     self.navigationItem.rightBarButtonItem = self.wordListBarButton;
-    [self resetWordWithWord:self.word];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -52,7 +51,14 @@
     self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
     if (self.isNeedPop) {
         [self.navigationController popViewControllerAnimated:NO];
+        return;
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self resetWordWithWord:self.word];
 }
 
 - (UIBarButtonItem*)wordListBarButton
@@ -123,18 +129,21 @@
     float height = 20;
 
     CGRect relaViewRect;
-
     for (id obj in keyArray) {
-        WordMeaningView* meaingView = [[WordMeaningView alloc] initWithWord:obj andMeaning:[word.meaning objectForKey:obj]];
-        meaingView.delegate = self;
-        meaingView.word = self.word.word;
-        meaingView.frame = CGRectMake(meaingView.frame.origin.x, height, meaingView.frame.size.width, meaingView.frame.size.height);
-        [self.scrollView addSubview:meaingView];
-        height += meaingView.frame.size.height + 20;
-        relaViewRect = meaingView.frame;
+        WordMeaningView* meaningView = [[WordMeaningView alloc] initWithWidth:self.view.frame.size.width - 20];
+        [meaningView setWord:obj andMeaning:word.meaning[obj]];
+        meaningView.frame = CGRectMake(10, height, self.view.frame.size.width - 20, meaningView.frame.size.height);
+        meaningView.delegate = self;
+        meaningView.word = self.word.word;
+
+        [self.scrollView addSubview:meaningView];
+
+        height += meaningView.frame.size.height + 20;
+        relaViewRect = meaningView.frame;
+        [self.scrollView setNeedsLayout];
     }
 
-    //add relatedwordTable view
+    //    add relatedwordTable view
     relaViewRect.origin.y = height;
 
     RelatedWordTableView* relatedWordTableView = [self getRelaWordViewWithRect:relaViewRect];
@@ -175,7 +184,6 @@
 - (void)wordTapCallBack:(NSString*)word
 {
     Word* wordEntity = nil;
-    NSLog(@"%@", word);
     @try {
         if ([self isNeedHintWithWord:word]) {
             isNeedResetPosition = YES;
@@ -239,6 +247,13 @@
     NSLog(@"click mark to word list");
     [[MarkWordManager sharedMarkWordManager] toggleWordList:self.word.word];
     self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
+}
+
+#pragma mark - rotate
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [self resetWordWithWord:self.word];
 }
 
 @end

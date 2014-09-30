@@ -18,7 +18,8 @@
 
 @interface WordMeaningView : UIView
 
-- (instancetype)initWithWord:(NSString*)word andMeaning:(NSString*)meaning;
+- (instancetype)initWithWidth:(CGFloat)width;
+- (void)setWord:(NSString*)word andMeaning:(NSString*)meaning;
 
 @property (nonatomic, weak) NSString* word;
 

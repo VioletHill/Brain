@@ -70,7 +70,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
@@ -90,7 +89,6 @@
 {
     UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"MyCell"];
 
-    // Configure the cell...
     if (self.data == nil || self.data.count == 0)
         cell.textLabel.text = [UserData sharedUserData].historyWords[indexPath.row];
     else
