@@ -130,17 +130,15 @@
     }
 }
 
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    UITableViewCell* cell = sender;
-    WordMeaningController* wordMeaningController = segue.destinationViewController;
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    WordMeaningController* wordMeaningController = [[WordMeaningController alloc] init];
 
     NSString* word = cell.textLabel.text;
 
     wordMeaningController.word = [[WordManager sharedWordManager] findWordByCompleteWord:word];
+    [self.navigationController pushViewController:wordMeaningController animated:YES];
 }
 
 @end
