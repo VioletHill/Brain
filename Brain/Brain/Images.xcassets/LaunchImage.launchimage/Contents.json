@@ -4,25 +4,27 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "736h",
-      "filename" : "1242*2208.png",
+      "filename" : "ipp竖.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "3x"
     },
     {
-      "orientation" : "landscape",
-      "idiom" : "iphone",
       "extent" : "full-screen",
-      "minimum-system-version" : "8.0",
+      "idiom" : "iphone",
       "subtype" : "736h",
+      "filename" : "ip6+H.png",
+      "minimum-system-version" : "8.0",
+      "orientation" : "landscape",
       "scale" : "3x"
     },
     {
-      "orientation" : "portrait",
-      "idiom" : "iphone",
       "extent" : "full-screen",
-      "minimum-system-version" : "8.0",
+      "idiom" : "iphone",
       "subtype" : "667h",
+      "filename" : "ip6.png",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
       "scale" : "2x"
     },
     {
@@ -30,14 +32,14 @@
       "idiom" : "iphone",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "开场界面（960）繁体.png",
+      "filename" : "ip4.png",
       "scale" : "2x"
     },
     {
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "retina4",
-      "filename" : "开场界面（1136）繁体.png",
+      "filename" : "ip5.png",
       "minimum-system-version" : "7.0",
       "orientation" : "portrait",
       "scale" : "2x"
@@ -47,6 +49,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
+      "filename" : "ipadshu_1024.png",
       "scale" : "1x"
     },
     {
@@ -54,6 +57,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
+      "filename" : "1024.png",
       "scale" : "1x"
     },
     {
@@ -61,6 +65,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
+      "filename" : "ipadshu.png",
       "scale" : "2x"
     },
     {
@@ -68,6 +73,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
+      "filename" : "ipadheng.png",
       "scale" : "2x"
     }
   ],
