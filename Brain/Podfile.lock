@@ -5,16 +5,16 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
-  - NewRelicAgent (3.412)
+  - UMeng (2.2.1)
 
 DEPENDENCIES:
   - FlurrySDK
   - MagicalRecord
-  - NewRelicAgent
+  - UMeng
 
 SPEC CHECKSUMS:
   FlurrySDK: bed9e5598353f867508d164795a451e3ada92cb6
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
-  NewRelicAgent: 5b293148e4ecbcc660630a1001d0a8b0fadaad87
+  UMeng: e5b6c6a06215aeba33cb59159341ab3d6d292935
 
 COCOAPODS: 0.33.1

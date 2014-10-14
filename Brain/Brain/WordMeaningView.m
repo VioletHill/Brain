@@ -88,11 +88,10 @@
     [self addSubview:self.meaningView];
     [self addSubview:self.cutOff];
     [self addSubview:self.wordTitle];
-    
-    
+
     CGSize size = [self.meaningView sizeThatFits:CGSizeMake(self.frame.size.width - 20, FLT_MAX)];
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, size.height + 44 + 2);
-    
+
     self.meaningView.translatesAutoresizingMaskIntoConstraints = NO;
     self.cutOff.translatesAutoresizingMaskIntoConstraints = NO;
     self.wordTitle.translatesAutoresizingMaskIntoConstraints = NO;
@@ -109,7 +108,6 @@
     [self addConstraints:vLayout];
     [self setNeedsLayout];
 }
-
 
 - (NSString*)getStringAtIndex:(NSInteger)index
 {

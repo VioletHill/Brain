@@ -9,15 +9,17 @@
 #import "AppDelegate.h"
 #import "WordManager.h"
 #import <FlurrySDK/Flurry.h>
-#import <NewRelicAgent/NewRelicAgent.h>
+#import <UMeng/MobClick.h>
 #import <MagicalRecord/CoreData+MagicalRecord.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    [NewRelicAgent startWithApplicationToken:@"AA077f78882b16c27ce60fbd51c5e0e196f849a816"];
     [Flurry startSession:@"DBW9WGX74V8YV9CBCFKZ"];
+
+    [MobClick startWithAppkey:@"543b8d20fd98c5076c001bce"];
+
     [[WordManager sharedWordManager] preparedWord];
 
     [MagicalRecord setDefaultModelNamed:@"UserWord.momd"];
