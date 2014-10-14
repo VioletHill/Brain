@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 #import "WordManager.h"
 #import <FlurrySDK/Flurry.h>
-#import <UMeng/MobClick.h>
 #import <MagicalRecord/CoreData+MagicalRecord.h>
+#import <UMeng/MobClick.h>
 
 @implementation AppDelegate
 

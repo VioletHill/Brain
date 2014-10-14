@@ -41,7 +41,7 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
-    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithRed:93.0 / 255.0 green:63.0 / 255.0 blue:39.0 / 255.0 alpha:1] forKey:NSForegroundColorAttributeName];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor titleLableColor] forKey:NSForegroundColorAttributeName];
     self.navigationItem.rightBarButtonItem = self.wordListBarButton;
 }
 
@@ -60,6 +60,8 @@
     [super viewWillAppear:animated];
     [self resetWordWithWord:self.word];
 }
+
+#pragma mark - getter
 
 - (UIBarButtonItem*)wordListBarButton
 {
@@ -95,6 +97,8 @@
     }
     return _scrollView;
 }
+
+#pragma mark - view
 
 - (void)clearAllMeaningViews
 {
@@ -140,7 +144,6 @@
 
         height += meaningView.frame.size.height + 20;
         relaViewRect = meaningView.frame;
-        [self.scrollView setNeedsLayout];
     }
 
     //    add relatedwordTable view
@@ -150,11 +153,12 @@
     height += relatedWordTableView.frame.size.height + 20;
     [self.scrollView addSubview:relatedWordTableView];
 
-    self.scrollView.contentOffset = CGPointMake(0, 0);
-    height = MAX(self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height + 1, height);
+    height = MAX(self.view.frame.size.height + 1, height);
     [self.scrollView setContentSize:CGSizeMake(0, height)];
     self.scrollView.scrollEnabled = YES;
     [self.view setNeedsLayout];
+
+    self.scrollView.contentOffset = CGPointMake(0, 0);
 }
 
 /**
@@ -211,12 +215,6 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - related word
 
 - (RelatedWordTableView*)getRelaWordViewWithRect:(CGRect)rect
@@ -243,7 +241,6 @@
 
 - (IBAction)toggleWordListBarButton:(id)sender
 {
-    NSLog(@"click mark to word list");
     [[MarkWordManager sharedMarkWordManager] toggleWordList:self.word.word];
     self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
 }
