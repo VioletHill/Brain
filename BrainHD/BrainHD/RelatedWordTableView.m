@@ -62,7 +62,7 @@
     label.textColor = [UIColor relatedWordsTitleColor];
     [view addSubview:label];
 
-    UIView* cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44 - 2, 1024, 2)];
+    UIView* cutOff = [[UIView alloc] initWithFrame:CGRectMake(0, 44 - 2, selfFrame.size.width, 2)];
     cutOff.backgroundColor = [UIColor cutOffColor];
     [view addSubview:cutOff];
 
@@ -84,14 +84,5 @@
     [self deselectRowAtIndexPath:indexPath animated:NO];
     [self.relaDelegate selectWordAtRelaWordView:self.data[indexPath.row]];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MarkWordManager.h"
+#import<CoreData+MagicalRecord.h>
 
 @implementation MarkWordManager
 

@@ -14,7 +14,7 @@
 @interface WordMeaningView ()
 
 @property (nonatomic, strong) UILabel* wordTitle;
-@property (nonatomic, strong) UIButton* cutOff;
+@property (nonatomic, strong) UIView* cutOff;
 @property (nonatomic, strong) UITextView* meaningView;
 @property (nonatomic, strong) NSString* selectString;
 @property (nonatomic, strong) NSAttributedString* oldAttributed;
@@ -25,15 +25,15 @@
 @implementation WordMeaningView {
     NSRange selectRange;
     NSRange lastRange;
-    float screenWidth;
 }
 
-- (UIButton*)cutOff
+#pragma mark - getter & setter
+
+- (UIView*)cutOff
 {
     if (_cutOff == nil) {
-        _cutOff = [[UIButton alloc] initWithFrame:CGRectMake(0, 44, screenWidth, 2)];
+        _cutOff = [[UIView alloc] init];
         _cutOff.backgroundColor = [UIColor cutOffColor];
-        [_cutOff setEnabled:NO];
     }
     return _cutOff;
 }
@@ -41,11 +41,10 @@
 - (UILabel*)wordTitle
 {
     if (_wordTitle == nil) {
-        _wordTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, screenWidth - 5, 44)];
-        _wordTitle.font = [UIFont systemFontOfSize:23];
+        _wordTitle = [[UILabel alloc] init];
+        _wordTitle.font = [UIFont systemFontOfSize:22];
         _wordTitle.textColor = [UIColor titleLableColor];
-        [self addSubview:self.wordTitle];
-        [self addSubview:self.cutOff];
+        _wordTitle.backgroundColor = [UIColor meaningViewBackgroundColor];
     }
     return _wordTitle;
 }
@@ -53,50 +52,61 @@
 - (UITextView*)meaningView
 {
     if (_meaningView == nil) {
-        _meaningView = [[UITextView alloc] initWithFrame:CGRectMake(0, 50, screenWidth, 300)];
+        _meaningView = [[UITextView alloc] init];
         _meaningView.backgroundColor = [UIColor meaningViewBackgroundColor];
         _meaningView.editable = NO;
         _meaningView.scrollEnabled = NO;
-        _meaningView.userInteractionEnabled = YES;
         _meaningView.contentSize = CGSizeMake(0, 0);
-        [self addSubview:_meaningView];
     }
     return _meaningView;
 }
 
-- (instancetype)initWithWord:(NSString*)word andMeaning:(NSString*)meaning withWidth:(float)width
+#pragma mark - init
+
+- (instancetype)initWithWidth:(CGFloat)width
 {
-    if (self = [super init]) {
-        screenWidth = width;
-        self.backgroundColor = [UIColor meaningViewBackgroundColor];
-        self.wordTitle.text = word;
-        self.meaningView.attributedText = [NSAttributedString getAttributeStringFromHtmlString:meaning];
-        self.oldAttributed = self.meaningView.attributedText;
-        [self adjustTextViewHeight:meaning];
-        self.frame = CGRectMake(0, 0, screenWidth, self.wordTitle.frame.size.height + self.cutOff.frame.size.height + self.meaningView.frame.size.height);
-        self.layer.cornerRadius = 10;
-        self.meaningView.layer.cornerRadius = 10;
-        self.userInteractionEnabled = YES;
+    if (self = [super initWithFrame:CGRectMake(0, 0, width, 0)]) {
     }
     return self;
 }
 
-- (void)resetMeaningView:(float)width
+- (void)setWord:(NSString*)word andMeaning:(NSString*)meaning
 {
-    self.cutOff.frame = CGRectMake(0, 44, width, self.cutOff.frame.size.height);
-    self.wordTitle.frame = CGRectMake(5, 0, width - 5, 44);
-    self.meaningView.frame = CGRectMake(0, 50, width, 300);
-    self.meaningView.contentSize = CGSizeMake(0, 0);
-    [self adjustTextViewHeight:self.meaningView.text];
-    self.frame = CGRectMake(0, 0, width, self.wordTitle.frame.size.height + self.cutOff.frame.size.height + self.meaningView.frame.size.height);
+    self.backgroundColor = [UIColor meaningViewBackgroundColor];
+    self.wordTitle.text = word;
+    self.meaningView.attributedText = [NSAttributedString getAttributeStringFromHtmlString:meaning];
+    self.oldAttributed = self.meaningView.attributedText;
+    self.layer.cornerRadius = 10;
+    self.clipsToBounds = YES;
+    [self setupLayout];
 }
 
-- (void)adjustTextViewHeight:(NSString*)str
+#pragma mark - layout
+
+- (void)setupLayout
 {
-    UITextView* textView = [[UITextView alloc] init];
-    textView.attributedText = [NSAttributedString getAttributeStringFromHtmlString:str];
-    CGSize size = [self.meaningView sizeThatFits:CGSizeMake(self.meaningView.frame.size.width, FLT_MAX)];
-    self.meaningView.frame = CGRectMake(self.meaningView.frame.origin.x, self.meaningView.frame.origin.y, self.meaningView.frame.size.width, size.height - 20);
+    [self addSubview:self.meaningView];
+    [self addSubview:self.cutOff];
+    [self addSubview:self.wordTitle];
+
+    CGSize size = [self.meaningView sizeThatFits:CGSizeMake(self.frame.size.width - 20, FLT_MAX)];
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, size.height + 44 + 2);
+
+    self.meaningView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.cutOff.translatesAutoresizingMaskIntoConstraints = NO;
+    self.wordTitle.translatesAutoresizingMaskIntoConstraints = NO;
+
+    NSDictionary* dictionaryView = NSDictionaryOfVariableBindings(_cutOff, _wordTitle, _meaningView);
+    NSArray* wordTitleHLayout = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_wordTitle]-10-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:dictionaryView];
+    NSArray* cutoffHLayout = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_cutOff]-10-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:dictionaryView];
+    NSArray* meaningViewHLayout = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_meaningView]-10-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:dictionaryView];
+    NSArray* vLayout = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_wordTitle(44)]-0-[_cutOff(2)]-0-[_meaningView]-0-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:dictionaryView];
+
+    [self addConstraints:wordTitleHLayout];
+    [self addConstraints:cutoffHLayout];
+    [self addConstraints:meaningViewHLayout];
+    [self addConstraints:vLayout];
+    [self setNeedsLayout];
 }
 
 - (NSString*)getStringAtIndex:(NSInteger)index
@@ -183,6 +193,8 @@
     return NO;
 }
 
+#pragma mark - word touch
+
 - (void)wordTap:(CGPoint)pos
 {
     if (lastRange.location != selectRange.location && lastRange.length != selectRange.length) {
@@ -193,6 +205,7 @@
     UITextPosition* tapPos = [self.meaningView closestPositionToPoint:pos];
     NSInteger tapIndex = [self.meaningView offsetFromPosition:self.meaningView.beginningOfDocument toPosition:tapPos] - 1;
     self.selectString = [self getStringAtIndex:tapIndex];
+
     if (([[WordManager sharedWordManager] findWordByCompleteWord:self.selectString] || [self isHintWord:self.selectString]) && selectRange.length != 0) //点击阴影效果
     {
         lastRange = NSMakeRange(selectRange.location, selectRange.length);

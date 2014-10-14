@@ -9,13 +9,15 @@
 #import "AppDelegate.h"
 #import "WordManager.h"
 #import <Flurry.h>
+#import <UMeng/MobClick.h>
+#import<CoreData+MagicalRecord.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     [Flurry startSession:@"SVTKKWP3GGRXX8NTFQFS"];
-
+    [MobClick startWithAppkey:@"543c8e7efd98c558f101a466"];
     [[WordManager sharedWordManager] preparedWord];
     // Override point for customization after application launch.
     [MagicalRecord setDefaultModelNamed:@"UserWord.momd"];

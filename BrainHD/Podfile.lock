@@ -5,13 +5,16 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
+  - UMeng (2.2.1)
 
 DEPENDENCIES:
-  - FlurrySDK (~> 5.2.0)
+  - FlurrySDK
   - MagicalRecord
+  - UMeng
 
 SPEC CHECKSUMS:
   FlurrySDK: 5322b9eb0d0b538f1a1983a6717f3a2e2ba03047
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
+  UMeng: e5b6c6a06215aeba33cb59159341ab3d6d292935
 
 COCOAPODS: 0.33.1

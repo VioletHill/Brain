@@ -12,6 +12,7 @@
 #import "WordMeaningController.h"
 #import "MainViewController.h"
 #import "NSString+sortString.h"
+#import<CoreData+MagicalRecord.h>
 
 @interface WordListViewController () <UITableViewDataSource, UITableViewDelegate>
 

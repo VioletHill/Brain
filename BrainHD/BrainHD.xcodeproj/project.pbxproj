@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18F3CD2219ECC8780004BE48 /* WordMeaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F3CD2119ECC8780004BE48 /* WordMeaningView.m */; };
+		18F3CD2519ECCAA60004BE48 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F3CD2419ECCAA60004BE48 /* AppInfo.m */; };
 		2468EBFB197F6173003876C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFA197F6173003876C0 /* Foundation.framework */; };
 		2468EBFD197F6173003876C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFC197F6173003876C0 /* CoreGraphics.framework */; };
 		2468EBFF197F6173003876C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2468EBFE197F6173003876C0 /* UIKit.framework */; };
@@ -28,7 +30,6 @@
 		2468EC83197F6FC5003876C0 /* HintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC6F197F6FC5003876C0 /* HintViewController.m */; };
 		2468EC84197F6FC5003876C0 /* WordMeaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC71197F6FC5003876C0 /* WordMeaningController.m */; };
 		2468EC85197F6FC5003876C0 /* WordMeaningRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC73197F6FC5003876C0 /* WordMeaningRootScrollView.m */; };
-		2468EC86197F6FC5003876C0 /* WordMeaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC75197F6FC5003876C0 /* WordMeaningView.m */; };
 		2468EC87197F6FC5003876C0 /* WordSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC77197F6FC5003876C0 /* WordSearchController.m */; };
 		2468EC88197F6FC5003876C0 /* NSAttributedString+Html2Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC79197F6FC5003876C0 /* NSAttributedString+Html2Attributed.m */; };
 		2468EC89197F6FC5003876C0 /* NSString+sortString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2468EC7B197F6FC5003876C0 /* NSString+sortString.m */; };
@@ -89,6 +90,10 @@
 
 /* Begin PBXFileReference section */
 		08F29E4BFF5040F192DCF6AA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		18F3CD2019ECC8780004BE48 /* WordMeaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningView.h; sourceTree = "<group>"; };
+		18F3CD2119ECC8780004BE48 /* WordMeaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningView.m; sourceTree = "<group>"; };
+		18F3CD2319ECCAA60004BE48 /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
+		18F3CD2419ECCAA60004BE48 /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
 		2468EBF7197F6173003876C0 /* BrainHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2468EBFA197F6173003876C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2468EBFC197F6173003876C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,8 +124,6 @@
 		2468EC71197F6FC5003876C0 /* WordMeaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningController.m; sourceTree = "<group>"; };
 		2468EC72197F6FC5003876C0 /* WordMeaningRootScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningRootScrollView.h; sourceTree = "<group>"; };
 		2468EC73197F6FC5003876C0 /* WordMeaningRootScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningRootScrollView.m; sourceTree = "<group>"; };
-		2468EC74197F6FC5003876C0 /* WordMeaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMeaningView.h; sourceTree = "<group>"; };
-		2468EC75197F6FC5003876C0 /* WordMeaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMeaningView.m; sourceTree = "<group>"; };
 		2468EC76197F6FC5003876C0 /* WordSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSearchController.h; sourceTree = "<group>"; };
 		2468EC77197F6FC5003876C0 /* WordSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSearchController.m; sourceTree = "<group>"; };
 		2468EC78197F6FC5003876C0 /* NSAttributedString+Html2Attributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Html2Attributed.h"; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 				2468EC8B197F6FE4003876C0 /* WordMeaning */,
 				2468EC09197F6173003876C0 /* AppDelegate.h */,
 				2468EC0A197F6173003876C0 /* AppDelegate.m */,
+				18F3CD2319ECCAA60004BE48 /* AppInfo.h */,
+				18F3CD2419ECCAA60004BE48 /* AppInfo.m */,
 				2468EC0C197F6173003876C0 /* Main.storyboard */,
 				2468ECCF197F713B003876C0 /* MainViewController.h */,
 				2468ECD0197F713B003876C0 /* MainViewController.m */,
@@ -335,12 +340,12 @@
 			children = (
 				2468EC6E197F6FC5003876C0 /* HintViewController.h */,
 				2468EC6F197F6FC5003876C0 /* HintViewController.m */,
+				18F3CD2019ECC8780004BE48 /* WordMeaningView.h */,
+				18F3CD2119ECC8780004BE48 /* WordMeaningView.m */,
 				2468EC70197F6FC5003876C0 /* WordMeaningController.h */,
 				2468EC71197F6FC5003876C0 /* WordMeaningController.m */,
 				2468EC72197F6FC5003876C0 /* WordMeaningRootScrollView.h */,
 				2468EC73197F6FC5003876C0 /* WordMeaningRootScrollView.m */,
-				2468EC74197F6FC5003876C0 /* WordMeaningView.h */,
-				2468EC75197F6FC5003876C0 /* WordMeaningView.m */,
 				2468ED3F197FB03D003876C0 /* RelatedWordTableView.h */,
 				2468ED40197FB03D003876C0 /* RelatedWordTableView.m */,
 			);
@@ -618,6 +623,7 @@
 			files = (
 				2468ED2F197FAE34003876C0 /* WordP.m in Sources */,
 				2468ED20197FAE33003876C0 /* WordL.m in Sources */,
+				18F3CD2219ECC8780004BE48 /* WordMeaningView.m in Sources */,
 				2468ECF9197FAE31003876C0 /* WordA.m in Sources */,
 				2468EC7C197F6FC5003876C0 /* AbbreviationViewController.m in Sources */,
 				2468ECE7197FAE30003876C0 /* WordK.m in Sources */,
@@ -643,7 +649,6 @@
 				2468ED0B197FAE32003876C0 /* WordF.m in Sources */,
 				2468ECDB197FAC27003876C0 /* UserWord.xcdatamodeld in Sources */,
 				2468ED26197FAE34003876C0 /* WordPrefix.m in Sources */,
-				2468EC86197F6FC5003876C0 /* WordMeaningView.m in Sources */,
 				2468ED14197FAE33003876C0 /* WordC.m in Sources */,
 				2468ED41197FB03D003876C0 /* RelatedWordTableView.m in Sources */,
 				2468EC89197F6FC5003876C0 /* NSString+sortString.m in Sources */,
@@ -651,6 +656,7 @@
 				2468ECEA197FAE30003876C0 /* WordS.m in Sources */,
 				2468EC84197F6FC5003876C0 /* WordMeaningController.m in Sources */,
 				2468ECFC197FAE32003876C0 /* WordQ.m in Sources */,
+				18F3CD2519ECCAA60004BE48 /* AppInfo.m in Sources */,
 				2468EC07197F6173003876C0 /* main.m in Sources */,
 				2468EC88197F6FC5003876C0 /* NSAttributedString+Html2Attributed.m in Sources */,
 				2468ED34197FAEB1003876C0 /* MarkWord.m in Sources */,

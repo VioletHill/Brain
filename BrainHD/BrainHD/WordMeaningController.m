@@ -33,14 +33,12 @@ static WordMeaningController* instanceWordMeaningController;
 static WordMeaningController* rootWordMeaningController;
 
 @implementation WordMeaningController {
-    BOOL isInit;
     BOOL isNeedResetPosition;
 }
 
 - (instancetype)init
 {
     if (self = [super init]) {
-        isInit = YES;
     }
     return self;
 }
@@ -49,7 +47,7 @@ static WordMeaningController* rootWordMeaningController;
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor meaningViewBackgroundColor];
-    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithRed:93.0 / 255.0 green:63.0 / 255.0 blue:39.0 / 255.0 alpha:1] forKey:NSForegroundColorAttributeName];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor titleLableColor] forKey:NSForegroundColorAttributeName];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:BOOKMARKS_CHANGE_AT_LISTVIEW object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetBookmark:) name:BOOKMARKS_CHANGE_AT_LISTVIEW object:nil];
     self.navigationItem.rightBarButtonItem = self.wordListBarButton;
@@ -75,13 +73,6 @@ static WordMeaningController* rootWordMeaningController;
     if (self.isNeedPop) {
         [self.navigationController popViewControllerAnimated:NO];
     }
-    if (!isNeedResetPosition) {
-        if (isInit) {
-            self.scrollView.contentOffset = CGPointMake(0, -64);
-        } else {
-            self.scrollView.contentOffset = CGPointMake(0, 0);
-        }
-    }
 }
 
 - (UIBarButtonItem*)wordListBarButton
@@ -105,13 +96,16 @@ static WordMeaningController* rootWordMeaningController;
 {
     if (_scrollView == nil) {
         self.view.backgroundColor = [UIColor colorWithRed:172.0 / 255.0 green:154.0 / 255.0 blue:137.0 / 255.0 alpha:1.0];
-        if (isInit) {
-            _scrollView = (WordMeaningRootScrollView*)[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        } else {
-            _scrollView = (WordMeaningRootScrollView*)[[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
-        }
 
+        _scrollView = (WordMeaningRootScrollView*)[[UIScrollView alloc] init];
         [self.view addSubview:_scrollView];
+
+        _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+        NSDictionary* dictionaryView = NSDictionaryOfVariableBindings(_scrollView);
+        NSArray* vlayout = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_scrollView]-0-|" options:0 metrics:nil views:dictionaryView];
+        NSArray* hlayout = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_scrollView]-0-|" options:0 metrics:nil views:dictionaryView];
+        [self.view addConstraints:vlayout];
+        [self.view addConstraints:hlayout];
     }
     return _scrollView;
 }
@@ -143,13 +137,14 @@ static WordMeaningController* rootWordMeaningController;
     CGRect relaViewRect;
     float height = 20;
     for (id obj in keyArray) {
-        WordMeaningView* meaingView = [[WordMeaningView alloc] initWithWord:obj andMeaning:[word.meaning objectForKey:obj] withWidth:self.view.frame.size.width - 20];
-        meaingView.delegate = self;
-        meaingView.word = self.word.word;
-        meaingView.frame = CGRectMake(10, height, meaingView.frame.size.width, meaingView.frame.size.height);
-        [self.scrollView addSubview:meaingView];
-        height += meaingView.frame.size.height + 20;
-        relaViewRect = meaingView.frame;
+        WordMeaningView* meaningView = [[WordMeaningView alloc] initWithWidth:self.view.frame.size.width - 20];
+        [meaningView setWord:obj andMeaning:word.meaning[obj]];
+        meaningView.delegate = self;
+        meaningView.word = self.word.word;
+        meaningView.frame = CGRectMake(10, height, meaningView.frame.size.width, meaningView.frame.size.height);
+        [self.scrollView addSubview:meaningView];
+        height += meaningView.frame.size.height + 20;
+        relaViewRect = meaningView.frame;
     }
 
     //add relatedwordTable view
@@ -158,7 +153,7 @@ static WordMeaningController* rootWordMeaningController;
     height += relatedWordTableView.frame.size.height + 20;
     [self.scrollView addSubview:relatedWordTableView];
 
-    height = MAX(self.view.frame.size.height - 63, height);
+    height = MAX(self.view.frame.size.height + 1, height);
     self.scrollView.contentSize = CGSizeMake(0, height);
     self.scrollView.contentOffset = CGPointMake(0, 0);
     self.scrollView.scrollEnabled = YES;
@@ -182,7 +177,6 @@ static WordMeaningController* rootWordMeaningController;
 - (void)wordTapCallBack:(NSString*)word
 {
     Word* wordEntity = nil;
-    NSLog(@"%@", word);
     @try {
         if ([self isNeedHintWithWord:word]) {
             isNeedResetPosition = YES;
@@ -245,48 +239,15 @@ static WordMeaningController* rootWordMeaningController;
 
 #pragma mark rotate
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
-    [self fixMeaningView];
-}
-
-- (void)resetAllView
-{
-    float height = 20;
-    for (UIView* view in self.scrollView.subviews) {
-        if ([view isKindOfClass:[WordMeaningView class]]) {
-            WordMeaningView* meaningView = (WordMeaningView*)view;
-            [meaningView resetMeaningView:self.view.frame.size.width - 20];
-            meaningView.frame = CGRectMake(10, height, meaningView.frame.size.width, meaningView.frame.size.height);
-            height += meaningView.frame.size.height + 20;
-        } else if ([view isKindOfClass:[RelatedWordTableView class]]) {
-            view.frame = CGRectMake(10, height, self.view.frame.size.width - 20, view.frame.size.height);
-            height += view.frame.size.height + 20;
-        }
-    }
-
-    height = MAX(self.view.frame.size.height - 63, height);
-    self.scrollView.contentSize = CGSizeMake(0, height);
-}
-
-//only call when device rotate
-
-- (void)fixMeaningView
-{
-    if (isInit) {
-        self.scrollView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    } else {
-        self.scrollView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64);
-    }
-
-    [self resetAllView];
+    [self resetWordWithWord:self.word];
 }
 
 #pragma mark - mark to word list
 
 - (void)toggleWordListBarButton:(id)sender
 {
-    NSLog(@"click mark to word list");
     [[MarkWordManager sharedMarkWordManager] toggleWordList:self.word.word];
     self.wordListBarButton.tintColor = [UIColor markWordColorWithWord:self.word.word];
     [[NSNotificationCenter defaultCenter] postNotificationName:BOOKMARKS_CHANGE_AT_MEANINGVIEW object:self.word.word];
@@ -302,7 +263,6 @@ static WordMeaningController* rootWordMeaningController;
 
 - (void)dealloc
 {
-    NSLog(@"delloc");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
